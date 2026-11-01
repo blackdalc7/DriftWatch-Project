@@ -1,10 +1,10 @@
 module github.com/driftwatch/agent
 
-go 1.24.0
+go 1.26.0
 
 require (
 	github.com/shirou/gopsutil/v4 v4.25.12
-	golang.org/x/sys v0.38.0
+	golang.org/x/sys v0.49.0
 )
 
 require (
