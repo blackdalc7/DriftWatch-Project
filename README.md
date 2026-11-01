@@ -1,5 +1,7 @@
 # Driftwatch
 
+[![ci](https://github.com/blackdalc7/DriftWatch-Project/actions/workflows/ci.yml/badge.svg)](https://github.com/blackdalc7/DriftWatch-Project/actions/workflows/ci.yml)
+
 Continuous security validation for a small lab: one Windows VM, one Linux VM and an Elastic backend.
 
 Driftwatch answers two questions, every day, with evidence:
@@ -16,6 +18,22 @@ Driftwatch answers two questions, every day, with evidence:
 > before being marked "verified". All agent actions must be benign, typed and signed. There is no
 > arbitrary remote shell execution: the agent can only run actions from a Safe Action Catalog compiled
 > into its binary, and only from task bundles signed by the server's Ed25519 key.
+
+## What is validated, and how
+
+Coverage shows the code runs; it does not prove a test catches anything on a real network. Each capability is labelled by the strongest evidence behind it.
+
+| Capability | Validation evidence | Level |
+|---|---|---|
+| Server: enrollment, scoring, drift, bundles, API | pytest suite, run on every push in [CI](https://github.com/blackdalc7/DriftWatch-Project/actions/workflows/ci.yml) | Unit tested |
+| Go agent | `go test ./...` on Linux and Windows runners | Unit tested |
+| Agent ↔ server over mTLS | `scripts/e2e_local.sh` runs a real server, mTLS proxy and Go agent on one host: enroll, heartbeat, signed bundles, results posted, run scored. A CI job | Integration tested (one host, no Elasticsearch) |
+| Linux hygiene checks | `check-baseline.sh` shellchecked and run on the CI runner | Runs on CI host |
+| Detection rules (Sigma → KQL) | `detection-regression.yml` lints every rule on each PR; running affected tests on lab agents needs a self-hosted runner | Lint tested, lab run optional |
+| Scoring against Elastic | Results engine tested with fixtures; the e2e run checks the no-Elasticsearch path | Fixture tested, live Elastic not yet shown |
+| Two-VM Windows lab | `make up` stack and agent install steps documented; no committed lab capture yet | Not yet verified live |
+| Web console and demo | Vitest unit tests; the demo replays a seeded week and labels simulated writes | Unit tested, demo simulated |
+| Claude drafting (`intel draft`) | Mocked client in `tests/test_intel.py`; offline mapper is the default | Mocked |
 
 ## Repository layout
 
