@@ -1,0 +1,65 @@
+# Fails a pull request when a changed Sigma rule stops detecting the recorded telemetry of its paired
+# test, or starts matching the benign baseline. Runs only the rules and tests the PR touched.
+name: detection-regression
+
+on:
+  pull_request:
+    paths: ["rules/**", "library/**", "telemetry/**", "src/driftwatch/sigma/**", "src/driftwatch/regression.py"]
+  workflow_dispatch:
+    inputs:
+      live:
+        description: Also run the affected tests on the lab agents (self-hosted runner in the lab)
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13", cache: pip}
+      - run: pip install -r requirements.txt
+      - name: Lint rules (Sigma -> KQL)
+        run: python -m driftwatch rules lint
+        env: {PYTHONPATH: src}
+      - name: Validate test library
+        run: python -m driftwatch library validate --dirs library/tests library/drafts
+        env: {PYTHONPATH: src}
+      - name: Regression gate
+        env: {PYTHONPATH: src}
+        run: |
+          base="origin/${{ github.base_ref || 'main' }}"
+          args=(--junit regression.xml --markdown regression.md)
+          if [ "${{ github.event_name }}" = "pull_request" ]; then args+=(--base-ref "$base"); fi
+          # src/ changes affect every rule, so re-check everything.
+          if git diff --name-only "$base...HEAD" 2>/dev/null | grep -q '^src/'; then args=(--junit regression.xml --markdown regression.md --require-coverage); fi
+          python -m driftwatch regress "${args[@]}"
+      - name: Job summary
+        if: always()
+        run: test -f regression.md && cat regression.md >> "$GITHUB_STEP_SUMMARY" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: detection-regression, path: "regression.*"}
+
+  live:
+    if: github.event_name == 'workflow_dispatch' && inputs.live
+    needs: offline
+    runs-on: [self-hosted, driftwatch-lab]
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -r requirements.txt
+      - name: Run affected tests on lab agents and wait for scoring
+        env:
+          PYTHONPATH: src
+          DRIFTWATCH_ADMIN_TOKEN: ${{ secrets.DRIFTWATCH_ADMIN_TOKEN }}
+          DRIFTWATCH_CA_CERT: deploy/pki/ca.crt
+        run: python -m driftwatch regress --live --server "${{ vars.DRIFTWATCH_SERVER }}" --tags lab --markdown live.md
+      - if: always()
+        run: test -f live.md && cat live.md >> "$GITHUB_STEP_SUMMARY" || true

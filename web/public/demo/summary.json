@@ -1,0 +1,21 @@
+{
+ "agents": {
+  "total": 2,
+  "online": 2
+ },
+ "tests": {
+  "draft": 1,
+  "approved": 1,
+  "verified": 10
+ },
+ "outcomes": {
+  "missed": 2,
+  "detected": 9,
+  "prevented": 1
+ },
+ "pass_rate": 83,
+ "passed": 10,
+ "scored": 12,
+ "drift_open": 2,
+ "signing_key_id": "85cbdb1e435fe4ad"
+}

@@ -1,0 +1,98 @@
+{
+ "id": "dw-win-eicar-quarantine",
+ "name": "Antivirus quarantines a dropped test file",
+ "description": "Writes the EICAR test file to disk. Real-time protection should quarantine it within seconds and log event 1116.",
+ "version": 1,
+ "status": "verified",
+ "platforms": [
+  "windows"
+ ],
+ "severity": "high",
+ "attack": {
+  "tactic": "command-and-control",
+  "techniques": [
+   "T1105"
+  ]
+ },
+ "steps": [
+  {
+   "action": "file.eicar_drop",
+   "params": {
+    "wait_seconds": 10
+   }
+  }
+ ],
+ "expected": {
+  "outcome": "prevented",
+  "detections": [
+   "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06"
+  ],
+  "window_seconds": 300
+ },
+ "hygiene_controls": [
+  "win.defender.realtime_protection",
+  "win.defender.cloud_protection"
+ ],
+ "provenance": {
+  "source": "manual",
+  "reference": null,
+  "generated_by": null,
+  "generated_at": null
+ },
+ "review": {
+  "approved_by": "driftwatch-maintainers",
+  "approved_at": "2026-10-30T12:00:00Z",
+  "notes": "Hand-written seed test, reviewed with its Sigma rule."
+ },
+ "verification": {
+  "run_id": "b711fbfd663ce25d",
+  "agent_id": "agt_demo_win01",
+  "verified_at": "2026-10-24T10:27:48.418230Z"
+ },
+ "emulated_techniques": [
+  "T1105"
+ ],
+ "dispatchable": true,
+ "results": {
+  "runs": 1,
+  "passed": 1
+ },
+ "yaml": "id: dw-win-eicar-quarantine\nname: Antivirus quarantines a dropped test file\ndescription: Writes the EICAR test file to disk. Real-time protection should quarantine it within seconds and log\n  event 1116.\nversion: 1\nstatus: verified\nplatforms:\n- windows\nseverity: high\nattack:\n  tactic: command-and-control\n  techniques:\n  - T1105\nsteps:\n- action: file.eicar_drop\n  params:\n    wait_seconds: 10\nexpected:\n  outcome: prevented\n  detections:\n  - 5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06\n  window_seconds: 300\nhygiene_controls:\n- win.defender.realtime_protection\n- win.defender.cloud_protection\nprovenance:\n  source: manual\n  reference: null\n  generated_by: null\n  generated_at: null\nreview:\n  approved_by: driftwatch-maintainers\n  approved_at: '2026-10-30T12:00:00Z'\n  notes: Hand-written seed test, reviewed with its Sigma rule.\nverification:\n  run_id: b711fbfd663ce25d\n  agent_id: agt_demo_win01\n  verified_at: '2026-10-24T10:27:48.418230Z'\n",
+ "flow": [
+  {
+   "index": 0,
+   "action": "file.eicar_drop",
+   "title": "Drop the EICAR test file",
+   "params": {
+    "wait_seconds": 10
+   },
+   "techniques": [
+    "T1105"
+   ],
+   "observables": [
+    "file.path"
+   ],
+   "cleanup": "Deletes the file if it still exists."
+  }
+ ],
+ "rules": [
+  {
+   "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+   "title": "Microsoft Defender detected or quarantined malware",
+   "level": "high",
+   "techniques": [
+    "T1105"
+   ],
+   "logsource": {
+    "product": "windows",
+    "service": "windefend"
+   },
+   "kql": "host.os.type:\"windows\" and winlog.channel:\"Microsoft-Windows-Windows Defender/Operational\" and (event.code:\"1116\" or event.code:\"1117\")",
+   "path": "windows/defender_malware_detected.yml"
+  }
+ ],
+ "hardening": [
+  "win.defender.realtime_protection",
+  "win.defender.cloud_protection"
+ ]
+}

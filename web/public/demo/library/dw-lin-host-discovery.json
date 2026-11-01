@@ -1,0 +1,122 @@
+{
+ "id": "dw-lin-host-discovery",
+ "name": "Linux identity and host discovery",
+ "description": "Runs id and uname -a back to back, the usual first commands after landing on a Linux host.",
+ "version": 1,
+ "status": "verified",
+ "platforms": [
+  "linux"
+ ],
+ "severity": "low",
+ "attack": {
+  "tactic": "discovery",
+  "techniques": [
+   "T1033",
+   "T1082"
+  ]
+ },
+ "steps": [
+  {
+   "action": "process.discovery",
+   "params": {
+    "command": "id"
+   }
+  },
+  {
+   "action": "process.discovery",
+   "params": {
+    "command": "uname_a"
+   }
+  }
+ ],
+ "expected": {
+  "outcome": "detected",
+  "detections": [
+   "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09"
+  ],
+  "window_seconds": 300
+ },
+ "hygiene_controls": [
+  "linux.auditd.running",
+  "linux.auditd.execve_rule"
+ ],
+ "provenance": {
+  "source": "manual",
+  "reference": null,
+  "generated_by": null,
+  "generated_at": null
+ },
+ "review": {
+  "approved_by": "driftwatch-maintainers",
+  "approved_at": "2026-10-30T12:00:00Z",
+  "notes": "Hand-written seed test, reviewed with its Sigma rule."
+ },
+ "verification": {
+  "run_id": "9757449bfc438697",
+  "agent_id": "agt_demo_lin01",
+  "verified_at": "2026-10-24T10:39:53.418230Z"
+ },
+ "emulated_techniques": [
+  "T1033",
+  "T1082"
+ ],
+ "dispatchable": true,
+ "results": {
+  "runs": 1,
+  "passed": 1
+ },
+ "yaml": "id: dw-lin-host-discovery\nname: Linux identity and host discovery\ndescription: Runs id and uname -a back to back, the usual first commands after landing on a Linux host.\nversion: 1\nstatus: verified\nplatforms:\n- linux\nseverity: low\nattack:\n  tactic: discovery\n  techniques:\n  - T1033\n  - T1082\nsteps:\n- action: process.discovery\n  params:\n    command: id\n- action: process.discovery\n  params:\n    command: uname_a\nexpected:\n  outcome: detected\n  detections:\n  - 5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09\n  window_seconds: 300\nhygiene_controls:\n- linux.auditd.running\n- linux.auditd.execve_rule\nprovenance:\n  source: manual\n  reference: null\n  generated_by: null\n  generated_at: null\nreview:\n  approved_by: driftwatch-maintainers\n  approved_at: '2026-10-30T12:00:00Z'\n  notes: Hand-written seed test, reviewed with its Sigma rule.\nverification:\n  run_id: 9757449bfc438697\n  agent_id: agt_demo_lin01\n  verified_at: '2026-10-24T10:39:53.418230Z'\n",
+ "flow": [
+  {
+   "index": 0,
+   "action": "process.discovery",
+   "title": "Run an allow-listed discovery command",
+   "params": {
+    "command": "id"
+   },
+   "techniques": [
+    "T1033"
+   ],
+   "observables": [
+    "process.command_line"
+   ],
+   "cleanup": "Nothing to clean up: the command is read-only."
+  },
+  {
+   "index": 1,
+   "action": "process.discovery",
+   "title": "Run an allow-listed discovery command",
+   "params": {
+    "command": "uname_a"
+   },
+   "techniques": [
+    "T1082"
+   ],
+   "observables": [
+    "process.command_line"
+   ],
+   "cleanup": "Nothing to clean up: the command is read-only."
+  }
+ ],
+ "rules": [
+  {
+   "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+   "title": "Linux host and identity discovery commands",
+   "level": "low",
+   "techniques": [
+    "T1033",
+    "T1082"
+   ],
+   "logsource": {
+    "product": "linux",
+    "category": "process_creation"
+   },
+   "kql": "host.os.type:\"linux\" and event.category:\"process\" and event.type:\"start\" and (process.executable:*/id or (process.executable:*/uname and process.command_line:*\\ -a*) or (process.executable:*/getent and process.command_line:*sudo*))",
+   "path": "linux/system_discovery.yml"
+  }
+ ],
+ "hardening": [
+  "linux.auditd.running",
+  "linux.auditd.execve_rule"
+ ]
+}

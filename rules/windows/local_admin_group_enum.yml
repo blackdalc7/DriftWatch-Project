@@ -1,0 +1,25 @@
+title: Local administrators group enumeration with net.exe
+id: 5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02
+status: stable
+description: Detects net.exe or net1.exe listing the members of the local Administrators group.
+author: Driftwatch
+date: 2026-10-30
+tags:
+  - attack.discovery
+  - attack.t1069.001
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection_img:
+    Image|endswith:
+      - '\net.exe'
+      - '\net1.exe'
+  selection_cli:
+    CommandLine|contains|all:
+      - 'localgroup'
+      - 'administrators'
+  condition: all of selection_*
+falsepositives:
+  - Inventory scripts
+level: medium

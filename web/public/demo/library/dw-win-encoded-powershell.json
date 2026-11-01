@@ -1,0 +1,99 @@
+{
+ "id": "dw-win-encoded-powershell",
+ "name": "Encoded PowerShell command",
+ "description": "Starts PowerShell with -EncodedCommand. The payload only prints a marker, but the launch pattern is a staple of loaders.",
+ "version": 1,
+ "status": "verified",
+ "platforms": [
+  "windows"
+ ],
+ "severity": "high",
+ "attack": {
+  "tactic": "execution",
+  "techniques": [
+   "T1059.001",
+   "T1027"
+  ]
+ },
+ "steps": [
+  {
+   "action": "powershell.encoded_marker",
+   "params": {}
+  }
+ ],
+ "expected": {
+  "outcome": "detected",
+  "detections": [
+   "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+  ],
+  "window_seconds": 300
+ },
+ "hygiene_controls": [
+  "win.powershell.scriptblock_logging",
+  "win.asr.block_obfuscated_scripts"
+ ],
+ "provenance": {
+  "source": "manual",
+  "reference": null,
+  "generated_by": null,
+  "generated_at": null
+ },
+ "review": {
+  "approved_by": "driftwatch-maintainers",
+  "approved_at": "2026-10-30T12:00:00Z",
+  "notes": "Hand-written seed test, reviewed with its Sigma rule."
+ },
+ "verification": {
+  "run_id": "546045281e0c0e32",
+  "agent_id": "agt_demo_win01",
+  "verified_at": "2026-10-24T10:49:31.418230Z"
+ },
+ "emulated_techniques": [
+  "T1059.001",
+  "T1027"
+ ],
+ "dispatchable": true,
+ "results": {
+  "runs": 1,
+  "passed": 0
+ },
+ "yaml": "id: dw-win-encoded-powershell\nname: Encoded PowerShell command\ndescription: Starts PowerShell with -EncodedCommand. The payload only prints a marker, but the launch pattern is\n  a staple of loaders.\nversion: 1\nstatus: verified\nplatforms:\n- windows\nseverity: high\nattack:\n  tactic: execution\n  techniques:\n  - T1059.001\n  - T1027\nsteps:\n- action: powershell.encoded_marker\n  params: {}\nexpected:\n  outcome: detected\n  detections:\n  - 5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05\n  window_seconds: 300\nhygiene_controls:\n- win.powershell.scriptblock_logging\n- win.asr.block_obfuscated_scripts\nprovenance:\n  source: manual\n  reference: null\n  generated_by: null\n  generated_at: null\nreview:\n  approved_by: driftwatch-maintainers\n  approved_at: '2026-10-30T12:00:00Z'\n  notes: Hand-written seed test, reviewed with its Sigma rule.\nverification:\n  run_id: 546045281e0c0e32\n  agent_id: agt_demo_win01\n  verified_at: '2026-10-24T10:49:31.418230Z'\n",
+ "flow": [
+  {
+   "index": 0,
+   "action": "powershell.encoded_marker",
+   "title": "Run a fixed encoded PowerShell command",
+   "params": {},
+   "techniques": [
+    "T1059.001",
+    "T1027"
+   ],
+   "observables": [
+    "process.command_line",
+    "powershell.file.script_block_text"
+   ],
+   "cleanup": "Nothing to clean up: the command only writes to stdout."
+  }
+ ],
+ "rules": [
+  {
+   "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05",
+   "title": "PowerShell started with an encoded command",
+   "level": "high",
+   "techniques": [
+    "T1059.001",
+    "T1027"
+   ],
+   "logsource": {
+    "product": "windows",
+    "category": "process_creation"
+   },
+   "kql": "host.os.type:\"windows\" and event.category:\"process\" and event.type:\"start\" and ((process.executable:*\\\\powershell.exe or process.executable:*\\\\pwsh.exe) and (process.command_line:*\\ -EncodedCommand\\ * or process.command_line:*\\ /EncodedCommand\\ * or process.command_line:*\\ -enc\\ * or process.command_line:*\\ /enc\\ * or process.command_line:*\\ -ec\\ * or process.command_line:*\\ /ec\\ *))",
+   "path": "windows/powershell_encoded_command.yml"
+  }
+ ],
+ "hardening": [
+  "win.powershell.scriptblock_logging",
+  "win.asr.block_obfuscated_scripts"
+ ]
+}

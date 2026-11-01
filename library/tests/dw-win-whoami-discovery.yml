@@ -1,0 +1,23 @@
+id: dw-win-whoami-discovery
+name: System owner discovery with whoami /all
+description: Runs whoami /all, which attackers use right after access to learn the current user, groups and privileges.
+version: 1
+status: approved
+platforms: [windows]
+severity: medium
+attack:
+  tactic: discovery
+  techniques: [T1033]
+steps:
+  - action: process.discovery
+    params: {command: whoami_all}
+expected:
+  outcome: detected
+  detections: [5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01]
+  window_seconds: 300
+hygiene_controls: [win.sysmon.process_creation]
+provenance: {source: manual}
+review:
+  approved_by: driftwatch-maintainers
+  approved_at: "2026-10-30T12:00:00Z"
+  notes: Hand-written seed test, reviewed with its Sigma rule.

@@ -1,0 +1,179 @@
+[
+ {
+  "id": 15,
+  "ts": "2026-10-31T03:33:01.418230Z",
+  "actor": "blackdalc",
+  "action": "test.approved",
+  "details": {
+   "test_id": "dw-cisa-demo-01a-t1082"
+  },
+  "prev_hash": "d39bf4323644624bf55074d71338ffe7ac198f555d1fd60b9280fdd41cdd3cce",
+  "hash": "f5e48255bca6caa330e10805b5d542595d8a707d341b3a0c4cd0da45910b4815"
+ },
+ {
+  "id": 14,
+  "ts": "2026-10-24T11:01:33.418230Z",
+  "actor": "system",
+  "action": "test.verified",
+  "details": {
+   "test_id": "dw-lin-autostart-persistence",
+   "run_id": "2d1c5e6ddb530ba5"
+  },
+  "prev_hash": "ac48f569cb76f3c192614e0007d3705524e52c5d87707cf93fafb05ec18b8991",
+  "hash": "d39bf4323644624bf55074d71338ffe7ac198f555d1fd60b9280fdd41cdd3cce"
+ },
+ {
+  "id": 13,
+  "ts": "2026-10-24T11:00:32.418230Z",
+  "actor": "system",
+  "action": "test.verified",
+  "details": {
+   "test_id": "dw-win-whoami-discovery",
+   "run_id": "51e5755cedb29d2c"
+  },
+  "prev_hash": "4a115664b36f47b56ca81df03569c9509c5a1ec9b2cf9020c3d4f31f42de8da4",
+  "hash": "ac48f569cb76f3c192614e0007d3705524e52c5d87707cf93fafb05ec18b8991"
+ },
+ {
+  "id": 12,
+  "ts": "2026-10-24T10:55:53.418230Z",
+  "actor": "system",
+  "action": "test.verified",
+  "details": {
+   "test_id": "dw-win-schtask-persistence",
+   "run_id": "023576b7652f9ccd"
+  },
+  "prev_hash": "7ede394af5061932942ba17ed855f7b5b972848ff513c5954b35746e73df8a2a",
+  "hash": "4a115664b36f47b56ca81df03569c9509c5a1ec9b2cf9020c3d4f31f42de8da4"
+ },
+ {
+  "id": 11,
+  "ts": "2026-10-24T10:54:32.418230Z",
+  "actor": "system",
+  "action": "test.verified",
+  "details": {
+   "test_id": "dw-dns-sinkhole-beacon",
+   "run_id": "0515f2f23a495e9e"
+  },
+  "prev_hash": "96c17767dd576fa0ce9118b192c8f7571e6425a3d44cb477f0e5bd947ef28b16",
+  "hash": "7ede394af5061932942ba17ed855f7b5b972848ff513c5954b35746e73df8a2a"
+ },
+ {
+  "id": 10,
+  "ts": "2026-10-24T10:49:31.418230Z",
+  "actor": "system",
+  "action": "test.verified",
+  "details": {
+   "test_id": "dw-win-encoded-powershell",
+   "run_id": "546045281e0c0e32"
+  },
+  "prev_hash": "5159e041c22f54fef485f9fb48d8f18734419971db5b15dbeed50d52ecec53ad",
+  "hash": "96c17767dd576fa0ce9118b192c8f7571e6425a3d44cb477f0e5bd947ef28b16"
+ },
+ {
+  "id": 9,
+  "ts": "2026-10-24T10:44:09.418230Z",
+  "actor": "system",
+  "action": "test.verified",
+  "details": {
+   "test_id": "dw-win-run-key-persistence",
+   "run_id": "647c5ecae9c12ce6"
+  },
+  "prev_hash": "332817145ea6e1073904c93c873f4af2a0bcada58a8275b437eae7457c995854",
+  "hash": "5159e041c22f54fef485f9fb48d8f18734419971db5b15dbeed50d52ecec53ad"
+ },
+ {
+  "id": 8,
+  "ts": "2026-10-24T10:39:53.418230Z",
+  "actor": "system",
+  "action": "test.verified",
+  "details": {
+   "test_id": "dw-lin-host-discovery",
+   "run_id": "9757449bfc438697"
+  },
+  "prev_hash": "25bc136cb56c9f36ccd3d3c16feb009a31da071b08d3b13c8e3eee8a95a33657",
+  "hash": "332817145ea6e1073904c93c873f4af2a0bcada58a8275b437eae7457c995854"
+ },
+ {
+  "id": 7,
+  "ts": "2026-10-24T10:30:46.418230Z",
+  "actor": "system",
+  "action": "test.verified",
+  "details": {
+   "test_id": "dw-credential-file-canary",
+   "run_id": "0d2cf5d5146f6c0b"
+  },
+  "prev_hash": "7a7ee90590c76fa5b36ccda3f63f08436e6f6d45b297b04581e8f2b872377933",
+  "hash": "25bc136cb56c9f36ccd3d3c16feb009a31da071b08d3b13c8e3eee8a95a33657"
+ },
+ {
+  "id": 6,
+  "ts": "2026-10-24T10:27:48.418230Z",
+  "actor": "system",
+  "action": "test.verified",
+  "details": {
+   "test_id": "dw-win-eicar-quarantine",
+   "run_id": "b711fbfd663ce25d"
+  },
+  "prev_hash": "a3cbe008ae08a169b4ede5fe1ea9b07c748f4ef05cef6b2d53ea1614286fb183",
+  "hash": "7a7ee90590c76fa5b36ccda3f63f08436e6f6d45b297b04581e8f2b872377933"
+ },
+ {
+  "id": 5,
+  "ts": "2026-10-24T10:21:46.418230Z",
+  "actor": "system",
+  "action": "test.verified",
+  "details": {
+   "test_id": "dw-win-local-admin-enum",
+   "run_id": "88280dc9e46d8771"
+  },
+  "prev_hash": "f2e18482f2dd33a4d15b844a59df125d1667fc5012b8447eaf9c1520a890c346",
+  "hash": "a3cbe008ae08a169b4ede5fe1ea9b07c748f4ef05cef6b2d53ea1614286fb183"
+ },
+ {
+  "id": 4,
+  "ts": "2026-10-23T09:33:01.418230Z",
+  "actor": "blackdalc",
+  "action": "schedule.created",
+  "details": {
+   "id": "0fca839743f9",
+   "name": "Weekday office-hours sweep (Windows + Linux)"
+  },
+  "prev_hash": "4a01ad9e5c3bed25ee9aeb12ec2bcf8059a4a7d96976a5693ae46df7506229fc",
+  "hash": "f2e18482f2dd33a4d15b844a59df125d1667fc5012b8447eaf9c1520a890c346"
+ },
+ {
+  "id": 3,
+  "ts": "2026-10-23T05:33:01.418230Z",
+  "actor": "agent:agt_demo_win01",
+  "action": "agent.enrolled",
+  "details": {
+   "hostname": "lab-win01"
+  },
+  "prev_hash": "e9d43f13ea13fd13fd95a923f61fa5124322daff2f1ea4baf956b0158a6c749d",
+  "hash": "4a01ad9e5c3bed25ee9aeb12ec2bcf8059a4a7d96976a5693ae46df7506229fc"
+ },
+ {
+  "id": 2,
+  "ts": "2026-10-23T05:33:01.418230Z",
+  "actor": "agent:agt_demo_lin01",
+  "action": "agent.enrolled",
+  "details": {
+   "hostname": "lab-lin01"
+  },
+  "prev_hash": "706e4d1d978601c15b54c198815c7b7c91e5960ffa9086539d3e028efdd0910d",
+  "hash": "e9d43f13ea13fd13fd95a923f61fa5124322daff2f1ea4baf956b0158a6c749d"
+ },
+ {
+  "id": 1,
+  "ts": "2026-10-23T05:21:01.418230Z",
+  "actor": "blackdalc",
+  "action": "token.created",
+  "details": {
+   "label": "lab-vms",
+   "uses": 2
+  },
+  "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "hash": "706e4d1d978601c15b54c198815c7b7c91e5960ffa9086539d3e028efdd0910d"
+ }
+]

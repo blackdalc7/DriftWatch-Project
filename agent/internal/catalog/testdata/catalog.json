@@ -1,0 +1,280 @@
+[
+  {
+    "id": "file.eicar_drop",
+    "title": "Drop the EICAR test file",
+    "description": "Writes the industry-standard EICAR antivirus test string to the agent workspace as eicar-DW-<run>.com, waits, then checks whether the file was quarantined. The string is inert.",
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "techniques": [
+      "T1105"
+    ],
+    "observables": [
+      "file.path"
+    ],
+    "cleanup": "Deletes the file if it still exists.",
+    "params": [
+      {
+        "name": "wait_seconds",
+        "kind": "int",
+        "description": "Seconds to wait for antivirus before checking the file",
+        "required": false,
+        "choices": [],
+        "minimum": 1,
+        "maximum": 60,
+        "default": 10
+      }
+    ],
+    "technique_by_choice": {},
+    "choice_platform": {},
+    "schedulable_as_test": true
+  },
+  {
+    "id": "process.discovery",
+    "title": "Run an allow-listed discovery command",
+    "description": "Runs one fixed, read-only discovery command chosen from an enum, with the run marker appended as a shell comment so the command line is attributable. No user-supplied text reaches the shell.",
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "techniques": [
+      "T1016",
+      "T1033",
+      "T1057",
+      "T1069.001",
+      "T1082"
+    ],
+    "observables": [
+      "process.command_line"
+    ],
+    "cleanup": "Nothing to clean up: the command is read-only.",
+    "params": [
+      {
+        "name": "command",
+        "kind": "enum",
+        "description": "Which discovery command to run",
+        "required": true,
+        "choices": [
+          "whoami_all",
+          "systeminfo",
+          "ipconfig_all",
+          "net_localgroup_admins",
+          "tasklist",
+          "id",
+          "uname_a",
+          "ip_addr",
+          "getent_group_sudo",
+          "ps_aux"
+        ],
+        "minimum": null,
+        "maximum": null,
+        "default": null
+      }
+    ],
+    "technique_by_choice": {
+      "whoami_all": "T1033",
+      "systeminfo": "T1082",
+      "ipconfig_all": "T1016",
+      "net_localgroup_admins": "T1069.001",
+      "tasklist": "T1057",
+      "id": "T1033",
+      "uname_a": "T1082",
+      "ip_addr": "T1016",
+      "getent_group_sudo": "T1069.001",
+      "ps_aux": "T1057"
+    },
+    "choice_platform": {
+      "whoami_all": "windows",
+      "systeminfo": "windows",
+      "ipconfig_all": "windows",
+      "net_localgroup_admins": "windows",
+      "tasklist": "windows",
+      "id": "linux",
+      "uname_a": "linux",
+      "ip_addr": "linux",
+      "getent_group_sudo": "linux",
+      "ps_aux": "linux"
+    },
+    "schedulable_as_test": true
+  },
+  {
+    "id": "registry.run_key_canary",
+    "title": "Write a Run key canary value",
+    "description": "Creates HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\DriftwatchCanary-DW-<run> pointing at a non-existent .txt path in the workspace, so nothing can ever execute at logon, then removes it.",
+    "platforms": [
+      "windows"
+    ],
+    "techniques": [
+      "T1547.001"
+    ],
+    "observables": [
+      "registry.path",
+      "registry.value"
+    ],
+    "cleanup": "Deletes the registry value immediately after the hold period.",
+    "params": [
+      {
+        "name": "hold_seconds",
+        "kind": "int",
+        "description": "How long the value exists before cleanup",
+        "required": false,
+        "choices": [],
+        "minimum": 1,
+        "maximum": 120,
+        "default": 15
+      }
+    ],
+    "technique_by_choice": {},
+    "choice_platform": {},
+    "schedulable_as_test": true
+  },
+  {
+    "id": "scheduled_task.canary",
+    "title": "Register a disabled scheduled task canary",
+    "description": "Registers a disabled scheduled task named DriftwatchCanary-DW-<run> whose only action is 'cmd.exe /c exit 0', set to a date in 2099, then deletes it.",
+    "platforms": [
+      "windows"
+    ],
+    "techniques": [
+      "T1053.005"
+    ],
+    "observables": [
+      "process.command_line"
+    ],
+    "cleanup": "Deletes the scheduled task.",
+    "params": [
+      {
+        "name": "hold_seconds",
+        "kind": "int",
+        "description": "How long the task exists before cleanup",
+        "required": false,
+        "choices": [],
+        "minimum": 1,
+        "maximum": 120,
+        "default": 15
+      }
+    ],
+    "technique_by_choice": {},
+    "choice_platform": {},
+    "schedulable_as_test": true
+  },
+  {
+    "id": "persistence.autostart_canary",
+    "title": "Write an XDG autostart canary",
+    "description": "Writes ~/.config/autostart/driftwatch-DW-<run>.desktop with Hidden=true and Exec=/bin/true, then removes it.",
+    "platforms": [
+      "linux"
+    ],
+    "techniques": [
+      "T1547.013"
+    ],
+    "observables": [
+      "file.path"
+    ],
+    "cleanup": "Deletes the .desktop file.",
+    "params": [
+      {
+        "name": "hold_seconds",
+        "kind": "int",
+        "description": "How long the file exists before cleanup",
+        "required": false,
+        "choices": [],
+        "minimum": 1,
+        "maximum": 120,
+        "default": 15
+      }
+    ],
+    "technique_by_choice": {},
+    "choice_platform": {},
+    "schedulable_as_test": true
+  },
+  {
+    "id": "dns.sinkhole_query",
+    "title": "Resolve a reserved .invalid domain",
+    "description": "Looks up dw-<run>.c2-canary.invalid. The .invalid TLD is reserved by RFC 2606 and never resolves, so no traffic leaves the resolver, but the query is logged by DNS telemetry.",
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "techniques": [
+      "T1071.004"
+    ],
+    "observables": [
+      "dns.question.name"
+    ],
+    "cleanup": "Nothing to clean up.",
+    "params": [
+      {
+        "name": "count",
+        "kind": "int",
+        "description": "Number of lookups (emulates beaconing)",
+        "required": false,
+        "choices": [],
+        "minimum": 1,
+        "maximum": 10,
+        "default": 3
+      }
+    ],
+    "technique_by_choice": {},
+    "choice_platform": {},
+    "schedulable_as_test": true
+  },
+  {
+    "id": "file.credential_canary_read",
+    "title": "Read a planted fake credential file",
+    "description": "Creates workspace/canary/passwords-DW-<run>.txt containing obviously fake credentials, reads it back the way a credential harvester would, then deletes it. No real secret store is touched.",
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "techniques": [
+      "T1552.001"
+    ],
+    "observables": [
+      "file.path"
+    ],
+    "cleanup": "Deletes the canary file and its folder.",
+    "params": [],
+    "technique_by_choice": {},
+    "choice_platform": {},
+    "schedulable_as_test": true
+  },
+  {
+    "id": "powershell.encoded_marker",
+    "title": "Run a fixed encoded PowerShell command",
+    "description": "Runs powershell.exe -NoProfile -EncodedCommand with the Base64 of a fixed statement that only prints 'Driftwatch DW-<run>'. Emulates the observable shape of T1059.001 with T1027 encoding; the decoded content is visible in script block logging.",
+    "platforms": [
+      "windows"
+    ],
+    "techniques": [
+      "T1059.001",
+      "T1027"
+    ],
+    "observables": [
+      "process.command_line",
+      "powershell.file.script_block_text"
+    ],
+    "cleanup": "Nothing to clean up: the command only writes to stdout.",
+    "params": [],
+    "technique_by_choice": {},
+    "choice_platform": {},
+    "schedulable_as_test": true
+  },
+  {
+    "id": "hygiene.collect",
+    "title": "Collect the baseline hygiene report",
+    "description": "Runs the baseline script compiled into the agent (PowerShell on Windows, Bash on Linux) and returns its JSON report. Read-only.",
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "techniques": [],
+    "observables": [],
+    "cleanup": "Nothing to clean up: the script only reads configuration.",
+    "params": [],
+    "technique_by_choice": {},
+    "choice_platform": {},
+    "schedulable_as_test": false
+  }
+]

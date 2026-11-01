@@ -1,0 +1,58 @@
+[
+ {
+  "id": "agt_demo_lin01",
+  "hostname": "lab-lin01",
+  "platform": "linux",
+  "os_version": "Debian 12",
+  "agent_version": "1.0.0",
+  "tags": [
+   "lab",
+   "demo"
+  ],
+  "cert_expires_at": "2026-11-30T05:33:01.418230Z",
+  "enrolled_at": "2026-10-23T05:33:01.418230Z",
+  "last_seen": "2026-10-31T05:33:01.418230Z",
+  "metrics": {
+   "cpu_percent": 3.6,
+   "memory_percent": 48.8,
+   "disk_percent": 53.1,
+   "uptime_seconds": 259200,
+   "ip_addresses": [
+    "10.24.0.12"
+   ],
+   "kernel_version": "6.1.0-26-amd64"
+  },
+  "status": "active",
+  "cert_sha256": "04766fe92b7858cff797d138068b9d8a196fe7838cd0f1ec0022dd0a9ab98682",
+  "connection": "online",
+  "lab_scope": "lab"
+ },
+ {
+  "id": "agt_demo_win01",
+  "hostname": "lab-win01",
+  "platform": "windows",
+  "os_version": "Windows 11 23H2",
+  "agent_version": "1.0.0",
+  "tags": [
+   "lab",
+   "demo"
+  ],
+  "cert_expires_at": "2026-11-30T05:33:01.418230Z",
+  "enrolled_at": "2026-10-23T05:33:01.418230Z",
+  "last_seen": "2026-10-31T05:33:01.418230Z",
+  "metrics": {
+   "cpu_percent": 2.9,
+   "memory_percent": 42.3,
+   "disk_percent": 53.8,
+   "uptime_seconds": 259200,
+   "ip_addresses": [
+    "10.24.0.11"
+   ],
+   "kernel_version": "10.0.22631.4317 Build 22631.4317"
+  },
+  "status": "active",
+  "cert_sha256": "e451f16c6b805c4e75da52e7c33d26b95afd7536502f7befff83a853097db8b3",
+  "connection": "online",
+  "lab_scope": "lab"
+ }
+]

@@ -1,0 +1,26 @@
+title: Linux host and identity discovery commands
+id: 5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09
+status: stable
+description: Detects id, uname -a and getent group sudo, typically run back to back after access to a Linux host.
+author: Driftwatch
+date: 2026-10-30
+tags:
+  - attack.discovery
+  - attack.t1033
+  - attack.t1082
+logsource:
+  product: linux
+  category: process_creation
+detection:
+  selection_id:
+    Image|endswith: '/id'
+  selection_uname:
+    Image|endswith: '/uname'
+    CommandLine|contains: ' -a'
+  selection_sudo:
+    Image|endswith: '/getent'
+    CommandLine|contains: 'sudo'
+  condition: 1 of selection_*
+falsepositives:
+  - Login scripts that print the kernel version
+level: low

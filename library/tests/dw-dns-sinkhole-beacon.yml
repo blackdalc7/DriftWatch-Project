@@ -1,0 +1,22 @@
+id: dw-dns-sinkhole-beacon
+name: DNS beaconing to a non-resolving domain
+description: Performs repeated lookups of a reserved .invalid name, emulating DNS command-and-control check-ins without any traffic leaving the resolver.
+version: 1
+status: approved
+platforms: [windows, linux]
+severity: medium
+attack:
+  tactic: command-and-control
+  techniques: [T1071.004]
+steps:
+  - action: dns.sinkhole_query
+    params: {count: 3}
+expected:
+  outcome: detected
+  detections: [5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08]
+hygiene_controls: [win.sysmon.dns]
+provenance: {source: manual}
+review:
+  approved_by: driftwatch-maintainers
+  approved_at: "2026-10-30T12:00:00Z"
+  notes: Hand-written seed test, reviewed with its Sigma rule.

@@ -1,0 +1,100 @@
+{
+ "defender": {
+  "current_score": 31.0,
+  "max_score": 54.0,
+  "percent": 57.4,
+  "created": "2026-10-31T05:33:01.810619Z",
+  "controls": [
+   {
+    "name": "scid_asr_lsass",
+    "category": "Device",
+    "percent": 0.0,
+    "status": "Not implemented",
+    "description": "Block credential stealing from the Windows local security authority subsystem (LSASS) with Attack Surface Reduction"
+   },
+   {
+    "name": "scid_asr_obfuscated",
+    "category": "Device",
+    "percent": 0.0,
+    "status": "Not implemented",
+    "description": "Block execution of potentially obfuscated scripts (Attack Surface Reduction)"
+   },
+   {
+    "name": "scid_av_realtime",
+    "category": "Device",
+    "percent": 100.0,
+    "status": "Implemented",
+    "description": "Turn on real-time protection"
+   },
+   {
+    "name": "scid_av_cloud",
+    "category": "Device",
+    "percent": 100.0,
+    "status": "Implemented",
+    "description": "Turn on cloud-delivered protection"
+   },
+   {
+    "name": "scid_tamper",
+    "category": "Device",
+    "percent": 100.0,
+    "status": "Implemented",
+    "description": "Turn on tamper protection"
+   },
+   {
+    "name": "scid_mfa_admins",
+    "category": "Identity",
+    "percent": 50.0,
+    "status": "Partially implemented",
+    "description": "Require MFA for administrative roles"
+   }
+  ]
+ },
+ "crowdstrike": {
+  "lab-lin01": {
+   "overall": 79,
+   "sensor_config": 88,
+   "os": 70
+  },
+  "lab-win01": {
+   "overall": 85,
+   "sensor_config": 92,
+   "os": 78
+  }
+ },
+ "findings": [
+  {
+   "type": "posture_disagreement",
+   "vendor": "crowdstrike",
+   "host": "lab-win01",
+   "control": "win.asr.block_obfuscated_scripts",
+   "driftwatch": "fail",
+   "edr": {
+    "signals": [
+     "Attack Surface Reduction"
+    ],
+    "overall": 85
+   },
+   "summary": "Falcon ZTA signals Attack Surface Reduction meet criteria on lab-win01, but Driftwatch sees win.asr.block_obfuscated_scripts failing."
+  },
+  {
+   "type": "test_failure_context",
+   "host": "lab-lin01",
+   "test": "dw-credential-file-canary",
+   "outcome": "missed",
+   "edr_context": [],
+   "summary": "dw-credential-file-canary was missed on lab-lin01; the EDR reports nothing related, so this gap is invisible to posture scores."
+  },
+  {
+   "type": "test_failure_context",
+   "host": "lab-win01",
+   "test": "dw-win-encoded-powershell",
+   "outcome": "missed",
+   "edr_context": [
+    "Secure Score: Block credential stealing from the Windows local security authority subsystem (LSASS) with Attack Surface Reduction at 0%"
+   ],
+   "summary": "dw-win-encoded-powershell was missed on lab-win01; EDR also flags: Secure Score: Block credential stealing from the Windows local security authority subsystem (LSASS) with Attack Surface Reduction at 0%"
+  }
+ ],
+ "configured": true,
+ "errors": []
+}

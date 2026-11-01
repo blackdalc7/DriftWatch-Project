@@ -1,0 +1,1934 @@
+[
+ {
+  "id": 42,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-30T17:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-30T17:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 40,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-30T13:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-30T13:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 38,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-30T09:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-30T09:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 36,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-29T17:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-29T17:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 34,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-29T13:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-29T13:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 32,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-29T09:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-29T09:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 30,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-28T17:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-28T17:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 28,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-28T13:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-28T13:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 26,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-28T09:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-28T09:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 24,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-27T17:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-27T17:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 22,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-27T13:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-27T13:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 20,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-27T09:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-27T09:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 18,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-26T17:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-26T17:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 16,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-26T13:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-26T13:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 14,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-26T09:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-26T09:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 12,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-25T17:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-25T17:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 10,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-25T13:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-25T13:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 8,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-25T09:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-25T09:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 6,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-24T17:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-24T17:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 4,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-24T13:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-24T13:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ },
+ {
+  "id": 2,
+  "agent_id": "agt_demo_lin01",
+  "collected_at": "2026-10-24T09:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "linux",
+   "collected_at": "2026-10-24T09:00:00.000000Z",
+   "checks": [
+    {
+     "id": "linux.auditd.running",
+     "title": "auditd service",
+     "severity": "high",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active"
+    },
+    {
+     "id": "linux.auditd.execve_rule",
+     "title": "auditd execve rule",
+     "severity": "high",
+     "status": "pass",
+     "expected": "execve rule",
+     "actual": "loaded"
+    },
+    {
+     "id": "linux.auditd.config_watch",
+     "title": "auditd watches its own configuration",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "watch on /etc/audit",
+     "actual": "present"
+    },
+    {
+     "id": "linux.ssh.root_login_disabled",
+     "title": "SSH root login (PermitRootLogin)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.ssh.password_auth_disabled",
+     "title": "SSH password authentication (PasswordAuthentication)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "no",
+     "actual": "no"
+    },
+    {
+     "id": "linux.firewall.active",
+     "title": "Host firewall",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "active",
+     "actual": "active (nftables)"
+    },
+    {
+     "id": "linux.mac.enforcing",
+     "title": "SELinux enforcing or AppArmor enabled",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enforcing",
+     "actual": "apparmor enabled"
+    },
+    {
+     "id": "linux.kernel.aslr",
+     "title": "Full ASLR (randomize_va_space)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "2",
+     "actual": "2"
+    },
+    {
+     "id": "linux.kernel.ptrace_restricted",
+     "title": "ptrace restricted (yama ptrace_scope)",
+     "severity": "medium",
+     "status": "pass",
+     "expected": ">= 1",
+     "actual": "1"
+    },
+    {
+     "id": "linux.time.synchronized",
+     "title": "System clock NTP-synchronized",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "yes",
+     "actual": "yes"
+    }
+   ]
+  }
+ }
+]

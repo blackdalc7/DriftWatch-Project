@@ -1,0 +1,35 @@
+[
+ {
+  "id": "0fca839743f9",
+  "name": "Weekday office-hours sweep (Windows + Linux)",
+  "test_ids": [
+   "dw-credential-file-canary",
+   "dw-dns-sinkhole-beacon",
+   "dw-lin-autostart-persistence",
+   "dw-lin-host-discovery",
+   "dw-win-eicar-quarantine",
+   "dw-win-encoded-powershell",
+   "dw-win-local-admin-enum",
+   "dw-win-run-key-persistence",
+   "dw-win-schtask-persistence",
+   "dw-win-whoami-discovery"
+  ],
+  "target_tags": [
+   "lab"
+  ],
+  "days": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "window_start": "09:00",
+  "window_end": "17:00",
+  "timezone": "UTC",
+  "randomize": true,
+  "enabled": true,
+  "created_at": "2026-10-23T09:33:01.418230Z",
+  "last_planned_date": null
+ }
+]

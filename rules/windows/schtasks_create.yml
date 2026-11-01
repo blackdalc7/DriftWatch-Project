@@ -1,0 +1,21 @@
+title: Scheduled task created with schtasks.exe
+id: 5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04
+status: stable
+description: Detects schtasks.exe creating a task from the command line.
+author: Driftwatch
+date: 2026-10-30
+tags:
+  - attack.persistence
+  - attack.execution
+  - attack.t1053.005
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    Image|endswith: '\schtasks.exe'
+    CommandLine|contains|windash: '-create'
+  condition: selection
+falsepositives:
+  - Software deployment tools
+level: medium

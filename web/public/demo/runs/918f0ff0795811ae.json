@@ -1,0 +1,52 @@
+{
+ "id": "918f0ff0795811ae",
+ "test_id": "dw-lin-host-discovery",
+ "test_version": 1,
+ "agent_id": "agt_demo_lin01",
+ "source": "demo",
+ "schedule_id": null,
+ "status": "evaluated",
+ "created_at": "2026-10-26T10:12:04.418230Z",
+ "not_before": "2026-10-26T10:12:04.418230Z",
+ "dispatched_at": "2026-10-26T10:12:04.418230Z",
+ "expires_at": null,
+ "started_at": "2026-10-26T10:12:04.418230Z",
+ "finished_at": "2026-10-26T10:12:24.418230Z",
+ "step_results": [
+  {
+   "index": 0,
+   "action": "process.discovery",
+   "status": "executed",
+   "cleanup": "ok"
+  },
+  {
+   "index": 1,
+   "action": "process.discovery",
+   "status": "executed",
+   "cleanup": "ok"
+  }
+ ],
+ "agent_log": "demo run (synthetic)",
+ "outcome": "detected",
+ "passed": true,
+ "evaluation": {
+  "outcome": "detected",
+  "passed": true,
+  "telemetry_seen": true,
+  "telemetry_hits": 5,
+  "detection_quality": "technique",
+  "alerts": [
+   {
+    "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+    "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+    "timestamp": "2026-10-26T10:12:44.418230Z"
+   }
+  ],
+  "expected_detections": [
+   "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09"
+  ],
+  "missing_detections": [],
+  "notes": []
+ },
+ "evaluated_at": "2026-10-26T10:15:04.418230Z"
+}

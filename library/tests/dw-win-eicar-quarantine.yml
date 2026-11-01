@@ -1,0 +1,22 @@
+id: dw-win-eicar-quarantine
+name: Antivirus quarantines a dropped test file
+description: Writes the EICAR test file to disk. Real-time protection should quarantine it within seconds and log event 1116.
+version: 1
+status: approved
+platforms: [windows]
+severity: high
+attack:
+  tactic: command-and-control
+  techniques: [T1105]
+steps:
+  - action: file.eicar_drop
+    params: {wait_seconds: 10}
+expected:
+  outcome: prevented
+  detections: [5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06]
+hygiene_controls: [win.defender.realtime_protection, win.defender.cloud_protection]
+provenance: {source: manual}
+review:
+  approved_by: driftwatch-maintainers
+  approved_at: "2026-10-30T12:00:00Z"
+  notes: Hand-written seed test, reviewed with its Sigma rule.

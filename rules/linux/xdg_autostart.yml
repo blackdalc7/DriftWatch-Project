@@ -1,0 +1,22 @@
+title: XDG autostart entry created
+id: 5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10
+status: stable
+description: Detects a .desktop file written to a user or system autostart folder.
+author: Driftwatch
+date: 2026-10-30
+tags:
+  - attack.persistence
+  - attack.t1547.013
+logsource:
+  product: linux
+  category: file_event
+detection:
+  selection:
+    TargetFilename|contains:
+      - '/.config/autostart/'
+      - '/etc/xdg/autostart/'
+    TargetFilename|endswith: '.desktop'
+  condition: selection
+falsepositives:
+  - Desktop applications enabling start at login
+level: medium

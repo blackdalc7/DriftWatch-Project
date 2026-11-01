@@ -1,0 +1,22 @@
+id: dw-win-local-admin-enum
+name: Local administrators group enumeration
+description: Lists members of the local Administrators group with net.exe to find privileged accounts.
+version: 1
+status: approved
+platforms: [windows]
+severity: medium
+attack:
+  tactic: discovery
+  techniques: [T1069.001]
+steps:
+  - action: process.discovery
+    params: {command: net_localgroup_admins}
+expected:
+  outcome: detected
+  detections: [5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02]
+hygiene_controls: [win.sysmon.process_creation]
+provenance: {source: manual}
+review:
+  approved_by: driftwatch-maintainers
+  approved_at: "2026-10-30T12:00:00Z"
+  notes: Hand-written seed test, reviewed with its Sigma rule.

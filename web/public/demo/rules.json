@@ -1,0 +1,142 @@
+[
+ {
+  "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+  "title": "Access to a file that looks like a password store",
+  "level": "medium",
+  "techniques": [
+   "T1552.001"
+  ],
+  "logsource": {
+   "category": "file_access"
+  },
+  "kql": "event.category:\"file\" and event.type:\"access\" and (file.path:*passwords* and file.path:*.txt)",
+  "path": "common/credential_file_access.yml"
+ },
+ {
+  "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+  "title": "DNS query for a reserved, non-resolving TLD",
+  "level": "low",
+  "techniques": [
+   "T1071.004"
+  ],
+  "logsource": {
+   "category": "dns_query"
+  },
+  "kql": "event.category:\"network\" and event.type:\"protocol\" and (dns.question.name:*.invalid or dns.question.name:*.test or dns.question.name:*.example)",
+  "path": "common/dns_reserved_tld.yml"
+ },
+ {
+  "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+  "title": "Linux host and identity discovery commands",
+  "level": "low",
+  "techniques": [
+   "T1033",
+   "T1082"
+  ],
+  "logsource": {
+   "product": "linux",
+   "category": "process_creation"
+  },
+  "kql": "host.os.type:\"linux\" and event.category:\"process\" and event.type:\"start\" and (process.executable:*/id or (process.executable:*/uname and process.command_line:*\\ -a*) or (process.executable:*/getent and process.command_line:*sudo*))",
+  "path": "linux/system_discovery.yml"
+ },
+ {
+  "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10",
+  "title": "XDG autostart entry created",
+  "level": "medium",
+  "techniques": [
+   "T1547.013"
+  ],
+  "logsource": {
+   "product": "linux",
+   "category": "file_event"
+  },
+  "kql": "host.os.type:\"linux\" and event.category:\"file\" and event.type:\"creation\" and ((file.path:*/.config/autostart/* or file.path:*/etc/xdg/autostart/*) and file.path:*.desktop)",
+  "path": "linux/xdg_autostart.yml"
+ },
+ {
+  "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+  "title": "Microsoft Defender detected or quarantined malware",
+  "level": "high",
+  "techniques": [
+   "T1105"
+  ],
+  "logsource": {
+   "product": "windows",
+   "service": "windefend"
+  },
+  "kql": "host.os.type:\"windows\" and winlog.channel:\"Microsoft-Windows-Windows Defender/Operational\" and (event.code:\"1116\" or event.code:\"1117\")",
+  "path": "windows/defender_malware_detected.yml"
+ },
+ {
+  "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+  "title": "Local administrators group enumeration with net.exe",
+  "level": "medium",
+  "techniques": [
+   "T1069.001"
+  ],
+  "logsource": {
+   "product": "windows",
+   "category": "process_creation"
+  },
+  "kql": "host.os.type:\"windows\" and event.category:\"process\" and event.type:\"start\" and ((process.executable:*\\\\net.exe or process.executable:*\\\\net1.exe) and (process.command_line:*localgroup* and process.command_line:*administrators*))",
+  "path": "windows/local_admin_group_enum.yml"
+ },
+ {
+  "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05",
+  "title": "PowerShell started with an encoded command",
+  "level": "high",
+  "techniques": [
+   "T1059.001",
+   "T1027"
+  ],
+  "logsource": {
+   "product": "windows",
+   "category": "process_creation"
+  },
+  "kql": "host.os.type:\"windows\" and event.category:\"process\" and event.type:\"start\" and ((process.executable:*\\\\powershell.exe or process.executable:*\\\\pwsh.exe) and (process.command_line:*\\ -EncodedCommand\\ * or process.command_line:*\\ /EncodedCommand\\ * or process.command_line:*\\ -enc\\ * or process.command_line:*\\ /enc\\ * or process.command_line:*\\ -ec\\ * or process.command_line:*\\ /ec\\ *))",
+  "path": "windows/powershell_encoded_command.yml"
+ },
+ {
+  "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+  "title": "New value under a user Run key",
+  "level": "medium",
+  "techniques": [
+   "T1547.001"
+  ],
+  "logsource": {
+   "product": "windows",
+   "category": "registry_set"
+  },
+  "kql": "host.os.type:\"windows\" and event.category:\"registry\" and (registry.path:*\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run\\\\* and not (registry.data.strings:*\\\\Microsoft\\\\OneDrive\\\\OneDrive.exe* and registry.data.strings:*/background*))",
+  "path": "windows/run_key_persistence.yml"
+ },
+ {
+  "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+  "title": "Scheduled task created with schtasks.exe",
+  "level": "medium",
+  "techniques": [
+   "T1053.005"
+  ],
+  "logsource": {
+   "product": "windows",
+   "category": "process_creation"
+  },
+  "kql": "host.os.type:\"windows\" and event.category:\"process\" and event.type:\"start\" and (process.executable:*\\\\schtasks.exe and (process.command_line:*-create* or process.command_line:*/create*))",
+  "path": "windows/schtasks_create.yml"
+ },
+ {
+  "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+  "title": "Whoami /all execution",
+  "level": "medium",
+  "techniques": [
+   "T1033"
+  ],
+  "logsource": {
+   "product": "windows",
+   "category": "process_creation"
+  },
+  "kql": "host.os.type:\"windows\" and event.category:\"process\" and event.type:\"start\" and (process.executable:*\\\\whoami.exe and process.command_line:*/all*)",
+  "path": "windows/whoami_all.yml"
+ }
+]

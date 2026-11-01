@@ -1,0 +1,96 @@
+{
+ "id": "dw-win-schtask-persistence",
+ "name": "Scheduled task persistence canary",
+ "description": "Registers a disabled scheduled task from the command line, as many intrusion sets do for persistence.",
+ "version": 1,
+ "status": "verified",
+ "platforms": [
+  "windows"
+ ],
+ "severity": "high",
+ "attack": {
+  "tactic": "persistence",
+  "techniques": [
+   "T1053.005"
+  ]
+ },
+ "steps": [
+  {
+   "action": "scheduled_task.canary",
+   "params": {
+    "hold_seconds": 15
+   }
+  }
+ ],
+ "expected": {
+  "outcome": "detected",
+  "detections": [
+   "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04"
+  ],
+  "window_seconds": 300
+ },
+ "hygiene_controls": [
+  "win.sysmon.process_creation"
+ ],
+ "provenance": {
+  "source": "manual",
+  "reference": null,
+  "generated_by": null,
+  "generated_at": null
+ },
+ "review": {
+  "approved_by": "driftwatch-maintainers",
+  "approved_at": "2026-10-30T12:00:00Z",
+  "notes": "Hand-written seed test, reviewed with its Sigma rule."
+ },
+ "verification": {
+  "run_id": "023576b7652f9ccd",
+  "agent_id": "agt_demo_win01",
+  "verified_at": "2026-10-24T10:55:53.418230Z"
+ },
+ "emulated_techniques": [
+  "T1053.005"
+ ],
+ "dispatchable": true,
+ "results": {
+  "runs": 1,
+  "passed": 1
+ },
+ "yaml": "id: dw-win-schtask-persistence\nname: Scheduled task persistence canary\ndescription: Registers a disabled scheduled task from the command line, as many intrusion sets do for persistence.\nversion: 1\nstatus: verified\nplatforms:\n- windows\nseverity: high\nattack:\n  tactic: persistence\n  techniques:\n  - T1053.005\nsteps:\n- action: scheduled_task.canary\n  params:\n    hold_seconds: 15\nexpected:\n  outcome: detected\n  detections:\n  - 5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04\n  window_seconds: 300\nhygiene_controls:\n- win.sysmon.process_creation\nprovenance:\n  source: manual\n  reference: null\n  generated_by: null\n  generated_at: null\nreview:\n  approved_by: driftwatch-maintainers\n  approved_at: '2026-10-30T12:00:00Z'\n  notes: Hand-written seed test, reviewed with its Sigma rule.\nverification:\n  run_id: 023576b7652f9ccd\n  agent_id: agt_demo_win01\n  verified_at: '2026-10-24T10:55:53.418230Z'\n",
+ "flow": [
+  {
+   "index": 0,
+   "action": "scheduled_task.canary",
+   "title": "Register a disabled scheduled task canary",
+   "params": {
+    "hold_seconds": 15
+   },
+   "techniques": [
+    "T1053.005"
+   ],
+   "observables": [
+    "process.command_line"
+   ],
+   "cleanup": "Deletes the scheduled task."
+  }
+ ],
+ "rules": [
+  {
+   "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+   "title": "Scheduled task created with schtasks.exe",
+   "level": "medium",
+   "techniques": [
+    "T1053.005"
+   ],
+   "logsource": {
+    "product": "windows",
+    "category": "process_creation"
+   },
+   "kql": "host.os.type:\"windows\" and event.category:\"process\" and event.type:\"start\" and (process.executable:*\\\\schtasks.exe and (process.command_line:*-create* or process.command_line:*/create*))",
+   "path": "windows/schtasks_create.yml"
+  }
+ ],
+ "hardening": [
+  "win.sysmon.process_creation"
+ ]
+}

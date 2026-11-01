@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import "@portfolio/aegis-ui/theme.css";
+
+/* Driftwatch "Midnight Lab": carbon weave, CRT amber/cyan, 1px brutalist frames.
+ * --dw-tint is the fleet's drift colour (terminal green -> CRT amber). The drift scrubber drives it,
+ * so the whole console warms up as you scrub towards the moment a baseline broke. */
+:root { --dw-tint: #39ff88; }
+
+body {
+  background-color: var(--ae-bg);
+  background-image:
+    radial-gradient(1200px 600px at 85% -10%, color-mix(in srgb, var(--dw-tint) 7%, transparent), transparent 60%),
+    repeating-linear-gradient(45deg, rgb(255 255 255 / 0.018) 0 2px, transparent 2px 6px),
+    repeating-linear-gradient(-45deg, rgb(0 0 0 / 0.35) 0 2px, transparent 2px 6px);
+  color: var(--ae-ink);
+  font-family: var(--font-sans);
+  transition: background-image 300ms;
+}
+
+.dw-tint { color: var(--dw-tint); }
+.dw-tint-border { border-color: color-mix(in srgb, var(--dw-tint) 55%, transparent); }
+.dw-tint-bg { background: color-mix(in srgb, var(--dw-tint) 10%, transparent); }
+.dw-rail-link[aria-current="page"] { color: var(--dw-tint); border-color: var(--dw-tint); background: color-mix(in srgb, var(--dw-tint) 8%, transparent); }
+
+/* Native range input restyled as a brutalist scrubber. */
+.dw-scrubber { appearance: none; width: 100%; height: 28px; background: transparent; cursor: ew-resize; }
+.dw-scrubber:focus-visible { outline: 1px solid var(--dw-tint); outline-offset: 4px; }
+.dw-scrubber::-webkit-slider-runnable-track { height: 2px; background: var(--ae-line-bright); }
+.dw-scrubber::-moz-range-track { height: 2px; background: var(--ae-line-bright); }
+.dw-scrubber::-webkit-slider-thumb {
+  appearance: none; width: 14px; height: 28px; margin-top: -13px; background: var(--ae-bg);
+  border: 1px solid var(--dw-tint); box-shadow: 0 0 18px -4px var(--dw-tint);
+}
+.dw-scrubber::-moz-range-thumb { width: 14px; height: 28px; background: var(--ae-bg); border: 1px solid var(--dw-tint); border-radius: 0; }
+
+/* React Flow on the obsidian theme. */
+.react-flow { --xy-background-color: transparent; --xy-edge-stroke: var(--ae-line-bright); --xy-minimap-background-color: var(--ae-panel-solid); }
+.react-flow__attribution { display: none; }
+.react-flow__controls button { background: var(--ae-panel-solid); border-color: var(--ae-line); color: var(--ae-muted); fill: var(--ae-muted); }
+.react-flow__node.dw-drop-target > div { box-shadow: 0 0 0 1px var(--ae-crimson), 0 0 32px -6px var(--ae-crimson); }
+
+@keyframes dw-strike { 0% { stroke-dashoffset: 40; } 100% { stroke-dashoffset: 0; } }
+.dw-strike path { stroke-dasharray: 6 4; animation: dw-strike 0.6s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .dw-strike path { animation: none; }
+  body { transition: none; }
+}

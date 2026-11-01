@@ -1,0 +1,3802 @@
+[
+ {
+  "id": "2c41e0b94dd04506",
+  "test_id": "dw-credential-file-canary",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-30T10:56:01.418230Z",
+  "not_before": "2026-10-30T10:56:01.418230Z",
+  "dispatched_at": "2026-10-30T10:56:01.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-30T10:56:01.418230Z",
+  "finished_at": "2026-10-30T10:56:21.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.credential_canary_read",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "missed",
+  "passed": false,
+  "evaluation": {
+   "outcome": "missed",
+   "passed": false,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "none",
+   "alerts": [],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "missing_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "notes": [
+    "Telemetry arrived but no rule fired."
+   ]
+  },
+  "evaluated_at": "2026-10-30T10:59:01.418230Z"
+ },
+ {
+  "id": "91dfd20da71260b8",
+  "test_id": "dw-win-encoded-powershell",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-30T10:53:42.418230Z",
+  "not_before": "2026-10-30T10:53:42.418230Z",
+  "dispatched_at": "2026-10-30T10:53:42.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-30T10:53:42.418230Z",
+  "finished_at": "2026-10-30T10:54:02.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "powershell.encoded_marker",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "missed",
+  "passed": false,
+  "evaluation": {
+   "outcome": "missed",
+   "passed": false,
+   "telemetry_seen": true,
+   "telemetry_hits": 3,
+   "detection_quality": "none",
+   "alerts": [],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+   ],
+   "missing_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+   ],
+   "notes": [
+    "Telemetry arrived but no rule fired."
+   ]
+  },
+  "evaluated_at": "2026-10-30T10:56:42.418230Z"
+ },
+ {
+  "id": "035d62a6089b09ee",
+  "test_id": "dw-win-whoami-discovery",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-30T10:49:23.418230Z",
+  "not_before": "2026-10-30T10:49:23.418230Z",
+  "dispatched_at": "2026-10-30T10:49:23.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-30T10:49:23.418230Z",
+  "finished_at": "2026-10-30T10:49:43.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 4,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+     "timestamp": "2026-10-30T10:50:03.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-30T10:52:23.418230Z"
+ },
+ {
+  "id": "7c228d2a3262c5ed",
+  "test_id": "dw-dns-sinkhole-beacon",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-30T10:48:17.418230Z",
+  "not_before": "2026-10-30T10:48:17.418230Z",
+  "dispatched_at": "2026-10-30T10:48:17.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-30T10:48:17.418230Z",
+  "finished_at": "2026-10-30T10:48:37.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "dns.sinkhole_query",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 1,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "timestamp": "2026-10-30T10:48:57.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-30T10:51:17.418230Z"
+ },
+ {
+  "id": "53f948d79c0df71b",
+  "test_id": "dw-win-local-admin-enum",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-30T10:40:59.418230Z",
+  "not_before": "2026-10-30T10:40:59.418230Z",
+  "dispatched_at": "2026-10-30T10:40:59.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-30T10:40:59.418230Z",
+  "finished_at": "2026-10-30T10:41:19.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 2,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+     "timestamp": "2026-10-30T10:41:39.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-30T10:43:59.418230Z"
+ },
+ {
+  "id": "46fda7c6dcefb93c",
+  "test_id": "dw-lin-autostart-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-30T10:35:13.418230Z",
+  "not_before": "2026-10-30T10:35:13.418230Z",
+  "dispatched_at": "2026-10-30T10:35:13.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-30T10:35:13.418230Z",
+  "finished_at": "2026-10-30T10:35:33.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "persistence.autostart_canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10",
+     "timestamp": "2026-10-30T10:35:53.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-30T10:38:13.418230Z"
+ },
+ {
+  "id": "685df711a0e6c02e",
+  "test_id": "dw-win-schtask-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-30T10:32:20.418230Z",
+  "not_before": "2026-10-30T10:32:20.418230Z",
+  "dispatched_at": "2026-10-30T10:32:20.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-30T10:32:20.418230Z",
+  "finished_at": "2026-10-30T10:32:40.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "scheduled_task.canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 2,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+     "timestamp": "2026-10-30T10:33:00.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-30T10:35:20.418230Z"
+ },
+ {
+  "id": "e9601b804d451dc8",
+  "test_id": "dw-dns-sinkhole-beacon",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-30T10:25:58.418230Z",
+  "not_before": "2026-10-30T10:25:58.418230Z",
+  "dispatched_at": "2026-10-30T10:25:58.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-30T10:25:58.418230Z",
+  "finished_at": "2026-10-30T10:26:18.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "dns.sinkhole_query",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 5,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "timestamp": "2026-10-30T10:26:38.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-30T10:28:58.418230Z"
+ },
+ {
+  "id": "d06dbe78394417a9",
+  "test_id": "dw-credential-file-canary",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-30T10:23:59.418230Z",
+  "not_before": "2026-10-30T10:23:59.418230Z",
+  "dispatched_at": "2026-10-30T10:23:59.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-30T10:23:59.418230Z",
+  "finished_at": "2026-10-30T10:24:19.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.credential_canary_read",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 4,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+     "timestamp": "2026-10-30T10:24:39.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-30T10:26:59.418230Z"
+ },
+ {
+  "id": "0a0d524f42b1519f",
+  "test_id": "dw-win-eicar-quarantine",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-30T10:17:06.418230Z",
+  "not_before": "2026-10-30T10:17:06.418230Z",
+  "dispatched_at": "2026-10-30T10:17:06.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-30T10:17:06.418230Z",
+  "finished_at": "2026-10-30T10:17:26.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.eicar_drop",
+    "status": "blocked",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "prevented",
+  "passed": true,
+  "evaluation": {
+   "outcome": "prevented",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 1,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+     "timestamp": "2026-10-30T10:17:46.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-30T10:20:06.418230Z"
+ },
+ {
+  "id": "e8951093f58ce0fd",
+  "test_id": "dw-win-run-key-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-30T10:15:17.418230Z",
+  "not_before": "2026-10-30T10:15:17.418230Z",
+  "dispatched_at": "2026-10-30T10:15:17.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-30T10:15:17.418230Z",
+  "finished_at": "2026-10-30T10:15:37.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "registry.run_key_canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 4,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+     "timestamp": "2026-10-30T10:15:57.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-30T10:18:17.418230Z"
+ },
+ {
+  "id": "ef173dbd0618f454",
+  "test_id": "dw-lin-host-discovery",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-30T10:05:03.418230Z",
+  "not_before": "2026-10-30T10:05:03.418230Z",
+  "dispatched_at": "2026-10-30T10:05:03.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-30T10:05:03.418230Z",
+  "finished_at": "2026-10-30T10:05:23.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   },
+   {
+    "index": 1,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+     "timestamp": "2026-10-30T10:05:43.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-30T10:08:03.418230Z"
+ },
+ {
+  "id": "65234e104aac13ca",
+  "test_id": "dw-win-whoami-discovery",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-29T10:59:12.418230Z",
+  "not_before": "2026-10-29T10:59:12.418230Z",
+  "dispatched_at": "2026-10-29T10:59:12.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-29T10:59:12.418230Z",
+  "finished_at": "2026-10-29T10:59:32.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+     "timestamp": "2026-10-29T10:59:52.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-29T11:02:12.418230Z"
+ },
+ {
+  "id": "718f8da6db0df341",
+  "test_id": "dw-lin-host-discovery",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-29T10:55:37.418230Z",
+  "not_before": "2026-10-29T10:55:37.418230Z",
+  "dispatched_at": "2026-10-29T10:55:37.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-29T10:55:37.418230Z",
+  "finished_at": "2026-10-29T10:55:57.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   },
+   {
+    "index": 1,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 1,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+     "timestamp": "2026-10-29T10:56:17.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-29T10:58:37.418230Z"
+ },
+ {
+  "id": "3ddb988fe885a084",
+  "test_id": "dw-win-schtask-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-29T10:53:25.418230Z",
+  "not_before": "2026-10-29T10:53:25.418230Z",
+  "dispatched_at": "2026-10-29T10:53:25.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-29T10:53:25.418230Z",
+  "finished_at": "2026-10-29T10:53:45.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "scheduled_task.canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 1,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+     "timestamp": "2026-10-29T10:54:05.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-29T10:56:25.418230Z"
+ },
+ {
+  "id": "24f74949573104e1",
+  "test_id": "dw-win-eicar-quarantine",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-29T10:46:09.418230Z",
+  "not_before": "2026-10-29T10:46:09.418230Z",
+  "dispatched_at": "2026-10-29T10:46:09.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-29T10:46:09.418230Z",
+  "finished_at": "2026-10-29T10:46:29.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.eicar_drop",
+    "status": "blocked",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "prevented",
+  "passed": true,
+  "evaluation": {
+   "outcome": "prevented",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 4,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+     "timestamp": "2026-10-29T10:46:49.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-29T10:49:09.418230Z"
+ },
+ {
+  "id": "1307812acef8ab57",
+  "test_id": "dw-dns-sinkhole-beacon",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-29T10:28:25.418230Z",
+  "not_before": "2026-10-29T10:28:25.418230Z",
+  "dispatched_at": "2026-10-29T10:28:25.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-29T10:28:25.418230Z",
+  "finished_at": "2026-10-29T10:28:45.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "dns.sinkhole_query",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 3,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "timestamp": "2026-10-29T10:29:05.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-29T10:31:25.418230Z"
+ },
+ {
+  "id": "9f9d0ea0570b7ecc",
+  "test_id": "dw-win-encoded-powershell",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-29T10:22:24.418230Z",
+  "not_before": "2026-10-29T10:22:24.418230Z",
+  "dispatched_at": "2026-10-29T10:22:24.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-29T10:22:24.418230Z",
+  "finished_at": "2026-10-29T10:22:44.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "powershell.encoded_marker",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "missed",
+  "passed": false,
+  "evaluation": {
+   "outcome": "missed",
+   "passed": false,
+   "telemetry_seen": true,
+   "telemetry_hits": 3,
+   "detection_quality": "none",
+   "alerts": [],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+   ],
+   "missing_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+   ],
+   "notes": [
+    "Telemetry arrived but no rule fired."
+   ]
+  },
+  "evaluated_at": "2026-10-29T10:25:24.418230Z"
+ },
+ {
+  "id": "41a0e31d0a686d07",
+  "test_id": "dw-dns-sinkhole-beacon",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-29T10:18:16.418230Z",
+  "not_before": "2026-10-29T10:18:16.418230Z",
+  "dispatched_at": "2026-10-29T10:18:16.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-29T10:18:16.418230Z",
+  "finished_at": "2026-10-29T10:18:36.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "dns.sinkhole_query",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 3,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "timestamp": "2026-10-29T10:18:56.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-29T10:21:16.418230Z"
+ },
+ {
+  "id": "050c0488a7e17bf7",
+  "test_id": "dw-win-local-admin-enum",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-29T10:07:53.418230Z",
+  "not_before": "2026-10-29T10:07:53.418230Z",
+  "dispatched_at": "2026-10-29T10:07:53.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-29T10:07:53.418230Z",
+  "finished_at": "2026-10-29T10:08:13.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 3,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+     "timestamp": "2026-10-29T10:08:33.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-29T10:10:53.418230Z"
+ },
+ {
+  "id": "3db8922feadc2287",
+  "test_id": "dw-lin-autostart-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-29T10:04:25.418230Z",
+  "not_before": "2026-10-29T10:04:25.418230Z",
+  "dispatched_at": "2026-10-29T10:04:25.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-29T10:04:25.418230Z",
+  "finished_at": "2026-10-29T10:04:45.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "persistence.autostart_canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 4,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10",
+     "timestamp": "2026-10-29T10:05:05.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-29T10:07:25.418230Z"
+ },
+ {
+  "id": "4d218d5049186f9d",
+  "test_id": "dw-credential-file-canary",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-29T10:00:57.418230Z",
+  "not_before": "2026-10-29T10:00:57.418230Z",
+  "dispatched_at": "2026-10-29T10:00:57.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-29T10:00:57.418230Z",
+  "finished_at": "2026-10-29T10:01:17.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.credential_canary_read",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "missed",
+  "passed": false,
+  "evaluation": {
+   "outcome": "missed",
+   "passed": false,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "none",
+   "alerts": [],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "missing_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "notes": [
+    "Telemetry arrived but no rule fired."
+   ]
+  },
+  "evaluated_at": "2026-10-29T10:03:57.418230Z"
+ },
+ {
+  "id": "fce33245e5e94329",
+  "test_id": "dw-credential-file-canary",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-29T10:00:31.418230Z",
+  "not_before": "2026-10-29T10:00:31.418230Z",
+  "dispatched_at": "2026-10-29T10:00:31.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-29T10:00:31.418230Z",
+  "finished_at": "2026-10-29T10:00:51.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.credential_canary_read",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+     "timestamp": "2026-10-29T10:01:11.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-29T10:03:31.418230Z"
+ },
+ {
+  "id": "6605319e4a184b9a",
+  "test_id": "dw-win-run-key-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-29T10:00:20.418230Z",
+  "not_before": "2026-10-29T10:00:20.418230Z",
+  "dispatched_at": "2026-10-29T10:00:20.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-29T10:00:20.418230Z",
+  "finished_at": "2026-10-29T10:00:40.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "registry.run_key_canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 3,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+     "timestamp": "2026-10-29T10:01:00.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-29T10:03:20.418230Z"
+ },
+ {
+  "id": "49b06c1f20512433",
+  "test_id": "dw-dns-sinkhole-beacon",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-28T10:45:23.418230Z",
+  "not_before": "2026-10-28T10:45:23.418230Z",
+  "dispatched_at": "2026-10-28T10:45:23.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-28T10:45:23.418230Z",
+  "finished_at": "2026-10-28T10:45:43.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "dns.sinkhole_query",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 2,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "timestamp": "2026-10-28T10:46:03.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-28T10:48:23.418230Z"
+ },
+ {
+  "id": "ea64232a96fd07e7",
+  "test_id": "dw-win-whoami-discovery",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-28T10:38:52.418230Z",
+  "not_before": "2026-10-28T10:38:52.418230Z",
+  "dispatched_at": "2026-10-28T10:38:52.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-28T10:38:52.418230Z",
+  "finished_at": "2026-10-28T10:39:12.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+     "timestamp": "2026-10-28T10:39:32.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-28T10:41:52.418230Z"
+ },
+ {
+  "id": "b8a2bc3a87fbcdde",
+  "test_id": "dw-credential-file-canary",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-28T10:32:17.418230Z",
+  "not_before": "2026-10-28T10:32:17.418230Z",
+  "dispatched_at": "2026-10-28T10:32:17.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-28T10:32:17.418230Z",
+  "finished_at": "2026-10-28T10:32:37.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.credential_canary_read",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "missed",
+  "passed": false,
+  "evaluation": {
+   "outcome": "missed",
+   "passed": false,
+   "telemetry_seen": true,
+   "telemetry_hits": 1,
+   "detection_quality": "none",
+   "alerts": [],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "missing_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "notes": [
+    "Telemetry arrived but no rule fired."
+   ]
+  },
+  "evaluated_at": "2026-10-28T10:35:17.418230Z"
+ },
+ {
+  "id": "9ca3ded1be7c1089",
+  "test_id": "dw-lin-autostart-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-28T10:31:57.418230Z",
+  "not_before": "2026-10-28T10:31:57.418230Z",
+  "dispatched_at": "2026-10-28T10:31:57.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-28T10:31:57.418230Z",
+  "finished_at": "2026-10-28T10:32:17.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "persistence.autostart_canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 4,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10",
+     "timestamp": "2026-10-28T10:32:37.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-28T10:34:57.418230Z"
+ },
+ {
+  "id": "9b0373c964a61a3a",
+  "test_id": "dw-win-eicar-quarantine",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-28T10:28:17.418230Z",
+  "not_before": "2026-10-28T10:28:17.418230Z",
+  "dispatched_at": "2026-10-28T10:28:17.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-28T10:28:17.418230Z",
+  "finished_at": "2026-10-28T10:28:37.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.eicar_drop",
+    "status": "blocked",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "prevented",
+  "passed": true,
+  "evaluation": {
+   "outcome": "prevented",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 4,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+     "timestamp": "2026-10-28T10:28:57.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-28T10:31:17.418230Z"
+ },
+ {
+  "id": "a7a16ec35187d10e",
+  "test_id": "dw-lin-host-discovery",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-28T10:25:01.418230Z",
+  "not_before": "2026-10-28T10:25:01.418230Z",
+  "dispatched_at": "2026-10-28T10:25:01.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-28T10:25:01.418230Z",
+  "finished_at": "2026-10-28T10:25:21.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   },
+   {
+    "index": 1,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 2,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+     "timestamp": "2026-10-28T10:25:41.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-28T10:28:01.418230Z"
+ },
+ {
+  "id": "36dd88a7ede9e79b",
+  "test_id": "dw-win-schtask-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-28T10:16:23.418230Z",
+  "not_before": "2026-10-28T10:16:23.418230Z",
+  "dispatched_at": "2026-10-28T10:16:23.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-28T10:16:23.418230Z",
+  "finished_at": "2026-10-28T10:16:43.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "scheduled_task.canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 2,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+     "timestamp": "2026-10-28T10:17:03.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-28T10:19:23.418230Z"
+ },
+ {
+  "id": "4cf66e94650fab6a",
+  "test_id": "dw-win-encoded-powershell",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-28T10:13:58.418230Z",
+  "not_before": "2026-10-28T10:13:58.418230Z",
+  "dispatched_at": "2026-10-28T10:13:58.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-28T10:13:58.418230Z",
+  "finished_at": "2026-10-28T10:14:18.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "powershell.encoded_marker",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "missed",
+  "passed": false,
+  "evaluation": {
+   "outcome": "missed",
+   "passed": false,
+   "telemetry_seen": true,
+   "telemetry_hits": 2,
+   "detection_quality": "none",
+   "alerts": [],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+   ],
+   "missing_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+   ],
+   "notes": [
+    "Telemetry arrived but no rule fired."
+   ]
+  },
+  "evaluated_at": "2026-10-28T10:16:58.418230Z"
+ },
+ {
+  "id": "177d9316c7f6dc3d",
+  "test_id": "dw-win-run-key-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-28T10:09:47.418230Z",
+  "not_before": "2026-10-28T10:09:47.418230Z",
+  "dispatched_at": "2026-10-28T10:09:47.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-28T10:09:47.418230Z",
+  "finished_at": "2026-10-28T10:10:07.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "registry.run_key_canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 5,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+     "timestamp": "2026-10-28T10:10:27.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-28T10:12:47.418230Z"
+ },
+ {
+  "id": "1265dfd61b024e97",
+  "test_id": "dw-dns-sinkhole-beacon",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-28T10:04:52.418230Z",
+  "not_before": "2026-10-28T10:04:52.418230Z",
+  "dispatched_at": "2026-10-28T10:04:52.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-28T10:04:52.418230Z",
+  "finished_at": "2026-10-28T10:05:12.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "dns.sinkhole_query",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 5,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "timestamp": "2026-10-28T10:05:32.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-28T10:07:52.418230Z"
+ },
+ {
+  "id": "c44dd562ba54faf4",
+  "test_id": "dw-win-local-admin-enum",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-28T10:04:37.418230Z",
+  "not_before": "2026-10-28T10:04:37.418230Z",
+  "dispatched_at": "2026-10-28T10:04:37.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-28T10:04:37.418230Z",
+  "finished_at": "2026-10-28T10:04:57.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 1,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+     "timestamp": "2026-10-28T10:05:17.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-28T10:07:37.418230Z"
+ },
+ {
+  "id": "6ac3453545455aee",
+  "test_id": "dw-credential-file-canary",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-28T10:01:18.418230Z",
+  "not_before": "2026-10-28T10:01:18.418230Z",
+  "dispatched_at": "2026-10-28T10:01:18.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-28T10:01:18.418230Z",
+  "finished_at": "2026-10-28T10:01:38.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.credential_canary_read",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 4,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+     "timestamp": "2026-10-28T10:01:58.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-28T10:04:18.418230Z"
+ },
+ {
+  "id": "1d5004dfb80e2181",
+  "test_id": "dw-lin-autostart-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-27T10:57:35.418230Z",
+  "not_before": "2026-10-27T10:57:35.418230Z",
+  "dispatched_at": "2026-10-27T10:57:35.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-27T10:57:35.418230Z",
+  "finished_at": "2026-10-27T10:57:55.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "persistence.autostart_canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 2,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10",
+     "timestamp": "2026-10-27T10:58:15.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-27T11:00:35.418230Z"
+ },
+ {
+  "id": "34af26ca1265e1dd",
+  "test_id": "dw-win-run-key-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-27T10:43:06.418230Z",
+  "not_before": "2026-10-27T10:43:06.418230Z",
+  "dispatched_at": "2026-10-27T10:43:06.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-27T10:43:06.418230Z",
+  "finished_at": "2026-10-27T10:43:26.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "registry.run_key_canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+     "timestamp": "2026-10-27T10:43:46.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-27T10:46:06.418230Z"
+ },
+ {
+  "id": "93ade2684c7f88fa",
+  "test_id": "dw-dns-sinkhole-beacon",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-27T10:41:47.418230Z",
+  "not_before": "2026-10-27T10:41:47.418230Z",
+  "dispatched_at": "2026-10-27T10:41:47.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-27T10:41:47.418230Z",
+  "finished_at": "2026-10-27T10:42:07.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "dns.sinkhole_query",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "timestamp": "2026-10-27T10:42:27.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-27T10:44:47.418230Z"
+ },
+ {
+  "id": "ab06ac6eed0d0d78",
+  "test_id": "dw-dns-sinkhole-beacon",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-27T10:29:49.418230Z",
+  "not_before": "2026-10-27T10:29:49.418230Z",
+  "dispatched_at": "2026-10-27T10:29:49.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-27T10:29:49.418230Z",
+  "finished_at": "2026-10-27T10:30:09.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "dns.sinkhole_query",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 1,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "timestamp": "2026-10-27T10:30:29.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-27T10:32:49.418230Z"
+ },
+ {
+  "id": "1adeff3f7161d6d4",
+  "test_id": "dw-win-eicar-quarantine",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-27T10:19:39.418230Z",
+  "not_before": "2026-10-27T10:19:39.418230Z",
+  "dispatched_at": "2026-10-27T10:19:39.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-27T10:19:39.418230Z",
+  "finished_at": "2026-10-27T10:19:59.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.eicar_drop",
+    "status": "blocked",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "prevented",
+  "passed": true,
+  "evaluation": {
+   "outcome": "prevented",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 5,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+     "timestamp": "2026-10-27T10:20:19.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-27T10:22:39.418230Z"
+ },
+ {
+  "id": "42d7f85347cd4828",
+  "test_id": "dw-lin-host-discovery",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-27T10:19:05.418230Z",
+  "not_before": "2026-10-27T10:19:05.418230Z",
+  "dispatched_at": "2026-10-27T10:19:05.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-27T10:19:05.418230Z",
+  "finished_at": "2026-10-27T10:19:25.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   },
+   {
+    "index": 1,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 4,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+     "timestamp": "2026-10-27T10:19:45.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-27T10:22:05.418230Z"
+ },
+ {
+  "id": "cab5260f7713d159",
+  "test_id": "dw-win-whoami-discovery",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-27T10:18:45.418230Z",
+  "not_before": "2026-10-27T10:18:45.418230Z",
+  "dispatched_at": "2026-10-27T10:18:45.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-27T10:18:45.418230Z",
+  "finished_at": "2026-10-27T10:19:05.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 5,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+     "timestamp": "2026-10-27T10:19:25.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-27T10:21:45.418230Z"
+ },
+ {
+  "id": "78fdb9372e0ed53f",
+  "test_id": "dw-credential-file-canary",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-27T10:18:29.418230Z",
+  "not_before": "2026-10-27T10:18:29.418230Z",
+  "dispatched_at": "2026-10-27T10:18:29.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-27T10:18:29.418230Z",
+  "finished_at": "2026-10-27T10:18:49.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.credential_canary_read",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "missed",
+  "passed": false,
+  "evaluation": {
+   "outcome": "missed",
+   "passed": false,
+   "telemetry_seen": true,
+   "telemetry_hits": 4,
+   "detection_quality": "none",
+   "alerts": [],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "missing_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "notes": [
+    "Telemetry arrived but no rule fired."
+   ]
+  },
+  "evaluated_at": "2026-10-27T10:21:29.418230Z"
+ },
+ {
+  "id": "8f83299f7243cd51",
+  "test_id": "dw-win-schtask-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-27T10:13:43.418230Z",
+  "not_before": "2026-10-27T10:13:43.418230Z",
+  "dispatched_at": "2026-10-27T10:13:43.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-27T10:13:43.418230Z",
+  "finished_at": "2026-10-27T10:14:03.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "scheduled_task.canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 4,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+     "timestamp": "2026-10-27T10:14:23.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-27T10:16:43.418230Z"
+ },
+ {
+  "id": "adedd862e1c02add",
+  "test_id": "dw-credential-file-canary",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-27T10:09:21.418230Z",
+  "not_before": "2026-10-27T10:09:21.418230Z",
+  "dispatched_at": "2026-10-27T10:09:21.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-27T10:09:21.418230Z",
+  "finished_at": "2026-10-27T10:09:41.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.credential_canary_read",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 3,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+     "timestamp": "2026-10-27T10:10:01.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-27T10:12:21.418230Z"
+ },
+ {
+  "id": "70bd1bf453ce5336",
+  "test_id": "dw-win-encoded-powershell",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-27T10:08:00.418230Z",
+  "not_before": "2026-10-27T10:08:00.418230Z",
+  "dispatched_at": "2026-10-27T10:08:00.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-27T10:08:00.418230Z",
+  "finished_at": "2026-10-27T10:08:20.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "powershell.encoded_marker",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "missed",
+  "passed": false,
+  "evaluation": {
+   "outcome": "missed",
+   "passed": false,
+   "telemetry_seen": true,
+   "telemetry_hits": 4,
+   "detection_quality": "none",
+   "alerts": [],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+   ],
+   "missing_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+   ],
+   "notes": [
+    "Telemetry arrived but no rule fired."
+   ]
+  },
+  "evaluated_at": "2026-10-27T10:11:00.418230Z"
+ },
+ {
+  "id": "7f61694b6a07cbb3",
+  "test_id": "dw-win-local-admin-enum",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-27T10:03:31.418230Z",
+  "not_before": "2026-10-27T10:03:31.418230Z",
+  "dispatched_at": "2026-10-27T10:03:31.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-27T10:03:31.418230Z",
+  "finished_at": "2026-10-27T10:03:51.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 3,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+     "timestamp": "2026-10-27T10:04:11.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-27T10:06:31.418230Z"
+ },
+ {
+  "id": "d2b90a17463637f2",
+  "test_id": "dw-credential-file-canary",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-26T10:57:34.418230Z",
+  "not_before": "2026-10-26T10:57:34.418230Z",
+  "dispatched_at": "2026-10-26T10:57:34.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-26T10:57:34.418230Z",
+  "finished_at": "2026-10-26T10:57:54.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.credential_canary_read",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 1,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+     "timestamp": "2026-10-26T10:58:14.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-26T11:00:34.418230Z"
+ },
+ {
+  "id": "1b9ee1e17759dae0",
+  "test_id": "dw-win-local-admin-enum",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-26T10:54:16.418230Z",
+  "not_before": "2026-10-26T10:54:16.418230Z",
+  "dispatched_at": "2026-10-26T10:54:16.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-26T10:54:16.418230Z",
+  "finished_at": "2026-10-26T10:54:36.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 2,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+     "timestamp": "2026-10-26T10:54:56.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-26T10:57:16.418230Z"
+ },
+ {
+  "id": "43e9df6d230f26f1",
+  "test_id": "dw-win-eicar-quarantine",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-26T10:47:47.418230Z",
+  "not_before": "2026-10-26T10:47:47.418230Z",
+  "dispatched_at": "2026-10-26T10:47:47.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-26T10:47:47.418230Z",
+  "finished_at": "2026-10-26T10:48:07.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.eicar_drop",
+    "status": "blocked",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "prevented",
+  "passed": true,
+  "evaluation": {
+   "outcome": "prevented",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 4,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+     "timestamp": "2026-10-26T10:48:27.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-26T10:50:47.418230Z"
+ },
+ {
+  "id": "da64985ac7452d4f",
+  "test_id": "dw-win-run-key-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-26T10:46:48.418230Z",
+  "not_before": "2026-10-26T10:46:48.418230Z",
+  "dispatched_at": "2026-10-26T10:46:48.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-26T10:46:48.418230Z",
+  "finished_at": "2026-10-26T10:47:08.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "registry.run_key_canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 2,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+     "timestamp": "2026-10-26T10:47:28.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-26T10:49:48.418230Z"
+ },
+ {
+  "id": "3c42f1825338b79c",
+  "test_id": "dw-dns-sinkhole-beacon",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-26T10:42:33.418230Z",
+  "not_before": "2026-10-26T10:42:33.418230Z",
+  "dispatched_at": "2026-10-26T10:42:33.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-26T10:42:33.418230Z",
+  "finished_at": "2026-10-26T10:42:53.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "dns.sinkhole_query",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 1,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "timestamp": "2026-10-26T10:43:13.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-26T10:45:33.418230Z"
+ },
+ {
+  "id": "8e291614cc54e095",
+  "test_id": "dw-lin-autostart-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-26T10:39:40.418230Z",
+  "not_before": "2026-10-26T10:39:40.418230Z",
+  "dispatched_at": "2026-10-26T10:39:40.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-26T10:39:40.418230Z",
+  "finished_at": "2026-10-26T10:40:00.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "persistence.autostart_canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10",
+     "timestamp": "2026-10-26T10:40:20.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-26T10:42:40.418230Z"
+ },
+ {
+  "id": "28d2e7117b5bfca3",
+  "test_id": "dw-win-whoami-discovery",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-26T10:29:31.418230Z",
+  "not_before": "2026-10-26T10:29:31.418230Z",
+  "dispatched_at": "2026-10-26T10:29:31.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-26T10:29:31.418230Z",
+  "finished_at": "2026-10-26T10:29:51.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 4,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+     "timestamp": "2026-10-26T10:30:11.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-26T10:32:31.418230Z"
+ },
+ {
+  "id": "ae95992efc1e537a",
+  "test_id": "dw-dns-sinkhole-beacon",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-26T10:18:49.418230Z",
+  "not_before": "2026-10-26T10:18:49.418230Z",
+  "dispatched_at": "2026-10-26T10:18:49.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-26T10:18:49.418230Z",
+  "finished_at": "2026-10-26T10:19:09.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "dns.sinkhole_query",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 1,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "timestamp": "2026-10-26T10:19:29.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-26T10:21:49.418230Z"
+ },
+ {
+  "id": "947c9f011b7bbdf8",
+  "test_id": "dw-win-encoded-powershell",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-26T10:16:51.418230Z",
+  "not_before": "2026-10-26T10:16:51.418230Z",
+  "dispatched_at": "2026-10-26T10:16:51.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-26T10:16:51.418230Z",
+  "finished_at": "2026-10-26T10:17:11.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "powershell.encoded_marker",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 1,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05",
+     "timestamp": "2026-10-26T10:17:31.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-26T10:19:51.418230Z"
+ },
+ {
+  "id": "26e2dff7f3ce3f6b",
+  "test_id": "dw-win-schtask-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-26T10:14:47.418230Z",
+  "not_before": "2026-10-26T10:14:47.418230Z",
+  "dispatched_at": "2026-10-26T10:14:47.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-26T10:14:47.418230Z",
+  "finished_at": "2026-10-26T10:15:07.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "scheduled_task.canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+     "timestamp": "2026-10-26T10:15:27.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-26T10:17:47.418230Z"
+ },
+ {
+  "id": "918f0ff0795811ae",
+  "test_id": "dw-lin-host-discovery",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-26T10:12:04.418230Z",
+  "not_before": "2026-10-26T10:12:04.418230Z",
+  "dispatched_at": "2026-10-26T10:12:04.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-26T10:12:04.418230Z",
+  "finished_at": "2026-10-26T10:12:24.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   },
+   {
+    "index": 1,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 5,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+     "timestamp": "2026-10-26T10:12:44.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-26T10:15:04.418230Z"
+ },
+ {
+  "id": "c2c591f1b4581643",
+  "test_id": "dw-credential-file-canary",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-26T10:04:30.418230Z",
+  "not_before": "2026-10-26T10:04:30.418230Z",
+  "dispatched_at": "2026-10-26T10:04:30.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-26T10:04:30.418230Z",
+  "finished_at": "2026-10-26T10:04:50.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.credential_canary_read",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "missed",
+  "passed": false,
+  "evaluation": {
+   "outcome": "missed",
+   "passed": false,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "none",
+   "alerts": [],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "missing_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "notes": [
+    "Telemetry arrived but no rule fired."
+   ]
+  },
+  "evaluated_at": "2026-10-26T10:07:30.418230Z"
+ },
+ {
+  "id": "7983299d2af4c378",
+  "test_id": "dw-win-schtask-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-25T10:53:28.418230Z",
+  "not_before": "2026-10-25T10:53:28.418230Z",
+  "dispatched_at": "2026-10-25T10:53:28.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-25T10:53:28.418230Z",
+  "finished_at": "2026-10-25T10:53:48.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "scheduled_task.canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 5,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+     "timestamp": "2026-10-25T10:54:08.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-25T10:56:28.418230Z"
+ },
+ {
+  "id": "804437861af05bfc",
+  "test_id": "dw-credential-file-canary",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-25T10:52:43.418230Z",
+  "not_before": "2026-10-25T10:52:43.418230Z",
+  "dispatched_at": "2026-10-25T10:52:43.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-25T10:52:43.418230Z",
+  "finished_at": "2026-10-25T10:53:03.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.credential_canary_read",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 5,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+     "timestamp": "2026-10-25T10:53:23.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-25T10:55:43.418230Z"
+ },
+ {
+  "id": "5b67f272759c7b77",
+  "test_id": "dw-dns-sinkhole-beacon",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-25T10:51:57.418230Z",
+  "not_before": "2026-10-25T10:51:57.418230Z",
+  "dispatched_at": "2026-10-25T10:51:57.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-25T10:51:57.418230Z",
+  "finished_at": "2026-10-25T10:52:17.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "dns.sinkhole_query",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "timestamp": "2026-10-25T10:52:37.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-25T10:54:57.418230Z"
+ },
+ {
+  "id": "da8243c9edabe54d",
+  "test_id": "dw-lin-host-discovery",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-25T10:47:59.418230Z",
+  "not_before": "2026-10-25T10:47:59.418230Z",
+  "dispatched_at": "2026-10-25T10:47:59.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-25T10:47:59.418230Z",
+  "finished_at": "2026-10-25T10:48:19.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   },
+   {
+    "index": 1,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 5,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+     "timestamp": "2026-10-25T10:48:39.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-25T10:50:59.418230Z"
+ },
+ {
+  "id": "8ba1bf094ca431bf",
+  "test_id": "dw-win-eicar-quarantine",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-25T10:43:44.418230Z",
+  "not_before": "2026-10-25T10:43:44.418230Z",
+  "dispatched_at": "2026-10-25T10:43:44.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-25T10:43:44.418230Z",
+  "finished_at": "2026-10-25T10:44:04.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.eicar_drop",
+    "status": "blocked",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "prevented",
+  "passed": true,
+  "evaluation": {
+   "outcome": "prevented",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+     "timestamp": "2026-10-25T10:44:24.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-25T10:46:44.418230Z"
+ },
+ {
+  "id": "3a1ec555b68fda1a",
+  "test_id": "dw-credential-file-canary",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-25T10:40:34.418230Z",
+  "not_before": "2026-10-25T10:40:34.418230Z",
+  "dispatched_at": "2026-10-25T10:40:34.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-25T10:40:34.418230Z",
+  "finished_at": "2026-10-25T10:40:54.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.credential_canary_read",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "missed",
+  "passed": false,
+  "evaluation": {
+   "outcome": "missed",
+   "passed": false,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "none",
+   "alerts": [],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "missing_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "notes": [
+    "Telemetry arrived but no rule fired."
+   ]
+  },
+  "evaluated_at": "2026-10-25T10:43:34.418230Z"
+ },
+ {
+  "id": "217b884df34f227c",
+  "test_id": "dw-win-run-key-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-25T10:23:06.418230Z",
+  "not_before": "2026-10-25T10:23:06.418230Z",
+  "dispatched_at": "2026-10-25T10:23:06.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-25T10:23:06.418230Z",
+  "finished_at": "2026-10-25T10:23:26.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "registry.run_key_canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 4,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+     "timestamp": "2026-10-25T10:23:46.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-25T10:26:06.418230Z"
+ },
+ {
+  "id": "f3a5ed1d2f8ed395",
+  "test_id": "dw-dns-sinkhole-beacon",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-25T10:15:31.418230Z",
+  "not_before": "2026-10-25T10:15:31.418230Z",
+  "dispatched_at": "2026-10-25T10:15:31.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-25T10:15:31.418230Z",
+  "finished_at": "2026-10-25T10:15:51.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "dns.sinkhole_query",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 3,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "timestamp": "2026-10-25T10:16:11.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-25T10:18:31.418230Z"
+ },
+ {
+  "id": "3505812f0921f1d4",
+  "test_id": "dw-win-encoded-powershell",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-25T10:14:05.418230Z",
+  "not_before": "2026-10-25T10:14:05.418230Z",
+  "dispatched_at": "2026-10-25T10:14:05.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-25T10:14:05.418230Z",
+  "finished_at": "2026-10-25T10:14:25.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "powershell.encoded_marker",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 1,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05",
+     "timestamp": "2026-10-25T10:14:45.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-25T10:17:05.418230Z"
+ },
+ {
+  "id": "337084a15a73dac4",
+  "test_id": "dw-win-whoami-discovery",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-25T10:03:40.418230Z",
+  "not_before": "2026-10-25T10:03:40.418230Z",
+  "dispatched_at": "2026-10-25T10:03:40.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-25T10:03:40.418230Z",
+  "finished_at": "2026-10-25T10:04:00.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 1,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+     "timestamp": "2026-10-25T10:04:20.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-25T10:06:40.418230Z"
+ },
+ {
+  "id": "1f51bb929a83db97",
+  "test_id": "dw-win-local-admin-enum",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-25T10:02:08.418230Z",
+  "not_before": "2026-10-25T10:02:08.418230Z",
+  "dispatched_at": "2026-10-25T10:02:08.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-25T10:02:08.418230Z",
+  "finished_at": "2026-10-25T10:02:28.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+     "timestamp": "2026-10-25T10:02:48.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-25T10:05:08.418230Z"
+ },
+ {
+  "id": "0ac618e8681b33d3",
+  "test_id": "dw-lin-autostart-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-25T10:00:29.418230Z",
+  "not_before": "2026-10-25T10:00:29.418230Z",
+  "dispatched_at": "2026-10-25T10:00:29.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-25T10:00:29.418230Z",
+  "finished_at": "2026-10-25T10:00:49.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "persistence.autostart_canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 1,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10",
+     "timestamp": "2026-10-25T10:01:09.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-25T10:03:29.418230Z"
+ },
+ {
+  "id": "2d1c5e6ddb530ba5",
+  "test_id": "dw-lin-autostart-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-24T10:58:33.418230Z",
+  "not_before": "2026-10-24T10:58:33.418230Z",
+  "dispatched_at": "2026-10-24T10:58:33.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-24T10:58:33.418230Z",
+  "finished_at": "2026-10-24T10:58:53.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "persistence.autostart_canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 5,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10",
+     "timestamp": "2026-10-24T10:59:13.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-24T11:01:33.418230Z"
+ },
+ {
+  "id": "592b84676b88614e",
+  "test_id": "dw-dns-sinkhole-beacon",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-24T10:57:45.418230Z",
+  "not_before": "2026-10-24T10:57:45.418230Z",
+  "dispatched_at": "2026-10-24T10:57:45.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-24T10:57:45.418230Z",
+  "finished_at": "2026-10-24T10:58:05.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "dns.sinkhole_query",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 5,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "timestamp": "2026-10-24T10:58:25.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-24T11:00:45.418230Z"
+ },
+ {
+  "id": "51e5755cedb29d2c",
+  "test_id": "dw-win-whoami-discovery",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-24T10:57:32.418230Z",
+  "not_before": "2026-10-24T10:57:32.418230Z",
+  "dispatched_at": "2026-10-24T10:57:32.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-24T10:57:32.418230Z",
+  "finished_at": "2026-10-24T10:57:52.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+     "timestamp": "2026-10-24T10:58:12.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-24T11:00:32.418230Z"
+ },
+ {
+  "id": "023576b7652f9ccd",
+  "test_id": "dw-win-schtask-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-24T10:52:53.418230Z",
+  "not_before": "2026-10-24T10:52:53.418230Z",
+  "dispatched_at": "2026-10-24T10:52:53.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-24T10:52:53.418230Z",
+  "finished_at": "2026-10-24T10:53:13.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "scheduled_task.canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+     "timestamp": "2026-10-24T10:53:33.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-24T10:55:53.418230Z"
+ },
+ {
+  "id": "0515f2f23a495e9e",
+  "test_id": "dw-dns-sinkhole-beacon",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-24T10:51:32.418230Z",
+  "not_before": "2026-10-24T10:51:32.418230Z",
+  "dispatched_at": "2026-10-24T10:51:32.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-24T10:51:32.418230Z",
+  "finished_at": "2026-10-24T10:51:52.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "dns.sinkhole_query",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 2,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+     "timestamp": "2026-10-24T10:52:12.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-24T10:54:32.418230Z"
+ },
+ {
+  "id": "affefe122763b74c",
+  "test_id": "dw-credential-file-canary",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-24T10:48:09.418230Z",
+  "not_before": "2026-10-24T10:48:09.418230Z",
+  "dispatched_at": "2026-10-24T10:48:09.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-24T10:48:09.418230Z",
+  "finished_at": "2026-10-24T10:48:29.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.credential_canary_read",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+     "timestamp": "2026-10-24T10:48:49.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-24T10:51:09.418230Z"
+ },
+ {
+  "id": "546045281e0c0e32",
+  "test_id": "dw-win-encoded-powershell",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-24T10:46:31.418230Z",
+  "not_before": "2026-10-24T10:46:31.418230Z",
+  "dispatched_at": "2026-10-24T10:46:31.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-24T10:46:31.418230Z",
+  "finished_at": "2026-10-24T10:46:51.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "powershell.encoded_marker",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 2,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05",
+     "timestamp": "2026-10-24T10:47:11.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-24T10:49:31.418230Z"
+ },
+ {
+  "id": "647c5ecae9c12ce6",
+  "test_id": "dw-win-run-key-persistence",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-24T10:41:09.418230Z",
+  "not_before": "2026-10-24T10:41:09.418230Z",
+  "dispatched_at": "2026-10-24T10:41:09.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-24T10:41:09.418230Z",
+  "finished_at": "2026-10-24T10:41:29.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "registry.run_key_canary",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 1,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+     "timestamp": "2026-10-24T10:41:49.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-24T10:44:09.418230Z"
+ },
+ {
+  "id": "9757449bfc438697",
+  "test_id": "dw-lin-host-discovery",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-24T10:36:53.418230Z",
+  "not_before": "2026-10-24T10:36:53.418230Z",
+  "dispatched_at": "2026-10-24T10:36:53.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-24T10:36:53.418230Z",
+  "finished_at": "2026-10-24T10:37:13.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   },
+   {
+    "index": 1,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 1,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09",
+     "timestamp": "2026-10-24T10:37:33.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-24T10:39:53.418230Z"
+ },
+ {
+  "id": "0d2cf5d5146f6c0b",
+  "test_id": "dw-credential-file-canary",
+  "test_version": 1,
+  "agent_id": "agt_demo_lin01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-24T10:27:46.418230Z",
+  "not_before": "2026-10-24T10:27:46.418230Z",
+  "dispatched_at": "2026-10-24T10:27:46.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-24T10:27:46.418230Z",
+  "finished_at": "2026-10-24T10:28:06.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.credential_canary_read",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "missed",
+  "passed": false,
+  "evaluation": {
+   "outcome": "missed",
+   "passed": false,
+   "telemetry_seen": true,
+   "telemetry_hits": 6,
+   "detection_quality": "none",
+   "alerts": [],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "missing_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "notes": [
+    "Telemetry arrived but no rule fired."
+   ]
+  },
+  "evaluated_at": "2026-10-24T10:30:46.418230Z"
+ },
+ {
+  "id": "b711fbfd663ce25d",
+  "test_id": "dw-win-eicar-quarantine",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-24T10:24:48.418230Z",
+  "not_before": "2026-10-24T10:24:48.418230Z",
+  "dispatched_at": "2026-10-24T10:24:48.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-24T10:24:48.418230Z",
+  "finished_at": "2026-10-24T10:25:08.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "file.eicar_drop",
+    "status": "blocked",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "prevented",
+  "passed": true,
+  "evaluation": {
+   "outcome": "prevented",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 3,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+     "timestamp": "2026-10-24T10:25:28.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-24T10:27:48.418230Z"
+ },
+ {
+  "id": "88280dc9e46d8771",
+  "test_id": "dw-win-local-admin-enum",
+  "test_version": 1,
+  "agent_id": "agt_demo_win01",
+  "source": "demo",
+  "schedule_id": null,
+  "status": "evaluated",
+  "created_at": "2026-10-24T10:18:46.418230Z",
+  "not_before": "2026-10-24T10:18:46.418230Z",
+  "dispatched_at": "2026-10-24T10:18:46.418230Z",
+  "expires_at": null,
+  "started_at": "2026-10-24T10:18:46.418230Z",
+  "finished_at": "2026-10-24T10:19:06.418230Z",
+  "step_results": [
+   {
+    "index": 0,
+    "action": "process.discovery",
+    "status": "executed",
+    "cleanup": "ok"
+   }
+  ],
+  "outcome": "detected",
+  "passed": true,
+  "evaluation": {
+   "outcome": "detected",
+   "passed": true,
+   "telemetry_seen": true,
+   "telemetry_hits": 5,
+   "detection_quality": "technique",
+   "alerts": [
+    {
+     "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+     "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+     "timestamp": "2026-10-24T10:19:26.418230Z"
+    }
+   ],
+   "expected_detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02"
+   ],
+   "missing_detections": [],
+   "notes": []
+  },
+  "evaluated_at": "2026-10-24T10:21:46.418230Z"
+ }
+]
