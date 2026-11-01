@@ -1,4 +1,4 @@
-module github.com/driftwatch/agent
+module github.com/blackdalc7/DriftWatch-Project/agent
 
 go 1.24.0
 

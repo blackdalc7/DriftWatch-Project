@@ -111,6 +111,7 @@ class FieldTest:
         return out
 
     def matches(self, event: dict[str, Any]) -> bool:
+        """True when the event field satisfies this test and its modifiers (``null`` matches a missing field)."""
         actual = _values(get_field(event, self.ecs_field))
         if self.values == (None,):
             return not actual

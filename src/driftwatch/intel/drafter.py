@@ -98,6 +98,7 @@ RESPONSE_SCHEMA: dict[str, Any] = {
 
 @dataclass
 class DraftResult:
+    """Draft tests produced from an advisory, plus what was rejected or could not be mapped."""
     drafts: list[DriftwatchTest] = field(default_factory=list)
     rejected: list[dict[str, str]] = field(default_factory=list)
     unsupported_techniques: list[str] = field(default_factory=list)

@@ -12,9 +12,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/driftwatch/agent/internal/bundle"
-	"github.com/driftwatch/agent/internal/client"
-	"github.com/driftwatch/agent/internal/state"
+	"github.com/blackdalc7/DriftWatch-Project/agent/internal/bundle"
+	"github.com/blackdalc7/DriftWatch-Project/agent/internal/client"
+	"github.com/blackdalc7/DriftWatch-Project/agent/internal/state"
 )
 
 type fakeAPI struct {

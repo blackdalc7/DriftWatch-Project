@@ -88,6 +88,7 @@ def cmd_library_list(args: argparse.Namespace) -> int:
 
 
 def cmd_library_approve(args: argparse.Namespace) -> int:
+    """Record a reviewer's approval of a draft test, optionally moving it into another library folder."""
     from driftwatch.library import LibraryError, approve
 
     lib = _library(args)
@@ -155,6 +156,7 @@ def _changed_files(args: argparse.Namespace) -> list[str] | None:
 
 
 def cmd_regress(args: argparse.Namespace) -> int:
+    """Run the detection regression gate offline (or on the lab with ``--live``) and write JUnit and Markdown."""
     from driftwatch.library import Library
     from driftwatch.regression import run_live, run_offline, to_junit, to_markdown
 
@@ -202,6 +204,7 @@ def cmd_intel_latest(args: argparse.Namespace) -> int:
 
 
 def cmd_intel_draft(args: argparse.Namespace) -> int:
+    """Draft validation tests from a CISA advisory, with Claude when a key is set and the offline mapper otherwise."""
     from driftwatch.intel.cisa import CisaClient, parse_advisory
     from driftwatch.intel.drafter import claude_drafts, offline_drafts, write_drafts
     from driftwatch.library import Library

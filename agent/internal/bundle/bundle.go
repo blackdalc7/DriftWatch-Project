@@ -19,7 +19,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/driftwatch/agent/internal/catalog"
+	"github.com/blackdalc7/DriftWatch-Project/agent/internal/catalog"
 )
 
 // Version is the only bundle format version this agent understands.

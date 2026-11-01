@@ -18,6 +18,7 @@ from driftwatch.connectors.base import OAuthClient
 
 @dataclass
 class CrowdStrikeConfig:
+    """API client credentials for the CrowdStrike Falcon tenant."""
     client_id: str
     client_secret: str
     base_url: str = "https://api.crowdstrike.com"

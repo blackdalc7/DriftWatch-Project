@@ -21,13 +21,13 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/driftwatch/agent/internal/agent"
-	"github.com/driftwatch/agent/internal/catalog"
-	"github.com/driftwatch/agent/internal/client"
-	"github.com/driftwatch/agent/internal/config"
-	"github.com/driftwatch/agent/internal/hygiene"
-	"github.com/driftwatch/agent/internal/metrics"
-	"github.com/driftwatch/agent/internal/state"
+	"github.com/blackdalc7/DriftWatch-Project/agent/internal/agent"
+	"github.com/blackdalc7/DriftWatch-Project/agent/internal/catalog"
+	"github.com/blackdalc7/DriftWatch-Project/agent/internal/client"
+	"github.com/blackdalc7/DriftWatch-Project/agent/internal/config"
+	"github.com/blackdalc7/DriftWatch-Project/agent/internal/hygiene"
+	"github.com/blackdalc7/DriftWatch-Project/agent/internal/metrics"
+	"github.com/blackdalc7/DriftWatch-Project/agent/internal/state"
 )
 
 // Version is set at build time with -ldflags "-X main.Version=...".

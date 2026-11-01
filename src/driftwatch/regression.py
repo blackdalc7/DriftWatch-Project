@@ -47,6 +47,7 @@ class CaseResult:
 
 @dataclass
 class RegressionReport:
+    """Outcome of a regression run: every case, and which rules and tests the change selected."""
     cases: list[CaseResult] = field(default_factory=list)
     selected_rules: list[str] = field(default_factory=list)
     selected_tests: list[str] = field(default_factory=list)

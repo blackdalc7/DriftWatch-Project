@@ -118,6 +118,7 @@ class CertificateAuthority:
 
     @classmethod
     def create(cls, common_name: str = "Driftwatch Lab CA", days: int = 3650) -> CertificateAuthority:
+        """Generate a new self-signed P-256 CA valid for ``days``."""
         key = ec.generate_private_key(ec.SECP256R1())
         name = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, common_name),
                           x509.NameAttribute(NameOID.ORGANIZATION_NAME, "Driftwatch")])

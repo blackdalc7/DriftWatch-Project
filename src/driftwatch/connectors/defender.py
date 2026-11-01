@@ -18,6 +18,7 @@ from driftwatch.connectors.base import OAuthClient
 
 @dataclass
 class DefenderConfig:
+    """Entra app credentials and endpoints for Microsoft Graph."""
     tenant_id: str
     client_id: str
     client_secret: str
@@ -38,6 +39,7 @@ class DefenderSecureScore:
         self._client.close()
 
     def latest_score(self) -> dict[str, Any]:
+        """The newest Secure Score as a percentage, with each control's score and status."""
         body = self._client.get("/v1.0/security/secureScores", params={"$top": "1"})
         scores = body.get("value") or []
         if not scores:

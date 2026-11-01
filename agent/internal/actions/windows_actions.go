@@ -15,7 +15,7 @@ import (
 
 	"golang.org/x/sys/windows/registry"
 
-	"github.com/driftwatch/agent/internal/bundle"
+	"github.com/blackdalc7/DriftWatch-Project/agent/internal/bundle"
 )
 
 const runKeyPath = `Software\Microsoft\Windows\CurrentVersion\Run`

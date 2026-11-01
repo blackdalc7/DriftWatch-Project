@@ -1,6 +1,6 @@
 # Driftwatch
 
-[![ci](https://github.com/blackdalc7/DriftWatch-Project/actions/workflows/ci.yml/badge.svg)](https://github.com/blackdalc7/DriftWatch-Project/actions/workflows/ci.yml)
+[![CI](https://github.com/blackdalc7/DriftWatch-Project/actions/workflows/ci.yml/badge.svg)](https://github.com/blackdalc7/DriftWatch-Project/actions/workflows/ci.yml)
 
 Continuous security validation for a small lab: one Windows VM, one Linux VM and an Elastic backend.
 

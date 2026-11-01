@@ -359,6 +359,7 @@ class Store:
 
     def create_run(self, test_id: str, test_version: int, agent_id: str, source: str,
                    not_before: datetime | None = None, schedule_id: str | None = None) -> dict[str, Any]:
+        """Queue a run of one test version on one agent and return the stored row."""
         now = utcnow()
         run = {
             "id": new_run_id(),

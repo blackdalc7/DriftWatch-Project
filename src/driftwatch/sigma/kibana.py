@@ -50,6 +50,7 @@ def threat_mapping(rule: SigmaRule) -> list[dict[str, Any]]:
 
 
 def to_kibana_rule(rule: SigmaRule, index: list[str], interval: str = "1m") -> dict[str, Any]:
+    """Convert a Sigma rule into a Kibana detection rule (KQL query) over ``index``."""
     severity = SEVERITY.get(rule.level, "medium")
     return {
         "rule_id": rule.id,

@@ -14,8 +14,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/driftwatch/agent/internal/actions"
-	"github.com/driftwatch/agent/internal/bundle"
+	"github.com/blackdalc7/DriftWatch-Project/agent/internal/actions"
+	"github.com/blackdalc7/DriftWatch-Project/agent/internal/bundle"
 )
 
 // Client is an HTTPS client that trusts only the Driftwatch CA.

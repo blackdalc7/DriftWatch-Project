@@ -29,12 +29,14 @@ class IntelError(Exception):
 
 @dataclass
 class TechniqueMention:
+    """An ATT&CK technique id found in an advisory, with the sentence around it."""
     id: str
     context: str
 
 
 @dataclass
 class Advisory:
+    """A parsed CISA advisory: its metadata, plain text and the techniques it names."""
     id: str | None
     title: str
     url: str
