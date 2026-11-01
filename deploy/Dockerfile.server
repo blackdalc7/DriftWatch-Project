@@ -1,5 +1,5 @@
 # Driftwatch control server (FastAPI) with the built UI. Multi-stage: build the UI, then a slim runtime.
-FROM node:22-alpine AS ui
+FROM node:26-alpine AS ui
 WORKDIR /build
 COPY packages/aegis-ui ./packages/aegis-ui
 COPY web ./web
