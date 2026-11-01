@@ -6,7 +6,7 @@ COPY web ./web
 WORKDIR /build/web
 RUN npm ci --no-audit --no-fund && npm run build
 
-FROM python:3.13-slim AS runtime
+FROM python:3.15-slim AS runtime
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 \
     PYTHONPATH=/app/src DRIFTWATCH_UI_DIR=/app/web/dist DRIFTWATCH_DATA_DIR=/data
 RUN groupadd --system --gid 10001 driftwatch && useradd --system --uid 10001 --gid driftwatch --home /app driftwatch
