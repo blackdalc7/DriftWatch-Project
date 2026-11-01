@@ -1,0 +1,96 @@
+{
+ "id": "dw-win-whoami-discovery",
+ "name": "System owner discovery with whoami /all",
+ "description": "Runs whoami /all, which attackers use right after access to learn the current user, groups and privileges.",
+ "version": 1,
+ "status": "verified",
+ "platforms": [
+  "windows"
+ ],
+ "severity": "medium",
+ "attack": {
+  "tactic": "discovery",
+  "techniques": [
+   "T1033"
+  ]
+ },
+ "steps": [
+  {
+   "action": "process.discovery",
+   "params": {
+    "command": "whoami_all"
+   }
+  }
+ ],
+ "expected": {
+  "outcome": "detected",
+  "detections": [
+   "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01"
+  ],
+  "window_seconds": 300
+ },
+ "hygiene_controls": [
+  "win.sysmon.process_creation"
+ ],
+ "provenance": {
+  "source": "manual",
+  "reference": null,
+  "generated_by": null,
+  "generated_at": null
+ },
+ "review": {
+  "approved_by": "driftwatch-maintainers",
+  "approved_at": "2026-10-30T12:00:00Z",
+  "notes": "Hand-written seed test, reviewed with its Sigma rule."
+ },
+ "verification": {
+  "run_id": "51e5755cedb29d2c",
+  "agent_id": "agt_demo_win01",
+  "verified_at": "2026-10-24T11:00:32.418230Z"
+ },
+ "emulated_techniques": [
+  "T1033"
+ ],
+ "dispatchable": true,
+ "results": {
+  "runs": 1,
+  "passed": 1
+ },
+ "yaml": "id: dw-win-whoami-discovery\nname: System owner discovery with whoami /all\ndescription: Runs whoami /all, which attackers use right after access to learn the current user, groups and privileges.\nversion: 1\nstatus: verified\nplatforms:\n- windows\nseverity: medium\nattack:\n  tactic: discovery\n  techniques:\n  - T1033\nsteps:\n- action: process.discovery\n  params:\n    command: whoami_all\nexpected:\n  outcome: detected\n  detections:\n  - 5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01\n  window_seconds: 300\nhygiene_controls:\n- win.sysmon.process_creation\nprovenance:\n  source: manual\n  reference: null\n  generated_by: null\n  generated_at: null\nreview:\n  approved_by: driftwatch-maintainers\n  approved_at: '2026-10-30T12:00:00Z'\n  notes: Hand-written seed test, reviewed with its Sigma rule.\nverification:\n  run_id: 51e5755cedb29d2c\n  agent_id: agt_demo_win01\n  verified_at: '2026-10-24T11:00:32.418230Z'\n",
+ "flow": [
+  {
+   "index": 0,
+   "action": "process.discovery",
+   "title": "Run an allow-listed discovery command",
+   "params": {
+    "command": "whoami_all"
+   },
+   "techniques": [
+    "T1033"
+   ],
+   "observables": [
+    "process.command_line"
+   ],
+   "cleanup": "Nothing to clean up: the command is read-only."
+  }
+ ],
+ "rules": [
+  {
+   "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+   "title": "Whoami /all execution",
+   "level": "medium",
+   "techniques": [
+    "T1033"
+   ],
+   "logsource": {
+    "product": "windows",
+    "category": "process_creation"
+   },
+   "kql": "host.os.type:\"windows\" and event.category:\"process\" and event.type:\"start\" and (process.executable:*\\\\whoami.exe and process.command_line:*/all*)",
+   "path": "windows/whoami_all.yml"
+  }
+ ],
+ "hardening": [
+  "win.sysmon.process_creation"
+ ]
+}

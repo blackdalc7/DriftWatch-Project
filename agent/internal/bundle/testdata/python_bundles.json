@@ -1,0 +1,15 @@
+{
+ "public_key": "Z7aWo6SsS98/kJx45015U3uesWyLgg5N0E08L6wJEWY=",
+ "agent_id": "agt_0123456789ab",
+ "now": "2026-10-30T14:05:00Z",
+ "test_bundle": {
+  "payload": "eyJhZ2VudF9pZCI6ImFndF8wMTIzNDU2Nzg5YWIiLCJleHBpcmVzX2F0IjoiMjAyNi0xMC0zMFQxNDoxNTowMC4wMDAwMDBaIiwiaXNzdWVkX2F0IjoiMjAyNi0xMC0zMFQxNDowMDowMC4wMDAwMDBaIiwia2luZCI6InRlc3QiLCJtYXJrZXIiOiJEVy0zZjljMmE3YjFlNWQ0Yzg2IiwicGxhdGZvcm0iOiJsaW51eCIsInJ1bl9pZCI6IjNmOWMyYTdiMWU1ZDRjODYiLCJzY29wZSI6ImxhYiIsInN0ZXBzIjpbeyJhY3Rpb24iOiJwcm9jZXNzLmRpc2NvdmVyeSIsImluZGV4IjowLCJwYXJhbXMiOnsiY29tbWFuZCI6ImlkIn19LHsiYWN0aW9uIjoicHJvY2Vzcy5kaXNjb3ZlcnkiLCJpbmRleCI6MSwicGFyYW1zIjp7ImNvbW1hbmQiOiJ1bmFtZV9hIn19XSwidGVzdF9pZCI6ImR3LWxpbi1ob3N0LWRpc2NvdmVyeSIsInRlc3RfdmVyc2lvbiI6MSwidmVyc2lvbiI6MX0=",
+  "signature": "lCYYaMTBWi7dQGD/E6EYqfIisOUJeB+LH8lD9m1atm5cU2Lhs/P/F4woCY1MrzIYXfhHPs1g7MmyN+64M3q8DA==",
+  "key_id": "bec3c82406a8c7cf"
+ },
+ "hygiene_bundle": {
+  "payload": "eyJhZ2VudF9pZCI6ImFndF8wMTIzNDU2Nzg5YWIiLCJleHBpcmVzX2F0IjoiMjAyNi0xMC0zMFQxNDoxNTowMC4wMDAwMDBaIiwiaXNzdWVkX2F0IjoiMjAyNi0xMC0zMFQxNDowMDowMC4wMDAwMDBaIiwia2luZCI6Imh5Z2llbmUiLCJtYXJrZXIiOiJEVy1hYWFhYmJiYmNjY2NkZGRkIiwicGxhdGZvcm0iOiJsaW51eCIsInJ1bl9pZCI6ImFhYWFiYmJiY2NjY2RkZGQiLCJzY29wZSI6ImxhYiIsInN0ZXBzIjpbeyJhY3Rpb24iOiJoeWdpZW5lLmNvbGxlY3QiLCJpbmRleCI6MCwicGFyYW1zIjp7fX1dLCJ0ZXN0X2lkIjoiYnVpbHRpbi5oeWdpZW5lIiwidGVzdF92ZXJzaW9uIjoxLCJ2ZXJzaW9uIjoxfQ==",
+  "signature": "HeAzqLkW8yY/agsbRZ69RFGA2zxa0LMWBrLbVuZTcpoFk+Vkt+7JodmlNh55m0eXg3kShH1Zhe2/oE6r5F2MBA==",
+  "key_id": "bec3c82406a8c7cf"
+ }
+}

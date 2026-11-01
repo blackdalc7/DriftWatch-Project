@@ -1,0 +1,102 @@
+# Driftwatch lab stack.
+#
+#   cp ../.env.example ../.env          # then set the secrets
+#   make pki                            # creates deploy/pki (CA, server cert, bundle signing key)
+#   docker compose --env-file ../.env up -d --build
+#   docker compose --profile kibana up -d    # optional Kibana for rule deployment and alert triage
+#
+# Build context is the repository root; the shared aegis-ui package is vendored under packages/.
+name: driftwatch
+
+x-env: &server-env
+  DRIFTWATCH_ADMIN_TOKEN: ${DRIFTWATCH_ADMIN_TOKEN:?set DRIFTWATCH_ADMIN_TOKEN in .env}
+  DRIFTWATCH_PROXY_SECRET: ${DRIFTWATCH_PROXY_SECRET:?set DRIFTWATCH_PROXY_SECRET in .env}
+  DRIFTWATCH_PKI_DIR: /pki
+  DRIFTWATCH_ELASTIC_URL: ${DRIFTWATCH_ELASTIC_URL:-http://elasticsearch:9200}
+  DRIFTWATCH_ELASTIC_USER: ${DRIFTWATCH_ELASTIC_USER:-elastic}
+  DRIFTWATCH_ELASTIC_PASSWORD: ${ELASTIC_PASSWORD:?set ELASTIC_PASSWORD in .env}
+  DRIFTWATCH_LAB_TAGS: ${DRIFTWATCH_LAB_TAGS:-lab}
+  DRIFTWATCH_TIMEZONE: ${DRIFTWATCH_TIMEZONE:-UTC}
+  DRIFTWATCH_DEFENDER_CLIENT_ID: ${MOCK_EDR_CLIENT_ID:-driftwatch-lab}
+  DRIFTWATCH_DEFENDER_CLIENT_SECRET: ${MOCK_EDR_CLIENT_SECRET:-lab-secret-change-me}
+  DRIFTWATCH_DEFENDER_LOGIN_URL: http://mock-edr:8080
+  DRIFTWATCH_DEFENDER_GRAPH_URL: http://mock-edr:8080
+  DRIFTWATCH_CROWDSTRIKE_CLIENT_ID: ${MOCK_EDR_CLIENT_ID:-driftwatch-lab}
+  DRIFTWATCH_CROWDSTRIKE_CLIENT_SECRET: ${MOCK_EDR_CLIENT_SECRET:-lab-secret-change-me}
+  DRIFTWATCH_CROWDSTRIKE_BASE_URL: http://mock-edr:8080
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.3
+    environment:
+      discovery.type: single-node
+      ELASTIC_PASSWORD: ${ELASTIC_PASSWORD}
+      xpack.security.enabled: "true"
+      xpack.security.http.ssl.enabled: "false"
+      ES_JAVA_OPTS: -Xms1g -Xmx1g
+    volumes: [esdata:/usr/share/elasticsearch/data]
+    ports: ["127.0.0.1:9200:9200"]   # Beats on the lab VMs ship here through your lab network
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s -u elastic:$${ELASTIC_PASSWORD} http://localhost:9200/_cluster/health | grep -qE 'green|yellow'"]
+      interval: 15s
+      retries: 20
+    restart: unless-stopped
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.15.3
+    profiles: [kibana]
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+      ELASTICSEARCH_USERNAME: kibana_system
+      ELASTICSEARCH_PASSWORD: ${KIBANA_SYSTEM_PASSWORD:-}
+      XPACK_ENCRYPTEDSAVEDOBJECTS_ENCRYPTIONKEY: ${KIBANA_ENCRYPTION_KEY:-}
+    ports: ["127.0.0.1:5601:5601"]
+    depends_on:
+      elasticsearch: {condition: service_healthy}
+    restart: unless-stopped
+
+  server:
+    build: {context: .., dockerfile: deploy/Dockerfile.server}
+    environment: *server-env
+    volumes:
+      - ./pki:/pki:ro
+      - dwdata:/data
+    depends_on:
+      elasticsearch: {condition: service_healthy}
+      mock-edr: {condition: service_started}
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+    restart: unless-stopped
+
+  mock-edr:
+    build: {context: .., dockerfile: deploy/Dockerfile.mock-edr}
+    environment:
+      MOCK_EDR_CLIENT_ID: ${MOCK_EDR_CLIENT_ID:-driftwatch-lab}
+      MOCK_EDR_CLIENT_SECRET: ${MOCK_EDR_CLIENT_SECRET:-lab-secret-change-me}
+    ports: ["127.0.0.1:8080:8080"]   # POST /_mock/scenario from your workstation to flip posture
+    read_only: true
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:1.27-alpine
+    environment:
+      DRIFTWATCH_PROXY_SECRET: ${DRIFTWATCH_PROXY_SECRET}
+      NGINX_ENVSUBST_FILTER: DRIFTWATCH_
+    volumes:
+      - ./nginx/driftwatch.conf.template:/etc/nginx/templates/driftwatch.conf.template:ro
+      - ./pki/ca.crt:/etc/driftwatch/pki/ca.crt:ro
+      - ./pki/server.crt:/etc/driftwatch/pki/server.crt:ro
+      - ./pki/server.key:/etc/driftwatch/pki/server.key:ro
+    ports:
+      - "443:443"     # operators: UI + API (API key)
+      - "8443:8443"   # agents: mTLS
+    depends_on: [server]
+    restart: unless-stopped
+
+volumes:
+  esdata:
+  dwdata:

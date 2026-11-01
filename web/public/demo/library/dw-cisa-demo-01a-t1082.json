@@ -1,0 +1,75 @@
+{
+ "id": "dw-cisa-demo-01a-t1082",
+ "name": "Run an allow-listed discovery command (T1082, from DEMO-01A)",
+ "description": "Emulates T1082 as reported in Synthetic advisory used by the Driftwatch demo (not a real CISA publication). Advisory context: the actors ran systeminfo on each host to profile it",
+ "version": 1,
+ "status": "approved",
+ "platforms": [
+  "windows"
+ ],
+ "severity": "medium",
+ "attack": {
+  "tactic": "discovery",
+  "techniques": [
+   "T1082"
+  ]
+ },
+ "steps": [
+  {
+   "action": "process.discovery",
+   "params": {
+    "command": "systeminfo"
+   }
+  }
+ ],
+ "expected": {
+  "outcome": "detected",
+  "detections": [],
+  "window_seconds": 300
+ },
+ "hygiene_controls": [],
+ "provenance": {
+  "source": "cisa",
+  "reference": "https://example.invalid/driftwatch/demo-advisory",
+  "generated_by": "offline-mapper",
+  "generated_at": "2026-10-31T05:33:01.624323Z"
+ },
+ "review": {
+  "approved_by": "blackdalc",
+  "approved_at": "2026-10-31T03:33:01.418230Z",
+  "notes": "Reviewed against the advisory; safe catalog steps only."
+ },
+ "verification": {
+  "run_id": null,
+  "agent_id": null,
+  "verified_at": null
+ },
+ "emulated_techniques": [
+  "T1082"
+ ],
+ "dispatchable": true,
+ "results": {
+  "runs": 0,
+  "passed": 0
+ },
+ "yaml": "id: dw-cisa-demo-01a-t1082\nname: Run an allow-listed discovery command (T1082, from DEMO-01A)\ndescription: 'Emulates T1082 as reported in Synthetic advisory used by the Driftwatch demo (not a real CISA publication).\n  Advisory context: the actors ran systeminfo on each host to profile it'\nversion: 1\nstatus: approved\nplatforms:\n- windows\nseverity: medium\nattack:\n  tactic: discovery\n  techniques:\n  - T1082\nsteps:\n- action: process.discovery\n  params:\n    command: systeminfo\nexpected:\n  outcome: detected\n  detections: []\n  window_seconds: 300\nhygiene_controls: []\nprovenance:\n  source: cisa\n  reference: https://example.invalid/driftwatch/demo-advisory\n  generated_by: offline-mapper\n  generated_at: '2026-10-31T05:33:01.624323Z'\nreview:\n  approved_by: blackdalc\n  approved_at: '2026-10-31T03:33:01.418230Z'\n  notes: Reviewed against the advisory; safe catalog steps only.\nverification:\n  run_id: null\n  agent_id: null\n  verified_at: null\n",
+ "flow": [
+  {
+   "index": 0,
+   "action": "process.discovery",
+   "title": "Run an allow-listed discovery command",
+   "params": {
+    "command": "systeminfo"
+   },
+   "techniques": [
+    "T1082"
+   ],
+   "observables": [
+    "process.command_line"
+   ],
+   "cleanup": "Nothing to clean up: the command is read-only."
+  }
+ ],
+ "rules": [],
+ "hardening": []
+}

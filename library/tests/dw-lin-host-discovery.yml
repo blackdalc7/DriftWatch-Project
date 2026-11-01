@@ -1,0 +1,24 @@
+id: dw-lin-host-discovery
+name: Linux identity and host discovery
+description: Runs id and uname -a back to back, the usual first commands after landing on a Linux host.
+version: 1
+status: approved
+platforms: [linux]
+severity: low
+attack:
+  tactic: discovery
+  techniques: [T1033, T1082]
+steps:
+  - action: process.discovery
+    params: {command: id}
+  - action: process.discovery
+    params: {command: uname_a}
+expected:
+  outcome: detected
+  detections: [5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09]
+hygiene_controls: [linux.auditd.running, linux.auditd.execve_rule]
+provenance: {source: manual}
+review:
+  approved_by: driftwatch-maintainers
+  approved_at: "2026-10-30T12:00:00Z"
+  notes: Hand-written seed test, reviewed with its Sigma rule.

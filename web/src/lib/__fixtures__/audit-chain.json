@@ -1,0 +1,44 @@
+[
+ {
+  "id": 3,
+  "ts": "2026-10-30T10:00:00.000000Z",
+  "actor": "system",
+  "action": "test.verified",
+  "details": {
+   "test_id": "dw-a",
+   "run_id": "0123456789abcdef",
+   "nested": {
+    "b": [
+     1,
+     "x"
+    ],
+    "a": null
+   }
+  },
+  "prev_hash": "d8e35bcd8497e2dea4f1a0a4492f3399f097b7cdd85d9cb1e32f36c287952781",
+  "hash": "433246f93131a1a527e178e3915c6bf937b80cec6bf76943db9a434c4fec98a5"
+ },
+ {
+  "id": 2,
+  "ts": "2026-10-30T09:05:00.000000Z",
+  "actor": "agent:agt_x",
+  "action": "agent.enrolled",
+  "details": {
+   "hostname": "lab-wïn01"
+  },
+  "prev_hash": "6a17db70e98080ecd55615f9b0e6adfc6287ac6516105af13edd531a5c82ef1e",
+  "hash": "d8e35bcd8497e2dea4f1a0a4492f3399f097b7cdd85d9cb1e32f36c287952781"
+ },
+ {
+  "id": 1,
+  "ts": "2026-10-30T09:00:00.000000Z",
+  "actor": "blackdalc",
+  "action": "token.created",
+  "details": {
+   "label": "lab-vms",
+   "uses": 2
+  },
+  "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "hash": "6a17db70e98080ecd55615f9b0e6adfc6287ac6516105af13edd531a5c82ef1e"
+ }
+]

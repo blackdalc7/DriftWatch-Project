@@ -1,0 +1,96 @@
+{
+ "id": "dw-lin-autostart-persistence",
+ "name": "XDG autostart persistence canary",
+ "description": "Writes a hidden .desktop autostart entry that runs /bin/true, emulating desktop persistence on Linux.",
+ "version": 1,
+ "status": "verified",
+ "platforms": [
+  "linux"
+ ],
+ "severity": "medium",
+ "attack": {
+  "tactic": "persistence",
+  "techniques": [
+   "T1547.013"
+  ]
+ },
+ "steps": [
+  {
+   "action": "persistence.autostart_canary",
+   "params": {
+    "hold_seconds": 15
+   }
+  }
+ ],
+ "expected": {
+  "outcome": "detected",
+  "detections": [
+   "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10"
+  ],
+  "window_seconds": 300
+ },
+ "hygiene_controls": [
+  "linux.auditd.running"
+ ],
+ "provenance": {
+  "source": "manual",
+  "reference": null,
+  "generated_by": null,
+  "generated_at": null
+ },
+ "review": {
+  "approved_by": "driftwatch-maintainers",
+  "approved_at": "2026-10-30T12:00:00Z",
+  "notes": "Hand-written seed test, reviewed with its Sigma rule."
+ },
+ "verification": {
+  "run_id": "2d1c5e6ddb530ba5",
+  "agent_id": "agt_demo_lin01",
+  "verified_at": "2026-10-24T11:01:33.418230Z"
+ },
+ "emulated_techniques": [
+  "T1547.013"
+ ],
+ "dispatchable": true,
+ "results": {
+  "runs": 1,
+  "passed": 1
+ },
+ "yaml": "id: dw-lin-autostart-persistence\nname: XDG autostart persistence canary\ndescription: Writes a hidden .desktop autostart entry that runs /bin/true, emulating desktop persistence on Linux.\nversion: 1\nstatus: verified\nplatforms:\n- linux\nseverity: medium\nattack:\n  tactic: persistence\n  techniques:\n  - T1547.013\nsteps:\n- action: persistence.autostart_canary\n  params:\n    hold_seconds: 15\nexpected:\n  outcome: detected\n  detections:\n  - 5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10\n  window_seconds: 300\nhygiene_controls:\n- linux.auditd.running\nprovenance:\n  source: manual\n  reference: null\n  generated_by: null\n  generated_at: null\nreview:\n  approved_by: driftwatch-maintainers\n  approved_at: '2026-10-30T12:00:00Z'\n  notes: Hand-written seed test, reviewed with its Sigma rule.\nverification:\n  run_id: 2d1c5e6ddb530ba5\n  agent_id: agt_demo_lin01\n  verified_at: '2026-10-24T11:01:33.418230Z'\n",
+ "flow": [
+  {
+   "index": 0,
+   "action": "persistence.autostart_canary",
+   "title": "Write an XDG autostart canary",
+   "params": {
+    "hold_seconds": 15
+   },
+   "techniques": [
+    "T1547.013"
+   ],
+   "observables": [
+    "file.path"
+   ],
+   "cleanup": "Deletes the .desktop file."
+  }
+ ],
+ "rules": [
+  {
+   "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10",
+   "title": "XDG autostart entry created",
+   "level": "medium",
+   "techniques": [
+    "T1547.013"
+   ],
+   "logsource": {
+    "product": "linux",
+    "category": "file_event"
+   },
+   "kql": "host.os.type:\"linux\" and event.category:\"file\" and event.type:\"creation\" and ((file.path:*/.config/autostart/* or file.path:*/etc/xdg/autostart/*) and file.path:*.desktop)",
+   "path": "linux/xdg_autostart.yml"
+  }
+ ],
+ "hardening": [
+  "linux.auditd.running"
+ ]
+}

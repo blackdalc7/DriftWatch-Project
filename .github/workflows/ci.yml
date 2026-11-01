@@ -1,0 +1,101 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13", cache: pip}
+      - run: pip install -r requirements.txt -r requirements-dev.txt ruff
+      - run: ruff check .
+      - run: python -m pytest --cov --cov-report=term-missing
+        env: {PYTHONPATH: src}
+      - name: Schema and catalog fixtures are up to date
+        env: {PYTHONPATH: src}
+        run: |
+          python -m driftwatch schema --out schema/driftwatch-test.schema.json
+          python -m driftwatch catalog > agent/internal/catalog/testdata/catalog.json
+          git diff --exit-code -- schema agent/internal/catalog/testdata
+
+  agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with: {go-version: "1.24", cache-dependency-path: agent/go.sum}
+      - working-directory: agent
+        run: |
+          test -z "$(gofmt -l .)"
+          go vet ./...
+          GOOS=windows go vet ./...
+          go test -race -cover ./...
+      - run: make agent
+      - uses: actions/upload-artifact@v4
+        with: {name: driftwatch-agent, path: agent/bin/, retention-days: 14}
+
+  agent-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with: {go-version: "1.24", cache-dependency-path: agent/go.sum}
+      - working-directory: agent
+        run: go test ./...
+      - name: PSScriptAnalyzer on the baseline script
+        shell: pwsh
+        run: |
+          Install-Module PSScriptAnalyzer -Force -Scope CurrentUser
+          $r = Invoke-ScriptAnalyzer -Path agent/internal/hygiene/scripts/Test-DriftwatchBaseline.ps1 -Severity Error
+          $r | Format-Table
+          if ($r) { exit 1 }
+      - name: Baseline script runs and emits a valid report
+        shell: powershell
+        run: |
+          $json = powershell -NoProfile -ExecutionPolicy Bypass -File agent/internal/hygiene/scripts/Test-DriftwatchBaseline.ps1 | ConvertFrom-Json
+          if ($json.schema -ne 'driftwatch.hygiene/v1' -or $json.checks.Count -lt 10) { exit 1 }
+          $json.checks | Format-Table id, status, actual
+
+  shell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: shellcheck agent/internal/hygiene/scripts/check-baseline.sh scripts/e2e_local.sh
+      - run: bash agent/internal/hygiene/scripts/check-baseline.sh | python3 -m json.tool > /dev/null
+
+  e2e:
+    runs-on: ubuntu-latest
+    needs: [python, agent]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13", cache: pip}
+      - uses: actions/setup-go@v5
+        with: {go-version: "1.24", cache-dependency-path: agent/go.sum}
+      - run: pip install -r requirements.txt
+      - run: scripts/e2e_local.sh
+
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: "22", cache: npm, cache-dependency-path: web/package-lock.json}
+      - working-directory: web
+        run: |
+          npm ci
+          npm run typecheck
+          npm test
+          npm run build

@@ -1,0 +1,21 @@
+title: DNS query for a reserved, non-resolving TLD
+id: 5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08
+status: stable
+description: Detects lookups of .invalid, .test or .example names, which never resolve and indicate misconfigured or synthetic beaconing.
+author: Driftwatch
+date: 2026-10-30
+tags:
+  - attack.command-and-control
+  - attack.t1071.004
+logsource:
+  category: dns_query
+detection:
+  selection:
+    QueryName|endswith:
+      - '.invalid'
+      - '.test'
+      - '.example'
+  condition: selection
+falsepositives:
+  - Developers testing resolvers
+level: low

@@ -1,0 +1,75 @@
+{
+ "id": "dw-cisa-demo-01a-t1053-005",
+ "name": "Register a disabled scheduled task canary (T1053.005, from DEMO-01A)",
+ "description": "Emulates T1053.005 as reported in Synthetic advisory used by the Driftwatch demo (not a real CISA publication). Advisory context: persistence came from a scheduled task named like a browser updater",
+ "version": 1,
+ "status": "draft",
+ "platforms": [
+  "windows"
+ ],
+ "severity": "medium",
+ "attack": {
+  "tactic": "persistence",
+  "techniques": [
+   "T1053.005"
+  ]
+ },
+ "steps": [
+  {
+   "action": "scheduled_task.canary",
+   "params": {
+    "hold_seconds": 15
+   }
+  }
+ ],
+ "expected": {
+  "outcome": "detected",
+  "detections": [],
+  "window_seconds": 300
+ },
+ "hygiene_controls": [],
+ "provenance": {
+  "source": "cisa",
+  "reference": "https://example.invalid/driftwatch/demo-advisory",
+  "generated_by": "offline-mapper",
+  "generated_at": "2026-10-31T05:33:01.624424Z"
+ },
+ "review": {
+  "approved_by": null,
+  "approved_at": null,
+  "notes": null
+ },
+ "verification": {
+  "run_id": null,
+  "agent_id": null,
+  "verified_at": null
+ },
+ "emulated_techniques": [
+  "T1053.005"
+ ],
+ "dispatchable": false,
+ "results": {
+  "runs": 0,
+  "passed": 0
+ },
+ "yaml": "id: dw-cisa-demo-01a-t1053-005\nname: Register a disabled scheduled task canary (T1053.005, from DEMO-01A)\ndescription: 'Emulates T1053.005 as reported in Synthetic advisory used by the Driftwatch demo (not a real CISA\n  publication). Advisory context: persistence came from a scheduled task named like a browser updater'\nversion: 1\nstatus: draft\nplatforms:\n- windows\nseverity: medium\nattack:\n  tactic: persistence\n  techniques:\n  - T1053.005\nsteps:\n- action: scheduled_task.canary\n  params:\n    hold_seconds: 15\nexpected:\n  outcome: detected\n  detections: []\n  window_seconds: 300\nhygiene_controls: []\nprovenance:\n  source: cisa\n  reference: https://example.invalid/driftwatch/demo-advisory\n  generated_by: offline-mapper\n  generated_at: '2026-10-31T05:33:01.624424Z'\nreview:\n  approved_by: null\n  approved_at: null\n  notes: null\nverification:\n  run_id: null\n  agent_id: null\n  verified_at: null\n",
+ "flow": [
+  {
+   "index": 0,
+   "action": "scheduled_task.canary",
+   "title": "Register a disabled scheduled task canary",
+   "params": {
+    "hold_seconds": 15
+   },
+   "techniques": [
+    "T1053.005"
+   ],
+   "observables": [
+    "process.command_line"
+   ],
+   "cleanup": "Deletes the scheduled task."
+  }
+ ],
+ "rules": [],
+ "hardening": []
+}

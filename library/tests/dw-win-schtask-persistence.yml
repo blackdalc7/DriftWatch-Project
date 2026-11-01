@@ -1,0 +1,22 @@
+id: dw-win-schtask-persistence
+name: Scheduled task persistence canary
+description: Registers a disabled scheduled task from the command line, as many intrusion sets do for persistence.
+version: 1
+status: approved
+platforms: [windows]
+severity: high
+attack:
+  tactic: persistence
+  techniques: [T1053.005]
+steps:
+  - action: scheduled_task.canary
+    params: {hold_seconds: 15}
+expected:
+  outcome: detected
+  detections: [5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04]
+hygiene_controls: [win.sysmon.process_creation]
+provenance: {source: manual}
+review:
+  approved_by: driftwatch-maintainers
+  approved_at: "2026-10-30T12:00:00Z"
+  notes: Hand-written seed test, reviewed with its Sigma rule.

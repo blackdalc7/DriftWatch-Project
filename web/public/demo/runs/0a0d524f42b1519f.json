@@ -1,0 +1,46 @@
+{
+ "id": "0a0d524f42b1519f",
+ "test_id": "dw-win-eicar-quarantine",
+ "test_version": 1,
+ "agent_id": "agt_demo_win01",
+ "source": "demo",
+ "schedule_id": null,
+ "status": "evaluated",
+ "created_at": "2026-10-30T10:17:06.418230Z",
+ "not_before": "2026-10-30T10:17:06.418230Z",
+ "dispatched_at": "2026-10-30T10:17:06.418230Z",
+ "expires_at": null,
+ "started_at": "2026-10-30T10:17:06.418230Z",
+ "finished_at": "2026-10-30T10:17:26.418230Z",
+ "step_results": [
+  {
+   "index": 0,
+   "action": "file.eicar_drop",
+   "status": "blocked",
+   "cleanup": "ok"
+  }
+ ],
+ "agent_log": "demo run (synthetic)",
+ "outcome": "prevented",
+ "passed": true,
+ "evaluation": {
+  "outcome": "prevented",
+  "passed": true,
+  "telemetry_seen": true,
+  "telemetry_hits": 1,
+  "detection_quality": "technique",
+  "alerts": [
+   {
+    "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+    "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+    "timestamp": "2026-10-30T10:17:46.418230Z"
+   }
+  ],
+  "expected_detections": [
+   "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06"
+  ],
+  "missing_detections": [],
+  "notes": []
+ },
+ "evaluated_at": "2026-10-30T10:20:06.418230Z"
+}

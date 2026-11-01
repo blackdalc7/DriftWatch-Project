@@ -1,0 +1,96 @@
+{
+ "id": "dw-win-local-admin-enum",
+ "name": "Local administrators group enumeration",
+ "description": "Lists members of the local Administrators group with net.exe to find privileged accounts.",
+ "version": 1,
+ "status": "verified",
+ "platforms": [
+  "windows"
+ ],
+ "severity": "medium",
+ "attack": {
+  "tactic": "discovery",
+  "techniques": [
+   "T1069.001"
+  ]
+ },
+ "steps": [
+  {
+   "action": "process.discovery",
+   "params": {
+    "command": "net_localgroup_admins"
+   }
+  }
+ ],
+ "expected": {
+  "outcome": "detected",
+  "detections": [
+   "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02"
+  ],
+  "window_seconds": 300
+ },
+ "hygiene_controls": [
+  "win.sysmon.process_creation"
+ ],
+ "provenance": {
+  "source": "manual",
+  "reference": null,
+  "generated_by": null,
+  "generated_at": null
+ },
+ "review": {
+  "approved_by": "driftwatch-maintainers",
+  "approved_at": "2026-10-30T12:00:00Z",
+  "notes": "Hand-written seed test, reviewed with its Sigma rule."
+ },
+ "verification": {
+  "run_id": "88280dc9e46d8771",
+  "agent_id": "agt_demo_win01",
+  "verified_at": "2026-10-24T10:21:46.418230Z"
+ },
+ "emulated_techniques": [
+  "T1069.001"
+ ],
+ "dispatchable": true,
+ "results": {
+  "runs": 1,
+  "passed": 1
+ },
+ "yaml": "id: dw-win-local-admin-enum\nname: Local administrators group enumeration\ndescription: Lists members of the local Administrators group with net.exe to find privileged accounts.\nversion: 1\nstatus: verified\nplatforms:\n- windows\nseverity: medium\nattack:\n  tactic: discovery\n  techniques:\n  - T1069.001\nsteps:\n- action: process.discovery\n  params:\n    command: net_localgroup_admins\nexpected:\n  outcome: detected\n  detections:\n  - 5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02\n  window_seconds: 300\nhygiene_controls:\n- win.sysmon.process_creation\nprovenance:\n  source: manual\n  reference: null\n  generated_by: null\n  generated_at: null\nreview:\n  approved_by: driftwatch-maintainers\n  approved_at: '2026-10-30T12:00:00Z'\n  notes: Hand-written seed test, reviewed with its Sigma rule.\nverification:\n  run_id: 88280dc9e46d8771\n  agent_id: agt_demo_win01\n  verified_at: '2026-10-24T10:21:46.418230Z'\n",
+ "flow": [
+  {
+   "index": 0,
+   "action": "process.discovery",
+   "title": "Run an allow-listed discovery command",
+   "params": {
+    "command": "net_localgroup_admins"
+   },
+   "techniques": [
+    "T1069.001"
+   ],
+   "observables": [
+    "process.command_line"
+   ],
+   "cleanup": "Nothing to clean up: the command is read-only."
+  }
+ ],
+ "rules": [
+  {
+   "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+   "title": "Local administrators group enumeration with net.exe",
+   "level": "medium",
+   "techniques": [
+    "T1069.001"
+   ],
+   "logsource": {
+    "product": "windows",
+    "category": "process_creation"
+   },
+   "kql": "host.os.type:\"windows\" and event.category:\"process\" and event.type:\"start\" and ((process.executable:*\\\\net.exe or process.executable:*\\\\net1.exe) and (process.command_line:*localgroup* and process.command_line:*administrators*))",
+   "path": "windows/local_admin_group_enum.yml"
+  }
+ ],
+ "hardening": [
+  "win.sysmon.process_creation"
+ ]
+}

@@ -1,0 +1,714 @@
+[
+ {
+  "id": "dw-cisa-demo-01a-t1053-005",
+  "name": "Register a disabled scheduled task canary (T1053.005, from DEMO-01A)",
+  "description": "Emulates T1053.005 as reported in Synthetic advisory used by the Driftwatch demo (not a real CISA publication). Advisory context: persistence came from a scheduled task named like a browser updater",
+  "version": 1,
+  "status": "draft",
+  "platforms": [
+   "windows"
+  ],
+  "severity": "medium",
+  "attack": {
+   "tactic": "persistence",
+   "techniques": [
+    "T1053.005"
+   ]
+  },
+  "steps": [
+   {
+    "action": "scheduled_task.canary",
+    "params": {
+     "hold_seconds": 15
+    }
+   }
+  ],
+  "expected": {
+   "outcome": "detected",
+   "detections": [],
+   "window_seconds": 300
+  },
+  "hygiene_controls": [],
+  "provenance": {
+   "source": "cisa",
+   "reference": "https://example.invalid/driftwatch/demo-advisory",
+   "generated_by": "offline-mapper",
+   "generated_at": "2026-10-31T05:33:01.624424Z"
+  },
+  "review": {
+   "approved_by": null,
+   "approved_at": null,
+   "notes": null
+  },
+  "verification": {
+   "run_id": null,
+   "agent_id": null,
+   "verified_at": null
+  },
+  "emulated_techniques": [
+   "T1053.005"
+  ],
+  "dispatchable": false,
+  "results": {
+   "runs": 0,
+   "passed": 0
+  }
+ },
+ {
+  "id": "dw-cisa-demo-01a-t1082",
+  "name": "Run an allow-listed discovery command (T1082, from DEMO-01A)",
+  "description": "Emulates T1082 as reported in Synthetic advisory used by the Driftwatch demo (not a real CISA publication). Advisory context: the actors ran systeminfo on each host to profile it",
+  "version": 1,
+  "status": "approved",
+  "platforms": [
+   "windows"
+  ],
+  "severity": "medium",
+  "attack": {
+   "tactic": "discovery",
+   "techniques": [
+    "T1082"
+   ]
+  },
+  "steps": [
+   {
+    "action": "process.discovery",
+    "params": {
+     "command": "systeminfo"
+    }
+   }
+  ],
+  "expected": {
+   "outcome": "detected",
+   "detections": [],
+   "window_seconds": 300
+  },
+  "hygiene_controls": [],
+  "provenance": {
+   "source": "cisa",
+   "reference": "https://example.invalid/driftwatch/demo-advisory",
+   "generated_by": "offline-mapper",
+   "generated_at": "2026-10-31T05:33:01.624323Z"
+  },
+  "review": {
+   "approved_by": "blackdalc",
+   "approved_at": "2026-10-31T03:33:01.418230Z",
+   "notes": "Reviewed against the advisory; safe catalog steps only."
+  },
+  "verification": {
+   "run_id": null,
+   "agent_id": null,
+   "verified_at": null
+  },
+  "emulated_techniques": [
+   "T1082"
+  ],
+  "dispatchable": true,
+  "results": {
+   "runs": 0,
+   "passed": 0
+  }
+ },
+ {
+  "id": "dw-credential-file-canary",
+  "name": "Plaintext credential file harvesting",
+  "description": "Plants a fake passwords file and reads it back, emulating credential harvesting from files on disk.",
+  "version": 1,
+  "status": "verified",
+  "platforms": [
+   "linux",
+   "windows"
+  ],
+  "severity": "medium",
+  "attack": {
+   "tactic": "credential-access",
+   "techniques": [
+    "T1552.001"
+   ]
+  },
+  "steps": [
+   {
+    "action": "file.credential_canary_read",
+    "params": {}
+   }
+  ],
+  "expected": {
+   "outcome": "detected",
+   "detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+   ],
+   "window_seconds": 300
+  },
+  "hygiene_controls": [
+   "win.audit.object_access",
+   "linux.auditd.running"
+  ],
+  "provenance": {
+   "source": "manual",
+   "reference": null,
+   "generated_by": null,
+   "generated_at": null
+  },
+  "review": {
+   "approved_by": "driftwatch-maintainers",
+   "approved_at": "2026-10-30T12:00:00Z",
+   "notes": "Hand-written seed test, reviewed with its Sigma rule."
+  },
+  "verification": {
+   "run_id": "0d2cf5d5146f6c0b",
+   "agent_id": "agt_demo_lin01",
+   "verified_at": "2026-10-24T10:30:46.418230Z"
+  },
+  "emulated_techniques": [
+   "T1552.001"
+  ],
+  "dispatchable": true,
+  "results": {
+   "runs": 2,
+   "passed": 1
+  }
+ },
+ {
+  "id": "dw-dns-sinkhole-beacon",
+  "name": "DNS beaconing to a non-resolving domain",
+  "description": "Performs repeated lookups of a reserved .invalid name, emulating DNS command-and-control check-ins without any traffic leaving the resolver.",
+  "version": 1,
+  "status": "verified",
+  "platforms": [
+   "linux",
+   "windows"
+  ],
+  "severity": "medium",
+  "attack": {
+   "tactic": "command-and-control",
+   "techniques": [
+    "T1071.004"
+   ]
+  },
+  "steps": [
+   {
+    "action": "dns.sinkhole_query",
+    "params": {
+     "count": 3
+    }
+   }
+  ],
+  "expected": {
+   "outcome": "detected",
+   "detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+   ],
+   "window_seconds": 300
+  },
+  "hygiene_controls": [
+   "win.sysmon.dns"
+  ],
+  "provenance": {
+   "source": "manual",
+   "reference": null,
+   "generated_by": null,
+   "generated_at": null
+  },
+  "review": {
+   "approved_by": "driftwatch-maintainers",
+   "approved_at": "2026-10-30T12:00:00Z",
+   "notes": "Hand-written seed test, reviewed with its Sigma rule."
+  },
+  "verification": {
+   "run_id": "0515f2f23a495e9e",
+   "agent_id": "agt_demo_lin01",
+   "verified_at": "2026-10-24T10:54:32.418230Z"
+  },
+  "emulated_techniques": [
+   "T1071.004"
+  ],
+  "dispatchable": true,
+  "results": {
+   "runs": 2,
+   "passed": 2
+  }
+ },
+ {
+  "id": "dw-lin-autostart-persistence",
+  "name": "XDG autostart persistence canary",
+  "description": "Writes a hidden .desktop autostart entry that runs /bin/true, emulating desktop persistence on Linux.",
+  "version": 1,
+  "status": "verified",
+  "platforms": [
+   "linux"
+  ],
+  "severity": "medium",
+  "attack": {
+   "tactic": "persistence",
+   "techniques": [
+    "T1547.013"
+   ]
+  },
+  "steps": [
+   {
+    "action": "persistence.autostart_canary",
+    "params": {
+     "hold_seconds": 15
+    }
+   }
+  ],
+  "expected": {
+   "outcome": "detected",
+   "detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b10"
+   ],
+   "window_seconds": 300
+  },
+  "hygiene_controls": [
+   "linux.auditd.running"
+  ],
+  "provenance": {
+   "source": "manual",
+   "reference": null,
+   "generated_by": null,
+   "generated_at": null
+  },
+  "review": {
+   "approved_by": "driftwatch-maintainers",
+   "approved_at": "2026-10-30T12:00:00Z",
+   "notes": "Hand-written seed test, reviewed with its Sigma rule."
+  },
+  "verification": {
+   "run_id": "2d1c5e6ddb530ba5",
+   "agent_id": "agt_demo_lin01",
+   "verified_at": "2026-10-24T11:01:33.418230Z"
+  },
+  "emulated_techniques": [
+   "T1547.013"
+  ],
+  "dispatchable": true,
+  "results": {
+   "runs": 1,
+   "passed": 1
+  }
+ },
+ {
+  "id": "dw-lin-host-discovery",
+  "name": "Linux identity and host discovery",
+  "description": "Runs id and uname -a back to back, the usual first commands after landing on a Linux host.",
+  "version": 1,
+  "status": "verified",
+  "platforms": [
+   "linux"
+  ],
+  "severity": "low",
+  "attack": {
+   "tactic": "discovery",
+   "techniques": [
+    "T1033",
+    "T1082"
+   ]
+  },
+  "steps": [
+   {
+    "action": "process.discovery",
+    "params": {
+     "command": "id"
+    }
+   },
+   {
+    "action": "process.discovery",
+    "params": {
+     "command": "uname_a"
+    }
+   }
+  ],
+  "expected": {
+   "outcome": "detected",
+   "detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b09"
+   ],
+   "window_seconds": 300
+  },
+  "hygiene_controls": [
+   "linux.auditd.running",
+   "linux.auditd.execve_rule"
+  ],
+  "provenance": {
+   "source": "manual",
+   "reference": null,
+   "generated_by": null,
+   "generated_at": null
+  },
+  "review": {
+   "approved_by": "driftwatch-maintainers",
+   "approved_at": "2026-10-30T12:00:00Z",
+   "notes": "Hand-written seed test, reviewed with its Sigma rule."
+  },
+  "verification": {
+   "run_id": "9757449bfc438697",
+   "agent_id": "agt_demo_lin01",
+   "verified_at": "2026-10-24T10:39:53.418230Z"
+  },
+  "emulated_techniques": [
+   "T1033",
+   "T1082"
+  ],
+  "dispatchable": true,
+  "results": {
+   "runs": 1,
+   "passed": 1
+  }
+ },
+ {
+  "id": "dw-win-eicar-quarantine",
+  "name": "Antivirus quarantines a dropped test file",
+  "description": "Writes the EICAR test file to disk. Real-time protection should quarantine it within seconds and log event 1116.",
+  "version": 1,
+  "status": "verified",
+  "platforms": [
+   "windows"
+  ],
+  "severity": "high",
+  "attack": {
+   "tactic": "command-and-control",
+   "techniques": [
+    "T1105"
+   ]
+  },
+  "steps": [
+   {
+    "action": "file.eicar_drop",
+    "params": {
+     "wait_seconds": 10
+    }
+   }
+  ],
+  "expected": {
+   "outcome": "prevented",
+   "detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06"
+   ],
+   "window_seconds": 300
+  },
+  "hygiene_controls": [
+   "win.defender.realtime_protection",
+   "win.defender.cloud_protection"
+  ],
+  "provenance": {
+   "source": "manual",
+   "reference": null,
+   "generated_by": null,
+   "generated_at": null
+  },
+  "review": {
+   "approved_by": "driftwatch-maintainers",
+   "approved_at": "2026-10-30T12:00:00Z",
+   "notes": "Hand-written seed test, reviewed with its Sigma rule."
+  },
+  "verification": {
+   "run_id": "b711fbfd663ce25d",
+   "agent_id": "agt_demo_win01",
+   "verified_at": "2026-10-24T10:27:48.418230Z"
+  },
+  "emulated_techniques": [
+   "T1105"
+  ],
+  "dispatchable": true,
+  "results": {
+   "runs": 1,
+   "passed": 1
+  }
+ },
+ {
+  "id": "dw-win-encoded-powershell",
+  "name": "Encoded PowerShell command",
+  "description": "Starts PowerShell with -EncodedCommand. The payload only prints a marker, but the launch pattern is a staple of loaders.",
+  "version": 1,
+  "status": "verified",
+  "platforms": [
+   "windows"
+  ],
+  "severity": "high",
+  "attack": {
+   "tactic": "execution",
+   "techniques": [
+    "T1059.001",
+    "T1027"
+   ]
+  },
+  "steps": [
+   {
+    "action": "powershell.encoded_marker",
+    "params": {}
+   }
+  ],
+  "expected": {
+   "outcome": "detected",
+   "detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+   ],
+   "window_seconds": 300
+  },
+  "hygiene_controls": [
+   "win.powershell.scriptblock_logging",
+   "win.asr.block_obfuscated_scripts"
+  ],
+  "provenance": {
+   "source": "manual",
+   "reference": null,
+   "generated_by": null,
+   "generated_at": null
+  },
+  "review": {
+   "approved_by": "driftwatch-maintainers",
+   "approved_at": "2026-10-30T12:00:00Z",
+   "notes": "Hand-written seed test, reviewed with its Sigma rule."
+  },
+  "verification": {
+   "run_id": "546045281e0c0e32",
+   "agent_id": "agt_demo_win01",
+   "verified_at": "2026-10-24T10:49:31.418230Z"
+  },
+  "emulated_techniques": [
+   "T1059.001",
+   "T1027"
+  ],
+  "dispatchable": true,
+  "results": {
+   "runs": 1,
+   "passed": 0
+  }
+ },
+ {
+  "id": "dw-win-local-admin-enum",
+  "name": "Local administrators group enumeration",
+  "description": "Lists members of the local Administrators group with net.exe to find privileged accounts.",
+  "version": 1,
+  "status": "verified",
+  "platforms": [
+   "windows"
+  ],
+  "severity": "medium",
+  "attack": {
+   "tactic": "discovery",
+   "techniques": [
+    "T1069.001"
+   ]
+  },
+  "steps": [
+   {
+    "action": "process.discovery",
+    "params": {
+     "command": "net_localgroup_admins"
+    }
+   }
+  ],
+  "expected": {
+   "outcome": "detected",
+   "detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02"
+   ],
+   "window_seconds": 300
+  },
+  "hygiene_controls": [
+   "win.sysmon.process_creation"
+  ],
+  "provenance": {
+   "source": "manual",
+   "reference": null,
+   "generated_by": null,
+   "generated_at": null
+  },
+  "review": {
+   "approved_by": "driftwatch-maintainers",
+   "approved_at": "2026-10-30T12:00:00Z",
+   "notes": "Hand-written seed test, reviewed with its Sigma rule."
+  },
+  "verification": {
+   "run_id": "88280dc9e46d8771",
+   "agent_id": "agt_demo_win01",
+   "verified_at": "2026-10-24T10:21:46.418230Z"
+  },
+  "emulated_techniques": [
+   "T1069.001"
+  ],
+  "dispatchable": true,
+  "results": {
+   "runs": 1,
+   "passed": 1
+  }
+ },
+ {
+  "id": "dw-win-run-key-persistence",
+  "name": "Run key persistence canary",
+  "description": "Writes a value under HKCU Run pointing at a harmless non-existent path, the way commodity malware persists.",
+  "version": 1,
+  "status": "verified",
+  "platforms": [
+   "windows"
+  ],
+  "severity": "high",
+  "attack": {
+   "tactic": "persistence",
+   "techniques": [
+    "T1547.001"
+   ]
+  },
+  "steps": [
+   {
+    "action": "registry.run_key_canary",
+    "params": {
+     "hold_seconds": 15
+    }
+   }
+  ],
+  "expected": {
+   "outcome": "detected",
+   "detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03"
+   ],
+   "window_seconds": 300
+  },
+  "hygiene_controls": [
+   "win.sysmon.registry"
+  ],
+  "provenance": {
+   "source": "manual",
+   "reference": null,
+   "generated_by": null,
+   "generated_at": null
+  },
+  "review": {
+   "approved_by": "driftwatch-maintainers",
+   "approved_at": "2026-10-30T12:00:00Z",
+   "notes": "Hand-written seed test, reviewed with its Sigma rule."
+  },
+  "verification": {
+   "run_id": "647c5ecae9c12ce6",
+   "agent_id": "agt_demo_win01",
+   "verified_at": "2026-10-24T10:44:09.418230Z"
+  },
+  "emulated_techniques": [
+   "T1547.001"
+  ],
+  "dispatchable": true,
+  "results": {
+   "runs": 1,
+   "passed": 1
+  }
+ },
+ {
+  "id": "dw-win-schtask-persistence",
+  "name": "Scheduled task persistence canary",
+  "description": "Registers a disabled scheduled task from the command line, as many intrusion sets do for persistence.",
+  "version": 1,
+  "status": "verified",
+  "platforms": [
+   "windows"
+  ],
+  "severity": "high",
+  "attack": {
+   "tactic": "persistence",
+   "techniques": [
+    "T1053.005"
+   ]
+  },
+  "steps": [
+   {
+    "action": "scheduled_task.canary",
+    "params": {
+     "hold_seconds": 15
+    }
+   }
+  ],
+  "expected": {
+   "outcome": "detected",
+   "detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04"
+   ],
+   "window_seconds": 300
+  },
+  "hygiene_controls": [
+   "win.sysmon.process_creation"
+  ],
+  "provenance": {
+   "source": "manual",
+   "reference": null,
+   "generated_by": null,
+   "generated_at": null
+  },
+  "review": {
+   "approved_by": "driftwatch-maintainers",
+   "approved_at": "2026-10-30T12:00:00Z",
+   "notes": "Hand-written seed test, reviewed with its Sigma rule."
+  },
+  "verification": {
+   "run_id": "023576b7652f9ccd",
+   "agent_id": "agt_demo_win01",
+   "verified_at": "2026-10-24T10:55:53.418230Z"
+  },
+  "emulated_techniques": [
+   "T1053.005"
+  ],
+  "dispatchable": true,
+  "results": {
+   "runs": 1,
+   "passed": 1
+  }
+ },
+ {
+  "id": "dw-win-whoami-discovery",
+  "name": "System owner discovery with whoami /all",
+  "description": "Runs whoami /all, which attackers use right after access to learn the current user, groups and privileges.",
+  "version": 1,
+  "status": "verified",
+  "platforms": [
+   "windows"
+  ],
+  "severity": "medium",
+  "attack": {
+   "tactic": "discovery",
+   "techniques": [
+    "T1033"
+   ]
+  },
+  "steps": [
+   {
+    "action": "process.discovery",
+    "params": {
+     "command": "whoami_all"
+    }
+   }
+  ],
+  "expected": {
+   "outcome": "detected",
+   "detections": [
+    "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01"
+   ],
+   "window_seconds": 300
+  },
+  "hygiene_controls": [
+   "win.sysmon.process_creation"
+  ],
+  "provenance": {
+   "source": "manual",
+   "reference": null,
+   "generated_by": null,
+   "generated_at": null
+  },
+  "review": {
+   "approved_by": "driftwatch-maintainers",
+   "approved_at": "2026-10-30T12:00:00Z",
+   "notes": "Hand-written seed test, reviewed with its Sigma rule."
+  },
+  "verification": {
+   "run_id": "51e5755cedb29d2c",
+   "agent_id": "agt_demo_win01",
+   "verified_at": "2026-10-24T11:00:32.418230Z"
+  },
+  "emulated_techniques": [
+   "T1033"
+  ],
+  "dispatchable": true,
+  "results": {
+   "runs": 1,
+   "passed": 1
+  }
+ }
+]

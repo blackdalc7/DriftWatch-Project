@@ -1,0 +1,96 @@
+{
+ "id": "dw-dns-sinkhole-beacon",
+ "name": "DNS beaconing to a non-resolving domain",
+ "description": "Performs repeated lookups of a reserved .invalid name, emulating DNS command-and-control check-ins without any traffic leaving the resolver.",
+ "version": 1,
+ "status": "verified",
+ "platforms": [
+  "linux",
+  "windows"
+ ],
+ "severity": "medium",
+ "attack": {
+  "tactic": "command-and-control",
+  "techniques": [
+   "T1071.004"
+  ]
+ },
+ "steps": [
+  {
+   "action": "dns.sinkhole_query",
+   "params": {
+    "count": 3
+   }
+  }
+ ],
+ "expected": {
+  "outcome": "detected",
+  "detections": [
+   "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+  ],
+  "window_seconds": 300
+ },
+ "hygiene_controls": [
+  "win.sysmon.dns"
+ ],
+ "provenance": {
+  "source": "manual",
+  "reference": null,
+  "generated_by": null,
+  "generated_at": null
+ },
+ "review": {
+  "approved_by": "driftwatch-maintainers",
+  "approved_at": "2026-10-30T12:00:00Z",
+  "notes": "Hand-written seed test, reviewed with its Sigma rule."
+ },
+ "verification": {
+  "run_id": "0515f2f23a495e9e",
+  "agent_id": "agt_demo_lin01",
+  "verified_at": "2026-10-24T10:54:32.418230Z"
+ },
+ "emulated_techniques": [
+  "T1071.004"
+ ],
+ "dispatchable": true,
+ "results": {
+  "runs": 2,
+  "passed": 2
+ },
+ "yaml": "id: dw-dns-sinkhole-beacon\nname: DNS beaconing to a non-resolving domain\ndescription: Performs repeated lookups of a reserved .invalid name, emulating DNS command-and-control check-ins\n  without any traffic leaving the resolver.\nversion: 1\nstatus: verified\nplatforms:\n- linux\n- windows\nseverity: medium\nattack:\n  tactic: command-and-control\n  techniques:\n  - T1071.004\nsteps:\n- action: dns.sinkhole_query\n  params:\n    count: 3\nexpected:\n  outcome: detected\n  detections:\n  - 5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08\n  window_seconds: 300\nhygiene_controls:\n- win.sysmon.dns\nprovenance:\n  source: manual\n  reference: null\n  generated_by: null\n  generated_at: null\nreview:\n  approved_by: driftwatch-maintainers\n  approved_at: '2026-10-30T12:00:00Z'\n  notes: Hand-written seed test, reviewed with its Sigma rule.\nverification:\n  run_id: 0515f2f23a495e9e\n  agent_id: agt_demo_lin01\n  verified_at: '2026-10-24T10:54:32.418230Z'\n",
+ "flow": [
+  {
+   "index": 0,
+   "action": "dns.sinkhole_query",
+   "title": "Resolve a reserved .invalid domain",
+   "params": {
+    "count": 3
+   },
+   "techniques": [
+    "T1071.004"
+   ],
+   "observables": [
+    "dns.question.name"
+   ],
+   "cleanup": "Nothing to clean up."
+  }
+ ],
+ "rules": [
+  {
+   "id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+   "title": "DNS query for a reserved, non-resolving TLD",
+   "level": "low",
+   "techniques": [
+    "T1071.004"
+   ],
+   "logsource": {
+    "category": "dns_query"
+   },
+   "kql": "event.category:\"network\" and event.type:\"protocol\" and (dns.question.name:*.invalid or dns.question.name:*.test or dns.question.name:*.example)",
+   "path": "common/dns_reserved_tld.yml"
+  }
+ ],
+ "hardening": [
+  "win.sysmon.dns"
+ ]
+}

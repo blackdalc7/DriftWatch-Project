@@ -1,0 +1,21 @@
+id: dw-win-encoded-powershell
+name: Encoded PowerShell command
+description: Starts PowerShell with -EncodedCommand. The payload only prints a marker, but the launch pattern is a staple of loaders.
+version: 1
+status: approved
+platforms: [windows]
+severity: high
+attack:
+  tactic: execution
+  techniques: [T1059.001, T1027]
+steps:
+  - action: powershell.encoded_marker
+expected:
+  outcome: detected
+  detections: [5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05]
+hygiene_controls: [win.powershell.scriptblock_logging, win.asr.block_obfuscated_scripts]
+provenance: {source: manual}
+review:
+  approved_by: driftwatch-maintainers
+  approved_at: "2026-10-30T12:00:00Z"
+  notes: Hand-written seed test, reviewed with its Sigma rule.

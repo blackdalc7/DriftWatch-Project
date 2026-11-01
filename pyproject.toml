@@ -1,0 +1,23 @@
+[project]
+name = "driftwatch"
+version = "1.0.0"
+description = "Continuous security validation for a lab: configuration drift detection and detection regression testing in CI"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[project.scripts]
+driftwatch = "driftwatch.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "tests"]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+markers = ["live: needs a running Elastic or the Anthropic API (skipped by default)"]
+
+[tool.coverage.run]
+source = ["driftwatch"]
+branch = true
+
+[tool.coverage.report]
+fail_under = 85
+show_missing = true

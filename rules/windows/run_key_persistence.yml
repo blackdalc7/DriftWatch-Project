@@ -1,0 +1,23 @@
+title: New value under a user Run key
+id: 5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03
+status: stable
+description: Detects a value written under the CurrentVersion\Run key, which starts a program at every logon.
+author: Driftwatch
+date: 2026-10-30
+tags:
+  - attack.persistence
+  - attack.t1547.001
+logsource:
+  product: windows
+  category: registry_set
+detection:
+  selection:
+    TargetObject|contains: '\Software\Microsoft\Windows\CurrentVersion\Run\'
+  filter_onedrive:
+    Details|contains|all:
+      - '\Microsoft\OneDrive\OneDrive.exe'
+      - '/background'
+  condition: selection and not filter_onedrive
+falsepositives:
+  - Software installers registering updaters
+level: medium

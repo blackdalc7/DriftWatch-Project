@@ -1,0 +1,49 @@
+[
+ {
+  "id": 2,
+  "agent_id": "agt_demo_win01",
+  "kind": "test",
+  "subject": "dw-win-encoded-powershell",
+  "from_state": "pass",
+  "to_state": "fail",
+  "last_good_at": "2026-10-26T10:08:00.418230Z",
+  "first_bad_at": "2026-10-27T10:08:20.418230Z",
+  "exact_change_at": null,
+  "detected_at": "2026-10-31T05:33:01.528378Z",
+  "details": {
+   "title": "Encoded PowerShell command",
+   "previous_outcome": "detected",
+   "outcome": "missed",
+   "direction": "regressed",
+   "likely_causes": [
+    "win.asr.block_obfuscated_scripts"
+   ]
+  },
+  "hostname": "lab-win01"
+ },
+ {
+  "id": 1,
+  "agent_id": "agt_demo_win01",
+  "kind": "control",
+  "subject": "win.asr.block_obfuscated_scripts",
+  "from_state": "pass",
+  "to_state": "fail",
+  "last_good_at": "2026-10-26T09:00:00.000000Z",
+  "first_bad_at": "2026-10-26T13:00:00.000000Z",
+  "exact_change_at": "2026-10-26T11:42:07.000000Z",
+  "detected_at": "2026-10-31T05:33:01.512059Z",
+  "details": {
+   "title": "ASR: block potentially obfuscated scripts",
+   "severity": "high",
+   "direction": "regressed",
+   "before": "block",
+   "after": "off",
+   "change_event": {
+    "code": "5007",
+    "user": "LAB\\it-admin",
+    "message": "Microsoft Defender Antivirus Configuration has changed. ASR rule 5beb7efe... set to 0 (Off)"
+   }
+  },
+  "hostname": "lab-win01"
+ }
+]

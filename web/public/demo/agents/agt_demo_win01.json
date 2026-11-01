@@ -1,0 +1,1568 @@
+{
+ "id": "agt_demo_win01",
+ "hostname": "lab-win01",
+ "platform": "windows",
+ "os_version": "Windows 11 23H2",
+ "agent_version": "1.0.0",
+ "tags": [
+  "lab",
+  "demo"
+ ],
+ "cert_expires_at": "2026-11-30T05:33:01.418230Z",
+ "enrolled_at": "2026-10-23T05:33:01.418230Z",
+ "last_seen": "2026-10-31T05:33:01.418230Z",
+ "metrics": {
+  "cpu_percent": 2.9,
+  "memory_percent": 42.3,
+  "disk_percent": 53.8,
+  "uptime_seconds": 259200,
+  "ip_addresses": [
+   "10.24.0.11"
+  ],
+  "kernel_version": "10.0.22631.4317 Build 22631.4317"
+ },
+ "status": "active",
+ "cert_sha256": "e451f16c6b805c4e75da52e7c33d26b95afd7536502f7befff83a853097db8b3",
+ "connection": "online",
+ "lab_scope": "lab",
+ "heartbeats": [
+  {
+   "ts": "2026-10-30T05:33:01.418230Z",
+   "cpu_percent": 4.3,
+   "memory_percent": 42.3,
+   "disk_percent": 53.3,
+   "uptime_seconds": 172800
+  },
+  {
+   "ts": "2026-10-30T05:53:01.418230Z",
+   "cpu_percent": 2.5,
+   "memory_percent": 48.0,
+   "disk_percent": 52.7,
+   "uptime_seconds": 174000
+  },
+  {
+   "ts": "2026-10-30T06:13:01.418230Z",
+   "cpu_percent": 2.4,
+   "memory_percent": 47.6,
+   "disk_percent": 52.1,
+   "uptime_seconds": 175200
+  },
+  {
+   "ts": "2026-10-30T06:33:01.418230Z",
+   "cpu_percent": 5.0,
+   "memory_percent": 41.0,
+   "disk_percent": 52.2,
+   "uptime_seconds": 176400
+  },
+  {
+   "ts": "2026-10-30T06:53:01.418230Z",
+   "cpu_percent": 5.0,
+   "memory_percent": 52.4,
+   "disk_percent": 52.2,
+   "uptime_seconds": 177600
+  },
+  {
+   "ts": "2026-10-30T07:13:01.418230Z",
+   "cpu_percent": 3.6,
+   "memory_percent": 49.4,
+   "disk_percent": 53.9,
+   "uptime_seconds": 178800
+  },
+  {
+   "ts": "2026-10-30T07:33:01.418230Z",
+   "cpu_percent": 6.0,
+   "memory_percent": 46.0,
+   "disk_percent": 54.0,
+   "uptime_seconds": 180000
+  },
+  {
+   "ts": "2026-10-30T07:53:01.418230Z",
+   "cpu_percent": 2.3,
+   "memory_percent": 52.9,
+   "disk_percent": 52.6,
+   "uptime_seconds": 181200
+  },
+  {
+   "ts": "2026-10-30T08:13:01.418230Z",
+   "cpu_percent": 3.0,
+   "memory_percent": 41.8,
+   "disk_percent": 52.6,
+   "uptime_seconds": 182400
+  },
+  {
+   "ts": "2026-10-30T08:33:01.418230Z",
+   "cpu_percent": 7.7,
+   "memory_percent": 42.7,
+   "disk_percent": 53.2,
+   "uptime_seconds": 183600
+  },
+  {
+   "ts": "2026-10-30T08:53:01.418230Z",
+   "cpu_percent": 6.5,
+   "memory_percent": 45.6,
+   "disk_percent": 53.1,
+   "uptime_seconds": 184800
+  },
+  {
+   "ts": "2026-10-30T09:13:01.418230Z",
+   "cpu_percent": 9.7,
+   "memory_percent": 40.9,
+   "disk_percent": 52.4,
+   "uptime_seconds": 186000
+  },
+  {
+   "ts": "2026-10-30T09:33:01.418230Z",
+   "cpu_percent": 26.4,
+   "memory_percent": 46.4,
+   "disk_percent": 52.6,
+   "uptime_seconds": 187200
+  },
+  {
+   "ts": "2026-10-30T09:53:01.418230Z",
+   "cpu_percent": 23.8,
+   "memory_percent": 46.8,
+   "disk_percent": 52.6,
+   "uptime_seconds": 188400
+  },
+  {
+   "ts": "2026-10-30T10:13:01.418230Z",
+   "cpu_percent": 29.4,
+   "memory_percent": 50.5,
+   "disk_percent": 52.5,
+   "uptime_seconds": 189600
+  },
+  {
+   "ts": "2026-10-30T10:33:01.418230Z",
+   "cpu_percent": 23.5,
+   "memory_percent": 47.9,
+   "disk_percent": 53.8,
+   "uptime_seconds": 190800
+  },
+  {
+   "ts": "2026-10-30T10:53:01.418230Z",
+   "cpu_percent": 27.7,
+   "memory_percent": 44.3,
+   "disk_percent": 54.0,
+   "uptime_seconds": 192000
+  },
+  {
+   "ts": "2026-10-30T11:13:01.418230Z",
+   "cpu_percent": 11.2,
+   "memory_percent": 46.3,
+   "disk_percent": 53.5,
+   "uptime_seconds": 193200
+  },
+  {
+   "ts": "2026-10-30T11:33:01.418230Z",
+   "cpu_percent": 12.1,
+   "memory_percent": 47.3,
+   "disk_percent": 52.1,
+   "uptime_seconds": 194400
+  },
+  {
+   "ts": "2026-10-30T11:53:01.418230Z",
+   "cpu_percent": 26.0,
+   "memory_percent": 51.5,
+   "disk_percent": 53.1,
+   "uptime_seconds": 195600
+  },
+  {
+   "ts": "2026-10-30T12:13:01.418230Z",
+   "cpu_percent": 31.6,
+   "memory_percent": 44.7,
+   "disk_percent": 53.4,
+   "uptime_seconds": 196800
+  },
+  {
+   "ts": "2026-10-30T12:33:01.418230Z",
+   "cpu_percent": 24.0,
+   "memory_percent": 48.7,
+   "disk_percent": 52.9,
+   "uptime_seconds": 198000
+  },
+  {
+   "ts": "2026-10-30T12:53:01.418230Z",
+   "cpu_percent": 30.7,
+   "memory_percent": 54.2,
+   "disk_percent": 52.9,
+   "uptime_seconds": 199200
+  },
+  {
+   "ts": "2026-10-30T13:13:01.418230Z",
+   "cpu_percent": 25.9,
+   "memory_percent": 40.9,
+   "disk_percent": 53.4,
+   "uptime_seconds": 200400
+  },
+  {
+   "ts": "2026-10-30T13:33:01.418230Z",
+   "cpu_percent": 25.5,
+   "memory_percent": 54.9,
+   "disk_percent": 53.6,
+   "uptime_seconds": 201600
+  },
+  {
+   "ts": "2026-10-30T13:53:01.418230Z",
+   "cpu_percent": 15.7,
+   "memory_percent": 45.8,
+   "disk_percent": 53.3,
+   "uptime_seconds": 202800
+  },
+  {
+   "ts": "2026-10-30T14:13:01.418230Z",
+   "cpu_percent": 8.6,
+   "memory_percent": 46.9,
+   "disk_percent": 52.3,
+   "uptime_seconds": 204000
+  },
+  {
+   "ts": "2026-10-30T14:33:01.418230Z",
+   "cpu_percent": 11.2,
+   "memory_percent": 40.9,
+   "disk_percent": 53.5,
+   "uptime_seconds": 205200
+  },
+  {
+   "ts": "2026-10-30T14:53:01.418230Z",
+   "cpu_percent": 11.5,
+   "memory_percent": 43.7,
+   "disk_percent": 52.8,
+   "uptime_seconds": 206400
+  },
+  {
+   "ts": "2026-10-30T15:13:01.418230Z",
+   "cpu_percent": 31.5,
+   "memory_percent": 41.2,
+   "disk_percent": 52.9,
+   "uptime_seconds": 207600
+  },
+  {
+   "ts": "2026-10-30T15:33:01.418230Z",
+   "cpu_percent": 22.8,
+   "memory_percent": 53.3,
+   "disk_percent": 53.6,
+   "uptime_seconds": 208800
+  },
+  {
+   "ts": "2026-10-30T15:53:01.418230Z",
+   "cpu_percent": 31.3,
+   "memory_percent": 44.2,
+   "disk_percent": 52.8,
+   "uptime_seconds": 210000
+  },
+  {
+   "ts": "2026-10-30T16:13:01.418230Z",
+   "cpu_percent": 17.7,
+   "memory_percent": 53.3,
+   "disk_percent": 53.9,
+   "uptime_seconds": 211200
+  },
+  {
+   "ts": "2026-10-30T16:33:01.418230Z",
+   "cpu_percent": 12.1,
+   "memory_percent": 42.6,
+   "disk_percent": 52.5,
+   "uptime_seconds": 212400
+  },
+  {
+   "ts": "2026-10-30T16:53:01.418230Z",
+   "cpu_percent": 14.3,
+   "memory_percent": 47.3,
+   "disk_percent": 53.2,
+   "uptime_seconds": 213600
+  },
+  {
+   "ts": "2026-10-30T17:13:01.418230Z",
+   "cpu_percent": 3.8,
+   "memory_percent": 40.1,
+   "disk_percent": 52.8,
+   "uptime_seconds": 214800
+  },
+  {
+   "ts": "2026-10-30T17:33:01.418230Z",
+   "cpu_percent": 4.6,
+   "memory_percent": 48.5,
+   "disk_percent": 53.9,
+   "uptime_seconds": 216000
+  },
+  {
+   "ts": "2026-10-30T17:53:01.418230Z",
+   "cpu_percent": 6.8,
+   "memory_percent": 47.7,
+   "disk_percent": 53.2,
+   "uptime_seconds": 217200
+  },
+  {
+   "ts": "2026-10-30T18:13:01.418230Z",
+   "cpu_percent": 6.7,
+   "memory_percent": 40.8,
+   "disk_percent": 53.8,
+   "uptime_seconds": 218400
+  },
+  {
+   "ts": "2026-10-30T18:33:01.418230Z",
+   "cpu_percent": 7.5,
+   "memory_percent": 53.1,
+   "disk_percent": 53.6,
+   "uptime_seconds": 219600
+  },
+  {
+   "ts": "2026-10-30T18:53:01.418230Z",
+   "cpu_percent": 4.7,
+   "memory_percent": 46.0,
+   "disk_percent": 52.2,
+   "uptime_seconds": 220800
+  },
+  {
+   "ts": "2026-10-30T19:13:01.418230Z",
+   "cpu_percent": 6.4,
+   "memory_percent": 40.9,
+   "disk_percent": 52.1,
+   "uptime_seconds": 222000
+  },
+  {
+   "ts": "2026-10-30T19:33:01.418230Z",
+   "cpu_percent": 3.5,
+   "memory_percent": 42.4,
+   "disk_percent": 52.7,
+   "uptime_seconds": 223200
+  },
+  {
+   "ts": "2026-10-30T19:53:01.418230Z",
+   "cpu_percent": 2.4,
+   "memory_percent": 40.0,
+   "disk_percent": 52.3,
+   "uptime_seconds": 224400
+  },
+  {
+   "ts": "2026-10-30T20:13:01.418230Z",
+   "cpu_percent": 2.7,
+   "memory_percent": 45.5,
+   "disk_percent": 52.1,
+   "uptime_seconds": 225600
+  },
+  {
+   "ts": "2026-10-30T20:33:01.418230Z",
+   "cpu_percent": 8.1,
+   "memory_percent": 49.2,
+   "disk_percent": 52.3,
+   "uptime_seconds": 226800
+  },
+  {
+   "ts": "2026-10-30T20:53:01.418230Z",
+   "cpu_percent": 3.8,
+   "memory_percent": 45.2,
+   "disk_percent": 52.7,
+   "uptime_seconds": 228000
+  },
+  {
+   "ts": "2026-10-30T21:13:01.418230Z",
+   "cpu_percent": 2.9,
+   "memory_percent": 52.7,
+   "disk_percent": 54.0,
+   "uptime_seconds": 229200
+  },
+  {
+   "ts": "2026-10-30T21:33:01.418230Z",
+   "cpu_percent": 5.3,
+   "memory_percent": 47.3,
+   "disk_percent": 52.2,
+   "uptime_seconds": 230400
+  },
+  {
+   "ts": "2026-10-30T21:53:01.418230Z",
+   "cpu_percent": 2.7,
+   "memory_percent": 45.1,
+   "disk_percent": 52.5,
+   "uptime_seconds": 231600
+  },
+  {
+   "ts": "2026-10-30T22:13:01.418230Z",
+   "cpu_percent": 7.8,
+   "memory_percent": 42.4,
+   "disk_percent": 52.0,
+   "uptime_seconds": 232800
+  },
+  {
+   "ts": "2026-10-30T22:33:01.418230Z",
+   "cpu_percent": 8.7,
+   "memory_percent": 47.9,
+   "disk_percent": 52.3,
+   "uptime_seconds": 234000
+  },
+  {
+   "ts": "2026-10-30T22:53:01.418230Z",
+   "cpu_percent": 5.8,
+   "memory_percent": 40.4,
+   "disk_percent": 53.1,
+   "uptime_seconds": 235200
+  },
+  {
+   "ts": "2026-10-30T23:13:01.418230Z",
+   "cpu_percent": 8.8,
+   "memory_percent": 52.9,
+   "disk_percent": 53.4,
+   "uptime_seconds": 236400
+  },
+  {
+   "ts": "2026-10-30T23:33:01.418230Z",
+   "cpu_percent": 3.8,
+   "memory_percent": 45.5,
+   "disk_percent": 52.3,
+   "uptime_seconds": 237600
+  },
+  {
+   "ts": "2026-10-30T23:53:01.418230Z",
+   "cpu_percent": 7.4,
+   "memory_percent": 48.0,
+   "disk_percent": 53.6,
+   "uptime_seconds": 238800
+  },
+  {
+   "ts": "2026-10-31T00:13:01.418230Z",
+   "cpu_percent": 4.3,
+   "memory_percent": 43.3,
+   "disk_percent": 53.6,
+   "uptime_seconds": 240000
+  },
+  {
+   "ts": "2026-10-31T00:33:01.418230Z",
+   "cpu_percent": 8.9,
+   "memory_percent": 52.8,
+   "disk_percent": 53.6,
+   "uptime_seconds": 241200
+  },
+  {
+   "ts": "2026-10-31T00:53:01.418230Z",
+   "cpu_percent": 7.7,
+   "memory_percent": 51.1,
+   "disk_percent": 52.5,
+   "uptime_seconds": 242400
+  },
+  {
+   "ts": "2026-10-31T01:13:01.418230Z",
+   "cpu_percent": 5.6,
+   "memory_percent": 45.3,
+   "disk_percent": 52.1,
+   "uptime_seconds": 243600
+  },
+  {
+   "ts": "2026-10-31T01:33:01.418230Z",
+   "cpu_percent": 2.2,
+   "memory_percent": 44.2,
+   "disk_percent": 52.5,
+   "uptime_seconds": 244800
+  },
+  {
+   "ts": "2026-10-31T01:53:01.418230Z",
+   "cpu_percent": 6.8,
+   "memory_percent": 54.3,
+   "disk_percent": 52.9,
+   "uptime_seconds": 246000
+  },
+  {
+   "ts": "2026-10-31T02:13:01.418230Z",
+   "cpu_percent": 8.6,
+   "memory_percent": 54.8,
+   "disk_percent": 53.9,
+   "uptime_seconds": 247200
+  },
+  {
+   "ts": "2026-10-31T02:33:01.418230Z",
+   "cpu_percent": 4.6,
+   "memory_percent": 43.3,
+   "disk_percent": 52.5,
+   "uptime_seconds": 248400
+  },
+  {
+   "ts": "2026-10-31T02:53:01.418230Z",
+   "cpu_percent": 3.4,
+   "memory_percent": 43.1,
+   "disk_percent": 53.2,
+   "uptime_seconds": 249600
+  },
+  {
+   "ts": "2026-10-31T03:13:01.418230Z",
+   "cpu_percent": 8.3,
+   "memory_percent": 52.6,
+   "disk_percent": 53.0,
+   "uptime_seconds": 250800
+  },
+  {
+   "ts": "2026-10-31T03:33:01.418230Z",
+   "cpu_percent": 6.6,
+   "memory_percent": 52.0,
+   "disk_percent": 52.2,
+   "uptime_seconds": 252000
+  },
+  {
+   "ts": "2026-10-31T03:53:01.418230Z",
+   "cpu_percent": 6.6,
+   "memory_percent": 53.6,
+   "disk_percent": 53.6,
+   "uptime_seconds": 253200
+  },
+  {
+   "ts": "2026-10-31T04:13:01.418230Z",
+   "cpu_percent": 7.3,
+   "memory_percent": 47.2,
+   "disk_percent": 52.4,
+   "uptime_seconds": 254400
+  },
+  {
+   "ts": "2026-10-31T04:33:01.418230Z",
+   "cpu_percent": 7.5,
+   "memory_percent": 45.0,
+   "disk_percent": 53.6,
+   "uptime_seconds": 255600
+  },
+  {
+   "ts": "2026-10-31T04:53:01.418230Z",
+   "cpu_percent": 8.8,
+   "memory_percent": 45.9,
+   "disk_percent": 52.8,
+   "uptime_seconds": 256800
+  },
+  {
+   "ts": "2026-10-31T05:13:01.418230Z",
+   "cpu_percent": 8.6,
+   "memory_percent": 50.9,
+   "disk_percent": 52.3,
+   "uptime_seconds": 258000
+  },
+  {
+   "ts": "2026-10-31T05:33:01.418230Z",
+   "cpu_percent": 2.9,
+   "memory_percent": 42.3,
+   "disk_percent": 53.8,
+   "uptime_seconds": 259200
+  }
+ ],
+ "hygiene": {
+  "schema": "driftwatch.hygiene/v1",
+  "platform": "windows",
+  "collected_at": "2026-10-30T17:00:00.000000Z",
+  "checks": [
+   {
+    "id": "win.defender.antivirus_enabled",
+    "title": "Defender antivirus enabled",
+    "severity": "high",
+    "status": "pass",
+    "expected": "enabled",
+    "actual": "enabled"
+   },
+   {
+    "id": "win.defender.realtime_protection",
+    "title": "Defender real-time protection",
+    "severity": "high",
+    "status": "pass",
+    "expected": "enabled",
+    "actual": "enabled"
+   },
+   {
+    "id": "win.defender.cloud_protection",
+    "title": "Defender cloud-delivered protection",
+    "severity": "medium",
+    "status": "pass",
+    "expected": "MAPS basic or advanced",
+    "actual": "advanced"
+   },
+   {
+    "id": "win.defender.tamper_protection",
+    "title": "Defender tamper protection",
+    "severity": "high",
+    "status": "pass",
+    "expected": "enabled",
+    "actual": "enabled"
+   },
+   {
+    "id": "win.defender.signature_age",
+    "title": "Defender signatures updated in the last 3 days",
+    "severity": "medium",
+    "status": "pass",
+    "expected": "<= 3 days",
+    "actual": "0 days"
+   },
+   {
+    "id": "win.asr.block_lsass_credential_theft",
+    "title": "ASR: block credential stealing from LSASS",
+    "severity": "high",
+    "status": "pass",
+    "expected": "block",
+    "actual": "block"
+   },
+   {
+    "id": "win.asr.block_obfuscated_scripts",
+    "title": "ASR: block potentially obfuscated scripts",
+    "severity": "high",
+    "status": "fail",
+    "expected": "block",
+    "actual": "off"
+   },
+   {
+    "id": "win.lsass.runasppl",
+    "title": "LSASS runs as a protected process (RunAsPPL)",
+    "severity": "high",
+    "status": "pass",
+    "expected": "1 or 2",
+    "actual": "RunAsPPL=1"
+   },
+   {
+    "id": "win.credential_guard.running",
+    "title": "Credential Guard running",
+    "severity": "medium",
+    "status": "fail",
+    "expected": "running",
+    "actual": "not running"
+   },
+   {
+    "id": "win.powershell.scriptblock_logging",
+    "title": "PowerShell script block logging",
+    "severity": "medium",
+    "status": "pass",
+    "expected": "enabled",
+    "actual": "enabled"
+   },
+   {
+    "id": "win.sysmon.process_creation",
+    "title": "Sysmon service running (process creation)",
+    "severity": "high",
+    "status": "pass",
+    "expected": "running",
+    "actual": "running"
+   },
+   {
+    "id": "win.firewall.domain",
+    "title": "Windows Firewall Domain profile",
+    "severity": "medium",
+    "status": "pass",
+    "expected": "enabled",
+    "actual": "enabled"
+   },
+   {
+    "id": "win.smb1.disabled",
+    "title": "SMBv1 server protocol",
+    "severity": "high",
+    "status": "pass",
+    "expected": "disabled",
+    "actual": "disabled"
+   }
+  ]
+ },
+ "recent_runs": [
+  {
+   "id": "91dfd20da71260b8",
+   "test_id": "dw-win-encoded-powershell",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-30T10:53:42.418230Z",
+   "not_before": "2026-10-30T10:53:42.418230Z",
+   "dispatched_at": "2026-10-30T10:53:42.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-30T10:53:42.418230Z",
+   "finished_at": "2026-10-30T10:54:02.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "powershell.encoded_marker",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "missed",
+   "passed": false,
+   "evaluation": {
+    "outcome": "missed",
+    "passed": false,
+    "telemetry_seen": true,
+    "telemetry_hits": 3,
+    "detection_quality": "none",
+    "alerts": [],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+    ],
+    "missing_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+    ],
+    "notes": [
+     "Telemetry arrived but no rule fired."
+    ]
+   },
+   "evaluated_at": "2026-10-30T10:56:42.418230Z"
+  },
+  {
+   "id": "035d62a6089b09ee",
+   "test_id": "dw-win-whoami-discovery",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-30T10:49:23.418230Z",
+   "not_before": "2026-10-30T10:49:23.418230Z",
+   "dispatched_at": "2026-10-30T10:49:23.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-30T10:49:23.418230Z",
+   "finished_at": "2026-10-30T10:49:43.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "process.discovery",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "detected",
+   "passed": true,
+   "evaluation": {
+    "outcome": "detected",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 4,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+      "timestamp": "2026-10-30T10:50:03.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-30T10:52:23.418230Z"
+  },
+  {
+   "id": "7c228d2a3262c5ed",
+   "test_id": "dw-dns-sinkhole-beacon",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-30T10:48:17.418230Z",
+   "not_before": "2026-10-30T10:48:17.418230Z",
+   "dispatched_at": "2026-10-30T10:48:17.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-30T10:48:17.418230Z",
+   "finished_at": "2026-10-30T10:48:37.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "dns.sinkhole_query",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "detected",
+   "passed": true,
+   "evaluation": {
+    "outcome": "detected",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 1,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+      "timestamp": "2026-10-30T10:48:57.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-30T10:51:17.418230Z"
+  },
+  {
+   "id": "53f948d79c0df71b",
+   "test_id": "dw-win-local-admin-enum",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-30T10:40:59.418230Z",
+   "not_before": "2026-10-30T10:40:59.418230Z",
+   "dispatched_at": "2026-10-30T10:40:59.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-30T10:40:59.418230Z",
+   "finished_at": "2026-10-30T10:41:19.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "process.discovery",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "detected",
+   "passed": true,
+   "evaluation": {
+    "outcome": "detected",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 2,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+      "timestamp": "2026-10-30T10:41:39.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-30T10:43:59.418230Z"
+  },
+  {
+   "id": "685df711a0e6c02e",
+   "test_id": "dw-win-schtask-persistence",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-30T10:32:20.418230Z",
+   "not_before": "2026-10-30T10:32:20.418230Z",
+   "dispatched_at": "2026-10-30T10:32:20.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-30T10:32:20.418230Z",
+   "finished_at": "2026-10-30T10:32:40.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "scheduled_task.canary",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "detected",
+   "passed": true,
+   "evaluation": {
+    "outcome": "detected",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 2,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+      "timestamp": "2026-10-30T10:33:00.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-30T10:35:20.418230Z"
+  },
+  {
+   "id": "d06dbe78394417a9",
+   "test_id": "dw-credential-file-canary",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-30T10:23:59.418230Z",
+   "not_before": "2026-10-30T10:23:59.418230Z",
+   "dispatched_at": "2026-10-30T10:23:59.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-30T10:23:59.418230Z",
+   "finished_at": "2026-10-30T10:24:19.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "file.credential_canary_read",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "detected",
+   "passed": true,
+   "evaluation": {
+    "outcome": "detected",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 4,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+      "timestamp": "2026-10-30T10:24:39.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-30T10:26:59.418230Z"
+  },
+  {
+   "id": "0a0d524f42b1519f",
+   "test_id": "dw-win-eicar-quarantine",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-30T10:17:06.418230Z",
+   "not_before": "2026-10-30T10:17:06.418230Z",
+   "dispatched_at": "2026-10-30T10:17:06.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-30T10:17:06.418230Z",
+   "finished_at": "2026-10-30T10:17:26.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "file.eicar_drop",
+     "status": "blocked",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "prevented",
+   "passed": true,
+   "evaluation": {
+    "outcome": "prevented",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 1,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+      "timestamp": "2026-10-30T10:17:46.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-30T10:20:06.418230Z"
+  },
+  {
+   "id": "e8951093f58ce0fd",
+   "test_id": "dw-win-run-key-persistence",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-30T10:15:17.418230Z",
+   "not_before": "2026-10-30T10:15:17.418230Z",
+   "dispatched_at": "2026-10-30T10:15:17.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-30T10:15:17.418230Z",
+   "finished_at": "2026-10-30T10:15:37.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "registry.run_key_canary",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "detected",
+   "passed": true,
+   "evaluation": {
+    "outcome": "detected",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 4,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+      "timestamp": "2026-10-30T10:15:57.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-30T10:18:17.418230Z"
+  },
+  {
+   "id": "65234e104aac13ca",
+   "test_id": "dw-win-whoami-discovery",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-29T10:59:12.418230Z",
+   "not_before": "2026-10-29T10:59:12.418230Z",
+   "dispatched_at": "2026-10-29T10:59:12.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-29T10:59:12.418230Z",
+   "finished_at": "2026-10-29T10:59:32.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "process.discovery",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "detected",
+   "passed": true,
+   "evaluation": {
+    "outcome": "detected",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 6,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+      "timestamp": "2026-10-29T10:59:52.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-29T11:02:12.418230Z"
+  },
+  {
+   "id": "3ddb988fe885a084",
+   "test_id": "dw-win-schtask-persistence",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-29T10:53:25.418230Z",
+   "not_before": "2026-10-29T10:53:25.418230Z",
+   "dispatched_at": "2026-10-29T10:53:25.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-29T10:53:25.418230Z",
+   "finished_at": "2026-10-29T10:53:45.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "scheduled_task.canary",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "detected",
+   "passed": true,
+   "evaluation": {
+    "outcome": "detected",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 1,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+      "timestamp": "2026-10-29T10:54:05.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-29T10:56:25.418230Z"
+  },
+  {
+   "id": "24f74949573104e1",
+   "test_id": "dw-win-eicar-quarantine",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-29T10:46:09.418230Z",
+   "not_before": "2026-10-29T10:46:09.418230Z",
+   "dispatched_at": "2026-10-29T10:46:09.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-29T10:46:09.418230Z",
+   "finished_at": "2026-10-29T10:46:29.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "file.eicar_drop",
+     "status": "blocked",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "prevented",
+   "passed": true,
+   "evaluation": {
+    "outcome": "prevented",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 4,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+      "timestamp": "2026-10-29T10:46:49.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-29T10:49:09.418230Z"
+  },
+  {
+   "id": "1307812acef8ab57",
+   "test_id": "dw-dns-sinkhole-beacon",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-29T10:28:25.418230Z",
+   "not_before": "2026-10-29T10:28:25.418230Z",
+   "dispatched_at": "2026-10-29T10:28:25.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-29T10:28:25.418230Z",
+   "finished_at": "2026-10-29T10:28:45.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "dns.sinkhole_query",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "detected",
+   "passed": true,
+   "evaluation": {
+    "outcome": "detected",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 3,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08",
+      "timestamp": "2026-10-29T10:29:05.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b08"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-29T10:31:25.418230Z"
+  },
+  {
+   "id": "9f9d0ea0570b7ecc",
+   "test_id": "dw-win-encoded-powershell",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-29T10:22:24.418230Z",
+   "not_before": "2026-10-29T10:22:24.418230Z",
+   "dispatched_at": "2026-10-29T10:22:24.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-29T10:22:24.418230Z",
+   "finished_at": "2026-10-29T10:22:44.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "powershell.encoded_marker",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "missed",
+   "passed": false,
+   "evaluation": {
+    "outcome": "missed",
+    "passed": false,
+    "telemetry_seen": true,
+    "telemetry_hits": 3,
+    "detection_quality": "none",
+    "alerts": [],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+    ],
+    "missing_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+    ],
+    "notes": [
+     "Telemetry arrived but no rule fired."
+    ]
+   },
+   "evaluated_at": "2026-10-29T10:25:24.418230Z"
+  },
+  {
+   "id": "050c0488a7e17bf7",
+   "test_id": "dw-win-local-admin-enum",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-29T10:07:53.418230Z",
+   "not_before": "2026-10-29T10:07:53.418230Z",
+   "dispatched_at": "2026-10-29T10:07:53.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-29T10:07:53.418230Z",
+   "finished_at": "2026-10-29T10:08:13.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "process.discovery",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "detected",
+   "passed": true,
+   "evaluation": {
+    "outcome": "detected",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 3,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02",
+      "timestamp": "2026-10-29T10:08:33.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b02"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-29T10:10:53.418230Z"
+  },
+  {
+   "id": "fce33245e5e94329",
+   "test_id": "dw-credential-file-canary",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-29T10:00:31.418230Z",
+   "not_before": "2026-10-29T10:00:31.418230Z",
+   "dispatched_at": "2026-10-29T10:00:31.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-29T10:00:31.418230Z",
+   "finished_at": "2026-10-29T10:00:51.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "file.credential_canary_read",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "detected",
+   "passed": true,
+   "evaluation": {
+    "outcome": "detected",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 6,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07",
+      "timestamp": "2026-10-29T10:01:11.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b07"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-29T10:03:31.418230Z"
+  },
+  {
+   "id": "6605319e4a184b9a",
+   "test_id": "dw-win-run-key-persistence",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-29T10:00:20.418230Z",
+   "not_before": "2026-10-29T10:00:20.418230Z",
+   "dispatched_at": "2026-10-29T10:00:20.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-29T10:00:20.418230Z",
+   "finished_at": "2026-10-29T10:00:40.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "registry.run_key_canary",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "detected",
+   "passed": true,
+   "evaluation": {
+    "outcome": "detected",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 3,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03",
+      "timestamp": "2026-10-29T10:01:00.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b03"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-29T10:03:20.418230Z"
+  },
+  {
+   "id": "ea64232a96fd07e7",
+   "test_id": "dw-win-whoami-discovery",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-28T10:38:52.418230Z",
+   "not_before": "2026-10-28T10:38:52.418230Z",
+   "dispatched_at": "2026-10-28T10:38:52.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-28T10:38:52.418230Z",
+   "finished_at": "2026-10-28T10:39:12.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "process.discovery",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "detected",
+   "passed": true,
+   "evaluation": {
+    "outcome": "detected",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 6,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01",
+      "timestamp": "2026-10-28T10:39:32.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b01"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-28T10:41:52.418230Z"
+  },
+  {
+   "id": "9b0373c964a61a3a",
+   "test_id": "dw-win-eicar-quarantine",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-28T10:28:17.418230Z",
+   "not_before": "2026-10-28T10:28:17.418230Z",
+   "dispatched_at": "2026-10-28T10:28:17.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-28T10:28:17.418230Z",
+   "finished_at": "2026-10-28T10:28:37.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "file.eicar_drop",
+     "status": "blocked",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "prevented",
+   "passed": true,
+   "evaluation": {
+    "outcome": "prevented",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 4,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06",
+      "timestamp": "2026-10-28T10:28:57.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b06"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-28T10:31:17.418230Z"
+  },
+  {
+   "id": "36dd88a7ede9e79b",
+   "test_id": "dw-win-schtask-persistence",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-28T10:16:23.418230Z",
+   "not_before": "2026-10-28T10:16:23.418230Z",
+   "dispatched_at": "2026-10-28T10:16:23.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-28T10:16:23.418230Z",
+   "finished_at": "2026-10-28T10:16:43.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "scheduled_task.canary",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "detected",
+   "passed": true,
+   "evaluation": {
+    "outcome": "detected",
+    "passed": true,
+    "telemetry_seen": true,
+    "telemetry_hits": 2,
+    "detection_quality": "technique",
+    "alerts": [
+     {
+      "rule_id": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+      "rule_name": "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04",
+      "timestamp": "2026-10-28T10:17:03.418230Z"
+     }
+    ],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b04"
+    ],
+    "missing_detections": [],
+    "notes": []
+   },
+   "evaluated_at": "2026-10-28T10:19:23.418230Z"
+  },
+  {
+   "id": "4cf66e94650fab6a",
+   "test_id": "dw-win-encoded-powershell",
+   "test_version": 1,
+   "agent_id": "agt_demo_win01",
+   "source": "demo",
+   "schedule_id": null,
+   "status": "evaluated",
+   "created_at": "2026-10-28T10:13:58.418230Z",
+   "not_before": "2026-10-28T10:13:58.418230Z",
+   "dispatched_at": "2026-10-28T10:13:58.418230Z",
+   "expires_at": null,
+   "started_at": "2026-10-28T10:13:58.418230Z",
+   "finished_at": "2026-10-28T10:14:18.418230Z",
+   "step_results": [
+    {
+     "index": 0,
+     "action": "powershell.encoded_marker",
+     "status": "executed",
+     "cleanup": "ok"
+    }
+   ],
+   "agent_log": "demo run (synthetic)",
+   "outcome": "missed",
+   "passed": false,
+   "evaluation": {
+    "outcome": "missed",
+    "passed": false,
+    "telemetry_seen": true,
+    "telemetry_hits": 2,
+    "detection_quality": "none",
+    "alerts": [],
+    "expected_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+    ],
+    "missing_detections": [
+     "5f2b1c0e-6a41-4c7e-9b8a-1d2e3f4a5b05"
+    ],
+    "notes": [
+     "Telemetry arrived but no rule fired."
+    ]
+   },
+   "evaluated_at": "2026-10-28T10:16:58.418230Z"
+  }
+ ]
+}

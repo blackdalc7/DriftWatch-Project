@@ -1,0 +1,2438 @@
+[
+ {
+  "id": 41,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-30T17:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-30T17:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "fail",
+     "expected": "block",
+     "actual": "off"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 39,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-30T13:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-30T13:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "fail",
+     "expected": "block",
+     "actual": "off"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 37,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-30T09:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-30T09:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "fail",
+     "expected": "block",
+     "actual": "off"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 35,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-29T17:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-29T17:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "fail",
+     "expected": "block",
+     "actual": "off"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 33,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-29T13:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-29T13:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "fail",
+     "expected": "block",
+     "actual": "off"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 31,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-29T09:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-29T09:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "fail",
+     "expected": "block",
+     "actual": "off"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 29,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-28T17:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-28T17:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "fail",
+     "expected": "block",
+     "actual": "off"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 27,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-28T13:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-28T13:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "fail",
+     "expected": "block",
+     "actual": "off"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 25,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-28T09:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-28T09:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "fail",
+     "expected": "block",
+     "actual": "off"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 23,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-27T17:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-27T17:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "fail",
+     "expected": "block",
+     "actual": "off"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 21,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-27T13:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-27T13:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "fail",
+     "expected": "block",
+     "actual": "off"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 19,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-27T09:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-27T09:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "fail",
+     "expected": "block",
+     "actual": "off"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 17,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-26T17:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-26T17:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "fail",
+     "expected": "block",
+     "actual": "off"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 15,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-26T13:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-26T13:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "fail",
+     "expected": "block",
+     "actual": "off"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 13,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-26T09:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-26T09:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 11,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-25T17:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-25T17:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 9,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-25T13:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-25T13:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 7,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-25T09:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-25T09:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 5,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-24T17:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-24T17:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 3,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-24T13:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-24T13:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ },
+ {
+  "id": 1,
+  "agent_id": "agt_demo_win01",
+  "collected_at": "2026-10-24T09:00:00.000000Z",
+  "report": {
+   "schema": "driftwatch.hygiene/v1",
+   "platform": "windows",
+   "collected_at": "2026-10-24T09:00:00.000000Z",
+   "checks": [
+    {
+     "id": "win.defender.antivirus_enabled",
+     "title": "Defender antivirus enabled",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.realtime_protection",
+     "title": "Defender real-time protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.cloud_protection",
+     "title": "Defender cloud-delivered protection",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "MAPS basic or advanced",
+     "actual": "advanced"
+    },
+    {
+     "id": "win.defender.tamper_protection",
+     "title": "Defender tamper protection",
+     "severity": "high",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.defender.signature_age",
+     "title": "Defender signatures updated in the last 3 days",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "<= 3 days",
+     "actual": "0 days"
+    },
+    {
+     "id": "win.asr.block_lsass_credential_theft",
+     "title": "ASR: block credential stealing from LSASS",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.asr.block_obfuscated_scripts",
+     "title": "ASR: block potentially obfuscated scripts",
+     "severity": "high",
+     "status": "pass",
+     "expected": "block",
+     "actual": "block"
+    },
+    {
+     "id": "win.lsass.runasppl",
+     "title": "LSASS runs as a protected process (RunAsPPL)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "1 or 2",
+     "actual": "RunAsPPL=1"
+    },
+    {
+     "id": "win.credential_guard.running",
+     "title": "Credential Guard running",
+     "severity": "medium",
+     "status": "fail",
+     "expected": "running",
+     "actual": "not running"
+    },
+    {
+     "id": "win.powershell.scriptblock_logging",
+     "title": "PowerShell script block logging",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.sysmon.process_creation",
+     "title": "Sysmon service running (process creation)",
+     "severity": "high",
+     "status": "pass",
+     "expected": "running",
+     "actual": "running"
+    },
+    {
+     "id": "win.firewall.domain",
+     "title": "Windows Firewall Domain profile",
+     "severity": "medium",
+     "status": "pass",
+     "expected": "enabled",
+     "actual": "enabled"
+    },
+    {
+     "id": "win.smb1.disabled",
+     "title": "SMBv1 server protocol",
+     "severity": "high",
+     "status": "pass",
+     "expected": "disabled",
+     "actual": "disabled"
+    }
+   ]
+  }
+ }
+]
