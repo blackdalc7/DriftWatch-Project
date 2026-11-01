@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v7
         with: {go-version: "1.24", cache-dependency-path: agent/go.sum}
       - working-directory: agent
         run: |
@@ -50,7 +50,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v7
         with: {go-version: "1.24", cache-dependency-path: agent/go.sum}
       - working-directory: agent
         run: go test ./...
@@ -82,7 +82,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.13", cache: pip}
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v7
         with: {go-version: "1.24", cache-dependency-path: agent/go.sum}
       - run: pip install -r requirements.txt
       - run: scripts/e2e_local.sh
