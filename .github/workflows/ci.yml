@@ -16,7 +16,7 @@ jobs:
   python:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with: {python-version: "3.13", cache: pip}
       - run: pip install -r requirements.txt -r requirements-dev.txt ruff
@@ -33,7 +33,7 @@ jobs:
   agent:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-go@v5
         with: {go-version: "1.24", cache-dependency-path: agent/go.sum}
       - working-directory: agent
@@ -49,7 +49,7 @@ jobs:
   agent-windows:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-go@v5
         with: {go-version: "1.24", cache-dependency-path: agent/go.sum}
       - working-directory: agent
@@ -71,7 +71,7 @@ jobs:
   shell:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: shellcheck agent/internal/hygiene/scripts/check-baseline.sh scripts/e2e_local.sh
       - run: bash agent/internal/hygiene/scripts/check-baseline.sh | python3 -m json.tool > /dev/null
 
@@ -79,7 +79,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [python, agent]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with: {python-version: "3.13", cache: pip}
       - uses: actions/setup-go@v5
@@ -90,7 +90,7 @@ jobs:
   web:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
         with: {node-version: "22", cache: npm, cache-dependency-path: web/package-lock.json}
       - working-directory: web
